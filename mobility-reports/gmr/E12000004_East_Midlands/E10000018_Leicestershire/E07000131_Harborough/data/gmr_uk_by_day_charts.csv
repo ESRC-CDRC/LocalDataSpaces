@@ -1,0 +1,2359 @@
+country_region_code,date,dayoftheweek,ukhol,ff_type,ff_min,ff_mean,ff_median,ff_max,ff_mad,ff_var
+GB,2020-02-15,Saturday,,Retail and Recreation,-33,-11,-11,10,4,28
+GB,2020-02-15,Saturday,,Grocery and Pharmacy,-20,-6,-6,24,3,15
+GB,2020-02-15,Saturday,,Parks,-70,-37,-37,37,12,158
+GB,2020-02-15,Saturday,,Transit Stations,-34,-12,-13,32,7,82
+GB,2020-02-15,Saturday,,Workplaces,-12,-4,-4,2,3,6
+GB,2020-02-15,Saturday,,Residential,1,2,2,5,0,0
+GB,2020-02-16,Sunday,,Retail and Recreation,-34,-8,-8,30,9,79
+GB,2020-02-16,Sunday,,Grocery and Pharmacy,-21,-6,-6,36,4,27
+GB,2020-02-16,Sunday,,Parks,-72,-31,-35,77,19,454
+GB,2020-02-16,Sunday,,Transit Stations,-40,-8,-8,29,10,115
+GB,2020-02-16,Sunday,,Workplaces,-16,-3,-3,5,3,10
+GB,2020-02-16,Sunday,,Residential,-1,1,1,3,0,1
+GB,2020-02-17,Monday,,Retail and Recreation,-6,10,9,37,6,46
+GB,2020-02-17,Monday,,Grocery and Pharmacy,-9,2,2,39,3,19
+GB,2020-02-17,Monday,,Parks,-31,24,20,182,18,552
+GB,2020-02-17,Monday,,Transit Stations,-22,0,-2,39,7,71
+GB,2020-02-17,Monday,,Workplaces,-29,-15,-16,4,3,23
+GB,2020-02-17,Monday,,Residential,0,2,2,7,0,1
+GB,2020-02-18,Tuesday,,Retail and Recreation,-10,9,9,32,6,45
+GB,2020-02-18,Tuesday,,Grocery and Pharmacy,-9,0,-1,36,3,21
+GB,2020-02-18,Tuesday,,Parks,-34,19,14,212,16,659
+GB,2020-02-18,Tuesday,,Transit Stations,-21,-2,-3,29,7,57
+GB,2020-02-18,Tuesday,,Workplaces,-24,-14,-15,5,3,23
+GB,2020-02-18,Tuesday,,Residential,0,2,3,6,0,1
+GB,2020-02-19,Wednesday,,Retail and Recreation,-9,6,5,42,6,44
+GB,2020-02-19,Wednesday,,Grocery and Pharmacy,-15,-1,-2,34,3,19
+GB,2020-02-19,Wednesday,,Parks,-55,5,1,170,18,609
+GB,2020-02-19,Wednesday,,Transit Stations,-22,-4,-5,23,7,63
+GB,2020-02-19,Wednesday,,Workplaces,-22,-14,-15,4,3,24
+GB,2020-02-19,Wednesday,,Residential,0,3,3,4,0,1
+GB,2020-02-20,Thursday,,Retail and Recreation,-8,6,5,38,4,39
+GB,2020-02-20,Thursday,,Grocery and Pharmacy,-11,-1,-1,36,3,18
+GB,2020-02-20,Thursday,,Parks,-45,1,-3,131,16,498
+GB,2020-02-20,Thursday,,Transit Stations,-23,-5,-5,22,7,60
+GB,2020-02-20,Thursday,,Workplaces,-23,-15,-16,2,3,29
+GB,2020-02-20,Thursday,,Residential,0,3,3,4,0,1
+GB,2020-02-21,Friday,,Retail and Recreation,-15,4,4,22,6,36
+GB,2020-02-21,Friday,,Grocery and Pharmacy,-12,0,0,33,3,16
+GB,2020-02-21,Friday,,Parks,-49,10,8,155,18,556
+GB,2020-02-21,Friday,,Transit Stations,-37,-2,-2,32,7,76
+GB,2020-02-21,Friday,,Workplaces,-25,-15,-16,2,3,25
+GB,2020-02-21,Friday,,Residential,0,3,3,5,0,1
+GB,2020-02-22,Saturday,,Retail and Recreation,-30,-3,-3,58,4,36
+GB,2020-02-22,Saturday,,Grocery and Pharmacy,-17,-1,-1,26,3,13
+GB,2020-02-22,Saturday,,Parks,-62,-7,-7,68,12,226
+GB,2020-02-22,Saturday,,Transit Stations,-25,0,-1,35,7,92
+GB,2020-02-22,Saturday,,Workplaces,-8,-2,-2,8,1,4
+GB,2020-02-22,Saturday,,Residential,-1,0,0,3,0,0
+GB,2020-02-23,Sunday,,Retail and Recreation,-32,-2,-2,90,4,63
+GB,2020-02-23,Sunday,,Grocery and Pharmacy,-14,-1,-1,31,3,12
+GB,2020-02-23,Sunday,,Parks,-59,-7,-8,103,10,228
+GB,2020-02-23,Sunday,,Transit Stations,-26,4,2,87,9,177
+GB,2020-02-23,Sunday,,Workplaces,-8,-1,-1,7,3,6
+GB,2020-02-23,Sunday,,Residential,-1,0,0,1,0,0
+GB,2020-02-24,Monday,,Retail and Recreation,-19,-4,-4,23,3,18
+GB,2020-02-24,Monday,,Grocery and Pharmacy,-16,0,0,32,3,14
+GB,2020-02-24,Monday,,Parks,-54,-10,-11,92,7,151
+GB,2020-02-24,Monday,,Transit Stations,-25,-2,-3,23,4,30
+GB,2020-02-24,Monday,,Workplaces,-32,-2,-1,4,1,11
+GB,2020-02-24,Monday,,Residential,0,1,1,11,0,1
+GB,2020-02-25,Tuesday,,Retail and Recreation,-20,0,0,27,3,19
+GB,2020-02-25,Tuesday,,Grocery and Pharmacy,-5,6,6,38,3,13
+GB,2020-02-25,Tuesday,,Parks,-42,3,1,141,7,195
+GB,2020-02-25,Tuesday,,Transit Stations,-19,0,0,25,4,27
+GB,2020-02-25,Tuesday,,Workplaces,-15,1,1,7,1,3
+GB,2020-02-25,Tuesday,,Residential,-1,0,0,3,0,0
+GB,2020-02-26,Wednesday,,Retail and Recreation,-14,1,0,33,3,15
+GB,2020-02-26,Wednesday,,Grocery and Pharmacy,-11,0,0,25,3,10
+GB,2020-02-26,Wednesday,,Parks,-47,4,3,132,9,217
+GB,2020-02-26,Wednesday,,Transit Stations,-19,-1,-1,24,4,27
+GB,2020-02-26,Wednesday,,Workplaces,-15,1,1,6,1,3
+GB,2020-02-26,Wednesday,,Residential,0,0,0,3,0,0
+GB,2020-02-27,Thursday,,Retail and Recreation,-11,2,2,37,3,22
+GB,2020-02-27,Thursday,,Grocery and Pharmacy,-9,2,2,19,3,9
+GB,2020-02-27,Thursday,,Parks,-41,4,3,146,10,258
+GB,2020-02-27,Thursday,,Transit Stations,-24,0,0,17,4,29
+GB,2020-02-27,Thursday,,Workplaces,-16,0,0,6,1,3
+GB,2020-02-27,Thursday,,Residential,-1,1,1,3,1,0
+GB,2020-02-28,Friday,,Retail and Recreation,-24,-1,0,17,4,20
+GB,2020-02-28,Friday,,Grocery and Pharmacy,-18,2,2,23,3,13
+GB,2020-02-28,Friday,,Parks,-63,-14,-14,113,10,206
+GB,2020-02-28,Friday,,Transit Stations,-27,0,0,20,6,35
+GB,2020-02-28,Friday,,Workplaces,-16,-1,-1,4,1,3
+GB,2020-02-28,Friday,,Residential,-1,1,1,3,0,0
+GB,2020-02-29,Saturday,,Retail and Recreation,-26,2,2,58,4,37
+GB,2020-02-29,Saturday,,Grocery and Pharmacy,-17,3,3,26,3,16
+GB,2020-02-29,Saturday,,Parks,-55,-16,-17,64,12,178
+GB,2020-02-29,Saturday,,Transit Stations,-40,-2,-2,39,7,79
+GB,2020-02-29,Saturday,,Workplaces,-8,1,1,9,1,6
+GB,2020-02-29,Saturday,,Residential,-1,0,0,2,0,0
+GB,2020-03-01,Sunday,,Retail and Recreation,-25,7,6,62,4,42
+GB,2020-03-01,Sunday,,Grocery and Pharmacy,-17,3,3,27,3,18
+GB,2020-03-01,Sunday,,Parks,-73,10,10,143,16,386
+GB,2020-03-01,Sunday,,Transit Stations,-41,5,5,72,9,134
+GB,2020-03-01,Sunday,,Workplaces,-7,1,1,10,3,7
+GB,2020-03-01,Sunday,,Residential,-2,-1,-1,0,0,0
+GB,2020-03-02,Monday,,Retail and Recreation,-19,5,4,27,3,21
+GB,2020-03-02,Monday,,Grocery and Pharmacy,-18,5,4,22,3,13
+GB,2020-03-02,Monday,,Parks,-38,13,12,167,10,282
+GB,2020-03-02,Monday,,Transit Stations,-18,2,2,29,5,34
+GB,2020-03-02,Monday,,Workplaces,-3,1,1,6,1,2
+GB,2020-03-02,Monday,,Residential,-1,0,0,2,0,0
+GB,2020-03-03,Tuesday,,Retail and Recreation,-12,4,4,21,4,21
+GB,2020-03-03,Tuesday,,Grocery and Pharmacy,-14,4,4,30,3,11
+GB,2020-03-03,Tuesday,,Parks,-41,11,9,138,10,272
+GB,2020-03-03,Tuesday,,Transit Stations,-16,0,0,21,4,28
+GB,2020-03-03,Tuesday,,Workplaces,-2,1,1,8,1,2
+GB,2020-03-03,Tuesday,,Residential,-1,0,0,1,0,0
+GB,2020-03-04,Wednesday,,Retail and Recreation,-14,2,2,38,4,27
+GB,2020-03-04,Wednesday,,Grocery and Pharmacy,-14,4,4,19,3,12
+GB,2020-03-04,Wednesday,,Parks,-45,1,-2,184,13,379
+GB,2020-03-04,Wednesday,,Transit Stations,-22,0,-1,20,4,30
+GB,2020-03-04,Wednesday,,Workplaces,-3,1,1,5,1,2
+GB,2020-03-04,Wednesday,,Residential,-1,1,1,2,1,0
+GB,2020-03-05,Thursday,,Retail and Recreation,-16,0,1,36,6,45
+GB,2020-03-05,Thursday,,Grocery and Pharmacy,-17,3,4,23,3,22
+GB,2020-03-05,Thursday,,Parks,-50,0,-1,173,20,536
+GB,2020-03-05,Thursday,,Transit Stations,-21,-1,-1,30,6,37
+GB,2020-03-05,Thursday,,Workplaces,-4,0,0,5,1,2
+GB,2020-03-05,Thursday,,Residential,-1,1,1,3,1,1
+GB,2020-03-06,Friday,,Retail and Recreation,-9,5,4,76,4,34
+GB,2020-03-06,Friday,,Grocery and Pharmacy,-14,6,6,26,3,17
+GB,2020-03-06,Friday,,Parks,-29,26,23,254,12,477
+GB,2020-03-06,Friday,,Transit Stations,-19,4,3,30,6,43
+GB,2020-03-06,Friday,,Workplaces,-4,1,1,6,1,2
+GB,2020-03-06,Friday,,Residential,-1,0,0,2,0,0
+GB,2020-03-07,Saturday,,Retail and Recreation,-18,1,1,87,4,52
+GB,2020-03-07,Saturday,,Grocery and Pharmacy,-16,4,3,27,3,19
+GB,2020-03-07,Saturday,,Parks,-41,9,7,139,10,312
+GB,2020-03-07,Saturday,,Transit Stations,-34,3,3,66,7,75
+GB,2020-03-07,Saturday,,Workplaces,-5,2,2,11,1,5
+GB,2020-03-07,Saturday,,Residential,-1,0,0,2,0,0
+GB,2020-03-08,Sunday,,Retail and Recreation,-12,5,4,40,6,52
+GB,2020-03-08,Sunday,,Grocery and Pharmacy,-17,4,3,23,3,20
+GB,2020-03-08,Sunday,,Parks,-46,15,13,195,16,536
+GB,2020-03-08,Sunday,,Transit Stations,-33,5,4,39,10,117
+GB,2020-03-08,Sunday,,Workplaces,-6,1,1,13,3,7
+GB,2020-03-08,Sunday,,Residential,-2,-1,-1,1,0,0
+GB,2020-03-09,Monday,,Retail and Recreation,-12,0,0,18,4,21
+GB,2020-03-09,Monday,,Grocery and Pharmacy,-18,4,4,23,3,17
+GB,2020-03-09,Monday,,Parks,-41,5,4,132,12,279
+GB,2020-03-09,Monday,,Transit Stations,-21,-1,-2,27,4,36
+GB,2020-03-09,Monday,,Workplaces,-6,0,0,6,1,2
+GB,2020-03-09,Monday,,Residential,-1,1,1,3,0,0
+GB,2020-03-10,Tuesday,,Retail and Recreation,-16,0,0,32,4,24
+GB,2020-03-10,Tuesday,,Grocery and Pharmacy,-11,6,6,26,3,14
+GB,2020-03-10,Tuesday,,Parks,-41,5,4,142,10,288
+GB,2020-03-10,Tuesday,,Transit Stations,-20,-2,-2,59,6,42
+GB,2020-03-10,Tuesday,,Workplaces,-5,0,0,7,1,3
+GB,2020-03-10,Tuesday,,Residential,0,1,1,4,0,0
+GB,2020-03-11,Wednesday,,Retail and Recreation,-17,0,0,24,3,21
+GB,2020-03-11,Wednesday,,Grocery and Pharmacy,-10,6,5,27,3,17
+GB,2020-03-11,Wednesday,,Parks,-43,10,9,158,10,308
+GB,2020-03-11,Wednesday,,Transit Stations,-21,-4,-4,45,5,43
+GB,2020-03-11,Wednesday,,Workplaces,-7,0,0,5,1,3
+GB,2020-03-11,Wednesday,,Residential,0,1,1,4,0,0
+GB,2020-03-12,Thursday,,Retail and Recreation,-22,0,0,29,4,29
+GB,2020-03-12,Thursday,,Grocery and Pharmacy,-11,12,12,30,4,28
+GB,2020-03-12,Thursday,,Parks,-38,6,5,159,12,312
+GB,2020-03-12,Thursday,,Transit Stations,-25,-5,-5,74,6,63
+GB,2020-03-12,Thursday,,Workplaces,-15,-1,-1,4,1,6
+GB,2020-03-12,Thursday,,Residential,0,2,1,6,0,1
+GB,2020-03-13,Friday,,Retail and Recreation,-30,-1,-1,27,6,43
+GB,2020-03-13,Friday,,Grocery and Pharmacy,-15,12,12,26,4,26
+GB,2020-03-13,Friday,,Parks,-38,17,14,215,13,589
+GB,2020-03-13,Friday,,Transit Stations,-33,-4,-5,88,7,102
+GB,2020-03-13,Friday,,Workplaces,-23,-4,-3,4,1,11
+GB,2020-03-13,Friday,,Residential,0,2,2,9,1,2
+GB,2020-03-14,Saturday,,Retail and Recreation,-36,-6,-6,45,7,68
+GB,2020-03-14,Saturday,,Grocery and Pharmacy,-15,10,9,32,4,31
+GB,2020-03-14,Saturday,,Parks,-43,4,1,144,12,440
+GB,2020-03-14,Saturday,,Transit Stations,-34,-10,-10,48,9,107
+GB,2020-03-14,Saturday,,Workplaces,-11,-2,-2,15,3,7
+GB,2020-03-14,Saturday,,Residential,0,2,2,6,1,1
+GB,2020-03-15,Sunday,,Retail and Recreation,-43,-8,-9,40,10,106
+GB,2020-03-15,Sunday,,Grocery and Pharmacy,-24,9,9,30,4,38
+GB,2020-03-15,Sunday,,Parks,-54,-2,-6,141,21,603
+GB,2020-03-15,Sunday,,Transit Stations,-44,-10,-10,39,12,148
+GB,2020-03-15,Sunday,,Workplaces,-16,-4,-4,6,3,11
+GB,2020-03-15,Sunday,,Residential,0,2,2,6,1,1
+GB,2020-03-16,Monday,,Retail and Recreation,-40,-1,0,28,7,69
+GB,2020-03-16,Monday,,Grocery and Pharmacy,-20,22,22,46,6,43
+GB,2020-03-16,Monday,,Parks,-42,31,26,221,21,791
+GB,2020-03-16,Monday,,Transit Stations,-44,-10,-10,44,10,121
+GB,2020-03-16,Monday,,Workplaces,-38,-8,-6,0,3,34
+GB,2020-03-16,Monday,,Residential,0,3,3,12,1,4
+GB,2020-03-17,Tuesday,,Retail and Recreation,-62,-11,-10,20,6,87
+GB,2020-03-17,Tuesday,,Grocery and Pharmacy,-40,24,25,45,6,73
+GB,2020-03-17,Tuesday,,Parks,-60,9,8,214,14,532
+GB,2020-03-17,Tuesday,,Transit Stations,-56,-21,-20,21,12,146
+GB,2020-03-17,Tuesday,,Workplaces,-66,-15,-12,-3,6,106
+GB,2020-03-17,Tuesday,,Residential,2,7,6,21,1,11
+GB,2020-03-18,Wednesday,,Retail and Recreation,-73,-18,-17,5,7,88
+GB,2020-03-18,Wednesday,,Grocery and Pharmacy,-46,25,25,60,7,104
+GB,2020-03-18,Wednesday,,Parks,-65,-3,-4,127,22,498
+GB,2020-03-18,Wednesday,,Transit Stations,-66,-28,-28,15,12,132
+GB,2020-03-18,Wednesday,,Workplaces,-62,-21,-19,-7,6,69
+GB,2020-03-18,Wednesday,,Residential,4,10,9,24,3,10
+GB,2020-03-19,Thursday,,Retail and Recreation,-78,-18,-17,8,9,115
+GB,2020-03-19,Thursday,,Grocery and Pharmacy,-47,27,27,62,9,114
+GB,2020-03-19,Thursday,,Parks,-74,4,0,206,22,723
+GB,2020-03-19,Thursday,,Transit Stations,-70,-29,-29,11,15,184
+GB,2020-03-19,Thursday,,Workplaces,-63,-25,-23,-9,6,76
+GB,2020-03-19,Thursday,,Residential,4,11,10,25,3,13
+GB,2020-03-20,Friday,,Retail and Recreation,-82,-25,-24,3,9,115
+GB,2020-03-20,Friday,,Grocery and Pharmacy,-54,12,12,43,6,67
+GB,2020-03-20,Friday,,Parks,-77,12,11,266,18,691
+GB,2020-03-20,Friday,,Transit Stations,-73,-31,-31,15,15,186
+GB,2020-03-20,Friday,,Workplaces,-64,-27,-25,-12,6,75
+GB,2020-03-20,Friday,,Residential,6,12,11,28,3,14
+GB,2020-03-21,Saturday,,Retail and Recreation,-90,-46,-45,-16,9,99
+GB,2020-03-21,Saturday,,Grocery and Pharmacy,-53,6,6,41,7,95
+GB,2020-03-21,Saturday,,Parks,-86,11,12,209,21,719
+GB,2020-03-21,Saturday,,Transit Stations,-79,-36,-36,21,15,236
+GB,2020-03-21,Saturday,,Workplaces,-48,-24,-23,-9,4,30
+GB,2020-03-21,Saturday,,Residential,7,10,10,18,1,4
+GB,2020-03-22,Sunday,,Retail and Recreation,-89,-54,-53,-23,7,78
+GB,2020-03-22,Sunday,,Grocery and Pharmacy,-67,-12,-12,26,6,66
+GB,2020-03-22,Sunday,,Parks,-86,24,22,277,24,1010
+GB,2020-03-22,Sunday,,Transit Stations,-82,-32,-32,48,21,417
+GB,2020-03-22,Sunday,,Workplaces,-52,-29,-28,-14,6,39
+GB,2020-03-22,Sunday,,Residential,5,8,8,16,1,5
+GB,2020-03-23,Monday,,Retail and Recreation,-87,-42,-41,-20,7,82
+GB,2020-03-23,Monday,,Grocery and Pharmacy,-70,-7,-6,24,5,55
+GB,2020-03-23,Monday,,Parks,-82,7,7,193,18,597
+GB,2020-03-23,Monday,,Transit Stations,-79,-44,-44,-3,13,172
+GB,2020-03-23,Monday,,Workplaces,-76,-44,-42,-25,7,80
+GB,2020-03-23,Monday,,Residential,9,17,16,32,3,15
+GB,2020-03-24,Tuesday,,Retail and Recreation,-94,-70,-69,-50,6,32
+GB,2020-03-24,Tuesday,,Grocery and Pharmacy,-79,-23,-23,-4,4,40
+GB,2020-03-24,Tuesday,,Parks,-88,-10,-11,152,18,478
+GB,2020-03-24,Tuesday,,Transit Stations,-87,-58,-58,-13,10,122
+GB,2020-03-24,Tuesday,,Workplaces,-82,-57,-56,-36,7,59
+GB,2020-03-24,Tuesday,,Residential,14,23,23,37,3,14
+GB,2020-03-25,Wednesday,,Retail and Recreation,-95,-72,-73,-54,4,27
+GB,2020-03-25,Wednesday,,Grocery and Pharmacy,-82,-26,-26,-6,4,40
+GB,2020-03-25,Wednesday,,Parks,-88,-7,-7,161,19,572
+GB,2020-03-25,Wednesday,,Transit Stations,-90,-62,-62,-19,12,115
+GB,2020-03-25,Wednesday,,Workplaces,-85,-63,-62,-41,6,45
+GB,2020-03-25,Wednesday,,Residential,17,26,25,39,3,13
+GB,2020-03-26,Thursday,,Retail and Recreation,-96,-73,-73,-56,4,27
+GB,2020-03-26,Thursday,,Grocery and Pharmacy,-83,-28,-28,-12,4,39
+GB,2020-03-26,Thursday,,Parks,-91,-6,-8,141,21,570
+GB,2020-03-26,Thursday,,Transit Stations,-92,-63,-64,-25,12,116
+GB,2020-03-26,Thursday,,Workplaces,-85,-65,-64,-43,6,40
+GB,2020-03-26,Thursday,,Residential,17,27,26,40,3,14
+GB,2020-03-27,Friday,,Retail and Recreation,-96,-75,-75,-56,4,25
+GB,2020-03-27,Friday,,Grocery and Pharmacy,-83,-30,-29,-8,4,42
+GB,2020-03-27,Friday,,Parks,-91,-19,-21,96,19,466
+GB,2020-03-27,Friday,,Transit Stations,-92,-65,-65,-32,9,96
+GB,2020-03-27,Friday,,Workplaces,-84,-65,-65,-43,6,35
+GB,2020-03-27,Friday,,Residential,19,28,27,41,3,12
+GB,2020-03-28,Saturday,,Retail and Recreation,-96,-83,-83,-61,4,18
+GB,2020-03-28,Saturday,,Grocery and Pharmacy,-74,-39,-40,-20,4,40
+GB,2020-03-28,Saturday,,Parks,-93,-50,-51,4,15,221
+GB,2020-03-28,Saturday,,Transit Stations,-93,-69,-69,-37,7,68
+GB,2020-03-28,Saturday,,Workplaces,-71,-56,-56,-37,3,19
+GB,2020-03-28,Saturday,,Residential,16,20,19,25,1,4
+GB,2020-03-29,Sunday,,Retail and Recreation,-100,-85,-86,-63,3,16
+GB,2020-03-29,Sunday,,Grocery and Pharmacy,-80,-47,-47,-29,4,30
+GB,2020-03-29,Sunday,,Parks,-93,-51,-52,14,13,221
+GB,2020-03-29,Sunday,,Transit Stations,-95,-69,-70,-37,9,94
+GB,2020-03-29,Sunday,,Workplaces,-70,-55,-54,-35,4,28
+GB,2020-03-29,Sunday,,Residential,13,16,15,21,1,3
+GB,2020-03-30,Monday,,Retail and Recreation,-95,-74,-74,-55,4,28
+GB,2020-03-30,Monday,,Grocery and Pharmacy,-84,-33,-32,-16,4,38
+GB,2020-03-30,Monday,,Parks,-90,-28,-29,63,15,307
+GB,2020-03-30,Monday,,Transit Stations,-93,-67,-67,-34,10,88
+GB,2020-03-30,Monday,,Workplaces,-86,-68,-67,-47,4,34
+GB,2020-03-30,Monday,,Residential,18,26,26,38,3,12
+GB,2020-03-31,Tuesday,,Retail and Recreation,-96,-73,-73,-55,4,28
+GB,2020-03-31,Tuesday,,Grocery and Pharmacy,-84,-30,-30,-12,4,41
+GB,2020-03-31,Tuesday,,Parks,-92,-15,-17,101,18,422
+GB,2020-03-31,Tuesday,,Transit Stations,-93,-66,-66,-25,10,97
+GB,2020-03-31,Tuesday,,Workplaces,-86,-68,-68,-47,4,33
+GB,2020-03-31,Tuesday,,Residential,18,27,26,39,3,13
+GB,2020-04-01,Wednesday,,Retail and Recreation,-96,-75,-75,-58,4,26
+GB,2020-04-01,Wednesday,,Grocery and Pharmacy,-85,-33,-33,-16,4,38
+GB,2020-04-01,Wednesday,,Parks,-92,-24,-25,61,16,355
+GB,2020-04-01,Wednesday,,Transit Stations,-93,-68,-67,-37,10,85
+GB,2020-04-01,Wednesday,,Workplaces,-85,-68,-68,-47,4,32
+GB,2020-04-01,Wednesday,,Residential,18,28,27,40,3,13
+GB,2020-04-02,Thursday,,Retail and Recreation,-97,-75,-74,-58,4,26
+GB,2020-04-02,Thursday,,Grocery and Pharmacy,-85,-32,-31,-14,4,38
+GB,2020-04-02,Thursday,,Parks,-93,-20,-21,46,19,433
+GB,2020-04-02,Thursday,,Transit Stations,-93,-68,-68,-31,10,95
+GB,2020-04-02,Thursday,,Workplaces,-86,-69,-68,-48,4,32
+GB,2020-04-02,Thursday,,Residential,18,28,28,41,3,13
+GB,2020-04-03,Friday,,Retail and Recreation,-97,-76,-76,-57,4,27
+GB,2020-04-03,Friday,,Grocery and Pharmacy,-84,-31,-31,-14,4,40
+GB,2020-04-03,Friday,,Parks,-92,-17,-20,72,21,550
+GB,2020-04-03,Friday,,Transit Stations,-93,-66,-66,-26,10,102
+GB,2020-04-03,Friday,,Workplaces,-84,-68,-67,-47,4,30
+GB,2020-04-03,Friday,,Residential,19,28,28,41,3,11
+GB,2020-04-04,Saturday,,Retail and Recreation,-96,-81,-82,-60,4,22
+GB,2020-04-04,Saturday,,Grocery and Pharmacy,-74,-37,-37,-14,6,40
+GB,2020-04-04,Saturday,,Parks,-91,-32,-35,62,24,545
+GB,2020-04-04,Saturday,,Transit Stations,-93,-66,-66,-19,9,100
+GB,2020-04-04,Saturday,,Workplaces,-70,-56,-56,-36,4,20
+GB,2020-04-04,Saturday,,Residential,15,19,19,24,1,3
+GB,2020-04-05,Sunday,,Retail and Recreation,-95,-82,-83,-64,4,20
+GB,2020-04-05,Sunday,,Grocery and Pharmacy,-75,-42,-42,-21,4,32
+GB,2020-04-05,Sunday,,Parks,-87,-27,-30,67,21,599
+GB,2020-04-05,Sunday,,Transit Stations,-95,-63,-63,-24,12,145
+GB,2020-04-05,Sunday,,Workplaces,-69,-53,-53,-37,4,25
+GB,2020-04-05,Sunday,,Residential,12,15,14,19,1,2
+GB,2020-04-06,Monday,,Retail and Recreation,-96,-72,-72,-53,4,32
+GB,2020-04-06,Monday,,Grocery and Pharmacy,-85,-32,-31,-16,4,39
+GB,2020-04-06,Monday,,Parks,-92,-16,-18,83,20,453
+GB,2020-04-06,Monday,,Transit Stations,-93,-65,-65,-27,10,106
+GB,2020-04-06,Monday,,Workplaces,-85,-69,-68,-47,4,33
+GB,2020-04-06,Monday,,Residential,18,26,26,38,3,12
+GB,2020-04-07,Tuesday,,Retail and Recreation,-97,-73,-72,-53,6,32
+GB,2020-04-07,Tuesday,,Grocery and Pharmacy,-84,-29,-29,-13,4,42
+GB,2020-04-07,Tuesday,,Parks,-90,-2,-6,137,21,740
+GB,2020-04-07,Tuesday,,Transit Stations,-93,-62,-62,-23,13,141
+GB,2020-04-07,Tuesday,,Workplaces,-87,-69,-69,-47,6,33
+GB,2020-04-07,Tuesday,,Residential,17,27,26,39,3,13
+GB,2020-04-08,Wednesday,,Retail and Recreation,-97,-73,-73,-53,6,33
+GB,2020-04-08,Wednesday,,Grocery and Pharmacy,-84,-28,-27,-7,6,46
+GB,2020-04-08,Wednesday,,Parks,-90,-9,-11,102,22,587
+GB,2020-04-08,Wednesday,,Transit Stations,-93,-63,-63,-22,13,134
+GB,2020-04-08,Wednesday,,Workplaces,-87,-69,-68,-49,4,31
+GB,2020-04-08,Wednesday,,Residential,18,27,27,39,3,12
+GB,2020-04-09,Thursday,,Retail and Recreation,-97,-70,-70,-49,6,41
+GB,2020-04-09,Thursday,,Grocery and Pharmacy,-82,-20,-20,-2,6,56
+GB,2020-04-09,Thursday,,Parks,-90,-8,-11,87,24,679
+GB,2020-04-09,Thursday,,Transit Stations,-93,-62,-62,-21,13,146
+GB,2020-04-09,Thursday,,Workplaces,-85,-69,-68,-50,4,30
+GB,2020-04-09,Thursday,,Residential,17,27,27,39,3,13
+GB,2020-04-10,Friday,Good Friday,Retail and Recreation,-98,-78,-78,-61,4,28
+GB,2020-04-10,Friday,Good Friday,Grocery and Pharmacy,-88,-34,-35,-14,6,52
+GB,2020-04-10,Friday,Good Friday,Parks,-93,-11,-14,84,28,776
+GB,2020-04-10,Friday,Good Friday,Transit Stations,-96,-69,-69,-23,10,112
+GB,2020-04-10,Friday,Good Friday,Workplaces,-90,-80,-80,-61,4,23
+GB,2020-04-10,Friday,Good Friday,Residential,23,32,31,42,3,11
+GB,2020-04-11,Saturday,,Retail and Recreation,-96,-80,-81,-56,4,24
+GB,2020-04-11,Saturday,,Grocery and Pharmacy,-72,-33,-33,-8,6,51
+GB,2020-04-11,Saturday,,Parks,-89,-31,-34,54,22,514
+GB,2020-04-11,Saturday,,Transit Stations,-95,-63,-63,-16,12,138
+GB,2020-04-11,Saturday,,Workplaces,-70,-57,-56,-41,3,16
+GB,2020-04-11,Saturday,,Residential,15,19,18,24,1,4
+GB,2020-04-12,Sunday,,Retail and Recreation,-97,-90,-91,-75,3,14
+GB,2020-04-12,Sunday,,Grocery and Pharmacy,-82,-65,-67,-27,7,89
+GB,2020-04-12,Sunday,,Parks,-88,-30,-32,48,22,550
+GB,2020-04-12,Sunday,,Transit Stations,-95,-64,-64,-25,13,172
+GB,2020-04-12,Sunday,,Workplaces,-72,-58,-58,-42,4,19
+GB,2020-04-12,Sunday,,Residential,13,16,16,20,1,3
+GB,2020-04-13,Monday,Easter Monday,Retail and Recreation,-99,-79,-79,-64,4,23
+GB,2020-04-13,Monday,Easter Monday,Grocery and Pharmacy,-91,-42,-42,-24,4,34
+GB,2020-04-13,Monday,Easter Monday,Parks,-96,-18,-22,69,23,624
+GB,2020-04-13,Monday,Easter Monday,Transit Stations,-97,-73,-74,-43,10,88
+GB,2020-04-13,Monday,Easter Monday,Workplaces,-91,-83,-83,-65,4,18
+GB,2020-04-13,Monday,Easter Monday,Residential,23,31,31,40,3,10
+GB,2020-04-14,Tuesday,,Retail and Recreation,-97,-70,-70,-49,6,38
+GB,2020-04-14,Tuesday,,Grocery and Pharmacy,-83,-26,-26,-9,6,47
+GB,2020-04-14,Tuesday,,Parks,-91,-5,-8,131,22,675
+GB,2020-04-14,Tuesday,,Transit Stations,-93,-62,-61,-21,13,141
+GB,2020-04-14,Tuesday,,Workplaces,-85,-69,-68,-48,4,33
+GB,2020-04-14,Tuesday,,Residential,17,26,26,38,3,13
+GB,2020-04-15,Wednesday,,Retail and Recreation,-97,-71,-71,-52,6,36
+GB,2020-04-15,Wednesday,,Grocery and Pharmacy,-83,-28,-27,-10,4,44
+GB,2020-04-15,Wednesday,,Parks,-91,-1,-4,109,25,744
+GB,2020-04-15,Wednesday,,Transit Stations,-93,-61,-61,-22,13,144
+GB,2020-04-15,Wednesday,,Workplaces,-84,-68,-67,-47,4,31
+GB,2020-04-15,Wednesday,,Residential,18,27,27,39,3,12
+GB,2020-04-16,Thursday,,Retail and Recreation,-97,-72,-71,-54,6,34
+GB,2020-04-16,Thursday,,Grocery and Pharmacy,-84,-28,-28,-7,4,44
+GB,2020-04-16,Thursday,,Parks,-93,-2,-4,108,26,685
+GB,2020-04-16,Thursday,,Transit Stations,-93,-62,-62,-14,13,161
+GB,2020-04-16,Thursday,,Workplaces,-84,-68,-67,-47,4,31
+GB,2020-04-16,Thursday,,Residential,17,27,27,40,3,13
+GB,2020-04-17,Friday,,Retail and Recreation,-97,-75,-75,-55,6,35
+GB,2020-04-17,Friday,,Grocery and Pharmacy,-83,-31,-31,-9,6,49
+GB,2020-04-17,Friday,,Parks,-93,-25,-27,101,22,533
+GB,2020-04-17,Friday,,Transit Stations,-93,-64,-65,-22,12,135
+GB,2020-04-17,Friday,,Workplaces,-84,-67,-66,-49,4,29
+GB,2020-04-17,Friday,,Residential,19,28,28,42,3,12
+GB,2020-04-18,Saturday,,Retail and Recreation,-97,-80,-81,-58,4,25
+GB,2020-04-18,Saturday,,Grocery and Pharmacy,-74,-36,-36,-12,6,47
+GB,2020-04-18,Saturday,,Parks,-93,-41,-43,32,19,421
+GB,2020-04-18,Saturday,,Transit Stations,-94,-65,-65,-28,10,121
+GB,2020-04-18,Saturday,,Workplaces,-66,-53,-53,-34,4,18
+GB,2020-04-18,Saturday,,Residential,15,19,19,25,1,4
+GB,2020-04-19,Sunday,,Retail and Recreation,-95,-80,-80,-62,4,23
+GB,2020-04-19,Sunday,,Grocery and Pharmacy,-72,-40,-40,-17,6,37
+GB,2020-04-19,Sunday,,Parks,-87,-7,-10,105,28,895
+GB,2020-04-19,Sunday,,Transit Stations,-95,-57,-57,-4,16,236
+GB,2020-04-19,Sunday,,Workplaces,-65,-48,-48,-34,4,26
+GB,2020-04-19,Sunday,,Residential,12,14,14,19,1,3
+GB,2020-04-20,Monday,,Retail and Recreation,-96,-69,-69,-51,6,38
+GB,2020-04-20,Monday,,Grocery and Pharmacy,-84,-30,-30,-7,4,41
+GB,2020-04-20,Monday,,Parks,-91,4,3,104,25,835
+GB,2020-04-20,Monday,,Transit Stations,-92,-60,-59,-14,13,165
+GB,2020-04-20,Monday,,Workplaces,-83,-65,-65,-45,6,37
+GB,2020-04-20,Monday,,Residential,17,25,25,36,3,11
+GB,2020-04-21,Tuesday,,Retail and Recreation,-97,-70,-70,-50,6,37
+GB,2020-04-21,Tuesday,,Grocery and Pharmacy,-84,-27,-27,-7,4,46
+GB,2020-04-21,Tuesday,,Parks,-90,8,6,164,27,918
+GB,2020-04-21,Tuesday,,Transit Stations,-93,-59,-59,-18,15,169
+GB,2020-04-21,Tuesday,,Workplaces,-84,-66,-65,-44,6,36
+GB,2020-04-21,Tuesday,,Residential,17,26,26,38,4,13
+GB,2020-04-22,Wednesday,,Retail and Recreation,-97,-71,-70,-52,4,36
+GB,2020-04-22,Wednesday,,Grocery and Pharmacy,-83,-28,-27,-9,4,42
+GB,2020-04-22,Wednesday,,Parks,-90,7,3,142,27,917
+GB,2020-04-22,Wednesday,,Transit Stations,-93,-59,-59,-17,15,173
+GB,2020-04-22,Wednesday,,Workplaces,-84,-65,-65,-47,6,34
+GB,2020-04-22,Wednesday,,Residential,17,26,26,38,3,12
+GB,2020-04-23,Thursday,,Retail and Recreation,-97,-70,-69,-51,6,38
+GB,2020-04-23,Thursday,,Grocery and Pharmacy,-84,-26,-26,-9,4,43
+GB,2020-04-23,Thursday,,Parks,-91,12,9,140,30,1060
+GB,2020-04-23,Thursday,,Transit Stations,-93,-59,-58,-15,15,186
+GB,2020-04-23,Thursday,,Workplaces,-84,-65,-65,-46,6,34
+GB,2020-04-23,Thursday,,Residential,17,26,26,39,3,13
+GB,2020-04-24,Friday,,Retail and Recreation,-97,-71,-71,-49,6,36
+GB,2020-04-24,Friday,,Grocery and Pharmacy,-82,-26,-26,0,6,47
+GB,2020-04-24,Friday,,Parks,-90,7,4,161,30,994
+GB,2020-04-24,Friday,,Transit Stations,-92,-58,-59,-14,14,178
+GB,2020-04-24,Friday,,Workplaces,-82,-64,-64,-47,4,31
+GB,2020-04-24,Friday,,Residential,18,27,26,39,3,11
+GB,2020-04-25,Saturday,,Retail and Recreation,-96,-77,-77,-53,4,30
+GB,2020-04-25,Saturday,,Grocery and Pharmacy,-71,-31,-31,-6,6,49
+GB,2020-04-25,Saturday,,Parks,-88,-14,-17,76,30,769
+GB,2020-04-25,Saturday,,Transit Stations,-93,-57,-57,-7,13,191
+GB,2020-04-25,Saturday,,Workplaces,-65,-50,-50,-37,4,18
+GB,2020-04-25,Saturday,,Residential,14,17,17,24,1,4
+GB,2020-04-26,Sunday,,Retail and Recreation,-95,-78,-78,-59,4,28
+GB,2020-04-26,Sunday,,Grocery and Pharmacy,-72,-37,-37,-14,4,40
+GB,2020-04-26,Sunday,,Parks,-82,-5,-9,122,33,1071
+GB,2020-04-26,Sunday,,Transit Stations,-94,-54,-54,-8,16,247
+GB,2020-04-26,Sunday,,Workplaces,-64,-47,-46,-32,4,25
+GB,2020-04-26,Sunday,,Residential,11,14,13,18,1,2
+GB,2020-04-27,Monday,,Retail and Recreation,-96,-67,-67,-47,6,43
+GB,2020-04-27,Monday,,Grocery and Pharmacy,-83,-28,-28,-7,4,43
+GB,2020-04-27,Monday,,Parks,-91,5,2,125,25,856
+GB,2020-04-27,Monday,,Transit Stations,-92,-57,-57,-14,15,183
+GB,2020-04-27,Monday,,Workplaces,-82,-64,-63,-45,6,38
+GB,2020-04-27,Monday,,Residential,16,25,24,36,3,11
+GB,2020-04-28,Tuesday,,Retail and Recreation,-97,-72,-72,-52,6,40
+GB,2020-04-28,Tuesday,,Grocery and Pharmacy,-87,-32,-32,-14,6,54
+GB,2020-04-28,Tuesday,,Parks,-93,-38,-41,79,16,387
+GB,2020-04-28,Tuesday,,Transit Stations,-92,-64,-64,-26,13,140
+GB,2020-04-28,Tuesday,,Workplaces,-84,-65,-65,-44,6,39
+GB,2020-04-28,Tuesday,,Residential,17,26,26,40,4,18
+GB,2020-04-29,Wednesday,,Retail and Recreation,-97,-71,-71,-50,4,34
+GB,2020-04-29,Wednesday,,Grocery and Pharmacy,-83,-28,-28,-11,4,41
+GB,2020-04-29,Wednesday,,Parks,-91,-25,-27,74,16,354
+GB,2020-04-29,Wednesday,,Transit Stations,-92,-62,-62,-28,13,134
+GB,2020-04-29,Wednesday,,Workplaces,-84,-65,-64,-45,6,36
+GB,2020-04-29,Wednesday,,Residential,17,27,26,39,3,12
+GB,2020-04-30,Thursday,,Retail and Recreation,-98,-72,-72,-53,6,37
+GB,2020-04-30,Thursday,,Grocery and Pharmacy,-85,-27,-27,-11,6,48
+GB,2020-04-30,Thursday,,Parks,-92,-25,-26,77,16,330
+GB,2020-04-30,Thursday,,Transit Stations,-92,-62,-61,11,13,155
+GB,2020-04-30,Thursday,,Workplaces,-84,-65,-64,-45,6,37
+GB,2020-04-30,Thursday,,Residential,17,27,26,40,3,14
+GB,2020-05-01,Friday,,Retail and Recreation,-97,-73,-72,-52,4,34
+GB,2020-05-01,Friday,,Grocery and Pharmacy,-82,-26,-26,-3,6,44
+GB,2020-05-01,Friday,,Parks,-89,-13,-14,92,22,502
+GB,2020-05-01,Friday,,Transit Stations,-92,-59,-59,36,13,188
+GB,2020-05-01,Friday,,Workplaces,-82,-63,-63,-46,4,33
+GB,2020-05-01,Friday,,Residential,18,27,26,40,3,11
+GB,2020-05-02,Saturday,,Retail and Recreation,-96,-77,-77,-54,4,31
+GB,2020-05-02,Saturday,,Grocery and Pharmacy,-71,-29,-29,-4,6,48
+GB,2020-05-02,Saturday,,Parks,-84,-8,-11,95,31,872
+GB,2020-05-02,Saturday,,Transit Stations,-93,-54,-54,30,13,216
+GB,2020-05-02,Saturday,,Workplaces,-63,-48,-48,-32,3,20
+GB,2020-05-02,Saturday,,Residential,13,17,17,22,1,3
+GB,2020-05-03,Sunday,,Retail and Recreation,-97,-79,-79,-59,4,30
+GB,2020-05-03,Sunday,,Grocery and Pharmacy,-75,-36,-37,-16,6,41
+GB,2020-05-03,Sunday,,Parks,-87,-15,-18,91,24,693
+GB,2020-05-03,Sunday,,Transit Stations,-95,-54,-54,14,18,281
+GB,2020-05-03,Sunday,,Workplaces,-63,-45,-45,-31,4,28
+GB,2020-05-03,Sunday,,Residential,11,14,13,19,1,3
+GB,2020-05-04,Monday,May Day (Early May Bank Holiday),Retail and Recreation,-97,-67,-67,-47,6,45
+GB,2020-05-04,Monday,May Day (Early May Bank Holiday),Grocery and Pharmacy,-83,-26,-26,-7,6,44
+GB,2020-05-04,Monday,May Day (Early May Bank Holiday),Parks,-88,12,8,139,28,1034
+GB,2020-05-04,Monday,May Day (Early May Bank Holiday),Transit Stations,-91,-55,-56,47,15,223
+GB,2020-05-04,Monday,May Day (Early May Bank Holiday),Workplaces,-82,-63,-62,-43,6,41
+GB,2020-05-04,Monday,May Day (Early May Bank Holiday),Residential,15,24,23,35,3,11
+GB,2020-05-05,Tuesday,,Retail and Recreation,-97,-68,-67,-46,6,45
+GB,2020-05-05,Tuesday,,Grocery and Pharmacy,-84,-24,-24,0,6,51
+GB,2020-05-05,Tuesday,,Parks,-88,11,8,178,30,1116
+GB,2020-05-05,Tuesday,,Transit Stations,-91,-55,-55,14,16,212
+GB,2020-05-05,Tuesday,,Workplaces,-84,-63,-62,-44,6,40
+GB,2020-05-05,Tuesday,,Residential,15,25,24,37,3,13
+GB,2020-05-06,Wednesday,,Retail and Recreation,-97,-67,-67,-48,6,43
+GB,2020-05-06,Wednesday,,Grocery and Pharmacy,-82,-21,-20,9,6,52
+GB,2020-05-06,Wednesday,,Parks,-87,23,18,207,30,1204
+GB,2020-05-06,Wednesday,,Transit Stations,-91,-53,-53,36,16,237
+GB,2020-05-06,Wednesday,,Workplaces,-81,-62,-61,-43,6,39
+GB,2020-05-06,Wednesday,,Residential,16,25,24,37,3,13
+GB,2020-05-07,Thursday,,Retail and Recreation,-97,-64,-64,-43,6,53
+GB,2020-05-07,Thursday,,Grocery and Pharmacy,-82,-13,-13,13,6,69
+GB,2020-05-07,Thursday,,Parks,-87,23,21,172,33,1328
+GB,2020-05-07,Thursday,,Transit Stations,-91,-52,-53,34,16,254
+GB,2020-05-07,Thursday,,Workplaces,-82,-62,-62,-44,6,37
+GB,2020-05-07,Thursday,,Residential,15,24,24,36,3,13
+GB,2020-05-08,Friday,,Retail and Recreation,-98,-74,-74,-50,4,36
+GB,2020-05-08,Friday,,Grocery and Pharmacy,-87,-29,-29,-5,6,56
+GB,2020-05-08,Friday,,Parks,-84,24,16,195,42,1911
+GB,2020-05-08,Friday,,Transit Stations,-94,-61,-62,15,13,172
+GB,2020-05-08,Friday,,Workplaces,-87,-77,-77,-57,4,23
+GB,2020-05-08,Friday,,Residential,21,29,29,38,3,9
+GB,2020-05-09,Saturday,,Retail and Recreation,-95,-76,-76,-54,4,32
+GB,2020-05-09,Saturday,,Grocery and Pharmacy,-71,-28,-28,-1,6,52
+GB,2020-05-09,Saturday,,Parks,-73,3,-1,140,33,1230
+GB,2020-05-09,Saturday,,Transit Stations,-93,-53,-54,30,13,234
+GB,2020-05-09,Saturday,,Workplaces,-62,-48,-48,-34,4,18
+GB,2020-05-09,Saturday,,Residential,13,16,16,21,1,2
+GB,2020-05-10,Sunday,,Retail and Recreation,-97,-80,-80,-57,4,31
+GB,2020-05-10,Sunday,,Grocery and Pharmacy,-78,-37,-37,-10,6,45
+GB,2020-05-10,Sunday,,Parks,-85,-35,-37,40,19,414
+GB,2020-05-10,Sunday,,Transit Stations,-95,-59,-59,21,13,201
+GB,2020-05-10,Sunday,,Workplaces,-63,-44,-44,-28,4,29
+GB,2020-05-10,Sunday,,Residential,12,14,14,19,1,3
+GB,2020-05-11,Monday,,Retail and Recreation,-97,-66,-66,-47,6,49
+GB,2020-05-11,Monday,,Grocery and Pharmacy,-84,-24,-24,-5,6,48
+GB,2020-05-11,Monday,,Parks,-89,-2,-3,116,22,590
+GB,2020-05-11,Monday,,Transit Stations,-92,-55,-56,39,16,221
+GB,2020-05-11,Monday,,Workplaces,-82,-61,-61,-42,6,43
+GB,2020-05-11,Monday,,Residential,15,24,23,36,3,12
+GB,2020-05-12,Tuesday,,Retail and Recreation,-97,-66,-65,-47,6,46
+GB,2020-05-12,Tuesday,,Grocery and Pharmacy,-83,-21,-21,2,6,51
+GB,2020-05-12,Tuesday,,Parks,-87,15,14,142,29,1042
+GB,2020-05-12,Tuesday,,Transit Stations,-91,-53,-53,37,15,228
+GB,2020-05-12,Tuesday,,Workplaces,-81,-61,-60,-40,6,44
+GB,2020-05-12,Tuesday,,Residential,15,24,24,36,3,12
+GB,2020-05-13,Wednesday,,Retail and Recreation,-97,-66,-66,-48,6,44
+GB,2020-05-13,Wednesday,,Grocery and Pharmacy,-83,-22,-22,3,6,52
+GB,2020-05-13,Wednesday,,Parks,-89,14,14,233,27,911
+GB,2020-05-13,Wednesday,,Transit Stations,-91,-53,-52,43,17,266
+GB,2020-05-13,Wednesday,,Workplaces,-81,-60,-59,-41,6,43
+GB,2020-05-13,Wednesday,,Residential,15,24,24,37,3,13
+GB,2020-05-14,Thursday,,Retail and Recreation,-97,-64,-64,-43,6,47
+GB,2020-05-14,Thursday,,Grocery and Pharmacy,-83,-19,-19,7,6,53
+GB,2020-05-14,Thursday,,Parks,-87,37,37,288,36,1554
+GB,2020-05-14,Thursday,,Transit Stations,-91,-50,-51,30,18,311
+GB,2020-05-14,Thursday,,Workplaces,-82,-60,-59,-40,6,44
+GB,2020-05-14,Thursday,,Residential,14,24,23,37,3,15
+GB,2020-05-15,Friday,,Retail and Recreation,-97,-67,-66,-47,6,42
+GB,2020-05-15,Friday,,Grocery and Pharmacy,-80,-20,-20,3,6,50
+GB,2020-05-15,Friday,,Parks,-82,35,31,264,40,1772
+GB,2020-05-15,Friday,,Transit Stations,-91,-50,-51,56,15,299
+GB,2020-05-15,Friday,,Workplaces,-80,-59,-58,-43,6,39
+GB,2020-05-15,Friday,,Residential,16,24,23,37,3,11
+GB,2020-05-16,Saturday,,Retail and Recreation,-95,-72,-72,-50,6,38
+GB,2020-05-16,Saturday,,Grocery and Pharmacy,-71,-23,-23,9,6,54
+GB,2020-05-16,Saturday,,Parks,-76,18,18,171,37,1347
+GB,2020-05-16,Saturday,,Transit Stations,-92,-46,-48,61,16,356
+GB,2020-05-16,Saturday,,Workplaces,-61,-42,-42,-28,4,23
+GB,2020-05-16,Saturday,,Residential,11,15,15,21,1,3
+GB,2020-05-17,Sunday,,Retail and Recreation,-93,-72,-72,-52,6,37
+GB,2020-05-17,Sunday,,Grocery and Pharmacy,-71,-27,-27,7,6,52
+GB,2020-05-17,Sunday,,Parks,-69,34,37,220,47,2263
+GB,2020-05-17,Sunday,,Transit Stations,-94,-41,-43,46,21,513
+GB,2020-05-17,Sunday,,Workplaces,-58,-38,-37,-24,6,34
+GB,2020-05-17,Sunday,,Residential,8,11,11,17,1,3
+GB,2020-05-18,Monday,,Retail and Recreation,-96,-60,-60,-40,6,58
+GB,2020-05-18,Monday,,Grocery and Pharmacy,-82,-19,-19,1,6,51
+GB,2020-05-18,Monday,,Parks,-83,44,41,247,43,2558
+GB,2020-05-18,Monday,,Transit Stations,-90,-48,-50,62,15,302
+GB,2020-05-18,Monday,,Workplaces,-80,-58,-57,-39,6,48
+GB,2020-05-18,Monday,,Residential,13,22,21,33,3,10
+GB,2020-05-19,Tuesday,,Retail and Recreation,-97,-61,-60,-41,6,54
+GB,2020-05-19,Tuesday,,Grocery and Pharmacy,-80,-16,-16,12,6,54
+GB,2020-05-19,Tuesday,,Parks,-82,58,55,234,47,2545
+GB,2020-05-19,Tuesday,,Transit Stations,-89,-47,-48,42,18,315
+GB,2020-05-19,Tuesday,,Workplaces,-82,-58,-57,-38,6,47
+GB,2020-05-19,Tuesday,,Residential,12,22,21,33,3,12
+GB,2020-05-20,Wednesday,,Retail and Recreation,-97,-61,-61,-37,6,57
+GB,2020-05-20,Wednesday,,Grocery and Pharmacy,-81,-14,-14,17,6,58
+GB,2020-05-20,Wednesday,,Parks,-78,72,69,271,44,2737
+GB,2020-05-20,Wednesday,,Transit Stations,-89,-45,-47,71,18,355
+GB,2020-05-20,Wednesday,,Workplaces,-79,-58,-57,-40,6,44
+GB,2020-05-20,Wednesday,,Residential,13,22,22,33,3,12
+GB,2020-05-21,Thursday,,Retail and Recreation,-97,-61,-60,-37,6,55
+GB,2020-05-21,Thursday,,Grocery and Pharmacy,-80,-14,-14,11,6,55
+GB,2020-05-21,Thursday,,Parks,-82,57,54,221,42,2116
+GB,2020-05-21,Thursday,,Transit Stations,-89,-47,-49,45,16,320
+GB,2020-05-21,Thursday,,Workplaces,-80,-58,-57,-38,6,45
+GB,2020-05-21,Thursday,,Residential,12,23,22,35,3,13
+GB,2020-05-22,Friday,,Retail and Recreation,-97,-64,-64,-44,6,49
+GB,2020-05-22,Friday,,Grocery and Pharmacy,-79,-16,-16,9,6,54
+GB,2020-05-22,Friday,,Parks,-81,26,26,275,39,1945
+GB,2020-05-22,Friday,,Transit Stations,-91,-50,-52,53,13,283
+GB,2020-05-22,Friday,,Workplaces,-78,-57,-56,-38,6,40
+GB,2020-05-22,Friday,,Residential,15,23,23,35,3,9
+GB,2020-05-23,Saturday,,Retail and Recreation,-95,-70,-70,-46,6,44
+GB,2020-05-23,Saturday,,Grocery and Pharmacy,-70,-21,-21,15,6,58
+GB,2020-05-23,Saturday,,Parks,-78,-2,-1,114,34,1103
+GB,2020-05-23,Saturday,,Transit Stations,-93,-49,-49,65,15,289
+GB,2020-05-23,Saturday,,Workplaces,-58,-40,-39,-27,4,26
+GB,2020-05-23,Saturday,,Residential,11,15,15,21,1,3
+GB,2020-05-24,Sunday,,Retail and Recreation,-94,-69,-69,-44,6,46
+GB,2020-05-24,Sunday,,Grocery and Pharmacy,-71,-23,-24,3,6,52
+GB,2020-05-24,Sunday,,Parks,-66,44,42,186,45,1883
+GB,2020-05-24,Sunday,,Transit Stations,-93,-38,-38,40,21,471
+GB,2020-05-24,Sunday,,Workplaces,-56,-35,-35,-18,4,32
+GB,2020-05-24,Sunday,,Residential,8,10,10,16,1,2
+GB,2020-05-25,Monday,Spring Bank Holiday,Retail and Recreation,-97,-62,-62,-27,7,68
+GB,2020-05-25,Monday,Spring Bank Holiday,Grocery and Pharmacy,-86,-22,-22,1,6,59
+GB,2020-05-25,Monday,Spring Bank Holiday,Parks,-72,141,141,407,86,7689
+GB,2020-05-25,Monday,Spring Bank Holiday,Transit Stations,-92,-48,-50,70,19,440
+GB,2020-05-25,Monday,Spring Bank Holiday,Workplaces,-87,-77,-78,-53,4,40
+GB,2020-05-25,Monday,Spring Bank Holiday,Residential,17,24,25,30,3,6
+GB,2020-05-26,Tuesday,,Retail and Recreation,-96,-56,-56,-27,7,69
+GB,2020-05-26,Tuesday,,Grocery and Pharmacy,-80,-11,-11,21,6,63
+GB,2020-05-26,Tuesday,,Parks,-80,74,74,209,45,2393
+GB,2020-05-26,Tuesday,,Transit Stations,-88,-44,-46,76,18,365
+GB,2020-05-26,Tuesday,,Workplaces,-80,-57,-57,-38,6,46
+GB,2020-05-26,Tuesday,,Residential,12,21,20,32,3,12
+GB,2020-05-27,Wednesday,,Retail and Recreation,-96,-58,-58,-33,6,64
+GB,2020-05-27,Wednesday,,Grocery and Pharmacy,-81,-13,-12,13,6,59
+GB,2020-05-27,Wednesday,,Parks,-79,72,71,208,44,2215
+GB,2020-05-27,Wednesday,,Transit Stations,-88,-43,-45,72,18,369
+GB,2020-05-27,Wednesday,,Workplaces,-78,-57,-56,-38,6,46
+GB,2020-05-27,Wednesday,,Residential,12,21,21,34,3,12
+GB,2020-05-28,Thursday,,Retail and Recreation,-96,-57,-56,-30,6,63
+GB,2020-05-28,Thursday,,Grocery and Pharmacy,-79,-10,-10,15,6,62
+GB,2020-05-28,Thursday,,Parks,-81,83,82,238,44,2573
+GB,2020-05-28,Thursday,,Transit Stations,-89,-42,-44,66,19,402
+GB,2020-05-28,Thursday,,Workplaces,-78,-56,-56,-36,6,46
+GB,2020-05-28,Thursday,,Residential,12,21,21,34,3,12
+GB,2020-05-29,Friday,,Retail and Recreation,-96,-60,-59,-37,6,58
+GB,2020-05-29,Friday,,Grocery and Pharmacy,-77,-10,-10,13,6,60
+GB,2020-05-29,Friday,,Parks,-77,79,74,257,50,2684
+GB,2020-05-29,Friday,,Transit Stations,-90,-41,-44,84,18,395
+GB,2020-05-29,Friday,,Workplaces,-76,-55,-54,-37,6,40
+GB,2020-05-29,Friday,,Residential,13,21,21,33,3,10
+GB,2020-05-30,Saturday,,Retail and Recreation,-94,-67,-67,-42,6,52
+GB,2020-05-30,Saturday,,Grocery and Pharmacy,-66,-13,-14,25,7,71
+GB,2020-05-30,Saturday,,Parks,-63,59,58,351,44,2526
+GB,2020-05-30,Saturday,,Transit Stations,-91,-34,-36,88,19,483
+GB,2020-05-30,Saturday,,Workplaces,-45,-30,-29,-17,4,23
+GB,2020-05-30,Saturday,,Residential,8,12,11,15,1,2
+GB,2020-05-31,Sunday,,Retail and Recreation,-92,-65,-65,-31,7,65
+GB,2020-05-31,Sunday,,Grocery and Pharmacy,-70,-17,-17,20,7,76
+GB,2020-05-31,Sunday,,Parks,-60,72,68,387,44,2499
+GB,2020-05-31,Sunday,,Transit Stations,-93,-29,-29,66,24,671
+GB,2020-05-31,Sunday,,Workplaces,-44,-25,-24,-11,4,33
+GB,2020-05-31,Sunday,,Residential,5,8,8,12,1,2
+GB,2020-06-01,Monday,,Retail and Recreation,-95,-53,-52,-28,7,76
+GB,2020-06-01,Monday,,Grocery and Pharmacy,-80,-11,-11,17,6,63
+GB,2020-06-01,Monday,,Parks,-78,77,73,255,43,2362
+GB,2020-06-01,Monday,,Transit Stations,-88,-38,-39,26,21,396
+GB,2020-06-01,Monday,,Workplaces,-79,-52,-51,-31,7,55
+GB,2020-06-01,Monday,,Residential,10,18,18,30,3,11
+GB,2020-06-02,Tuesday,,Retail and Recreation,-96,-55,-55,-30,7,70
+GB,2020-06-02,Tuesday,,Grocery and Pharmacy,-79,-12,-12,17,6,61
+GB,2020-06-02,Tuesday,,Parks,-78,84,82,263,50,3167
+GB,2020-06-02,Tuesday,,Transit Stations,-87,-38,-39,90,19,447
+GB,2020-06-02,Tuesday,,Workplaces,-78,-52,-51,-32,7,53
+GB,2020-06-02,Tuesday,,Residential,10,19,18,31,3,12
+GB,2020-06-03,Wednesday,,Retail and Recreation,-96,-60,-59,-40,6,63
+GB,2020-06-03,Wednesday,,Grocery and Pharmacy,-81,-18,-18,1,6,52
+GB,2020-06-03,Wednesday,,Parks,-84,5,0,147,25,898
+GB,2020-06-03,Wednesday,,Transit Stations,-87,-47,-48,49,15,247
+GB,2020-06-03,Wednesday,,Workplaces,-81,-53,-52,-34,6,50
+GB,2020-06-03,Wednesday,,Residential,13,22,21,34,3,12
+GB,2020-06-04,Thursday,,Retail and Recreation,-97,-58,-57,-39,6,60
+GB,2020-06-04,Thursday,,Grocery and Pharmacy,-80,-15,-14,11,6,53
+GB,2020-06-04,Thursday,,Parks,-85,28,27,218,28,1110
+GB,2020-06-04,Thursday,,Transit Stations,-88,-44,-45,48,18,320
+GB,2020-06-04,Thursday,,Workplaces,-76,-53,-52,-32,7,51
+GB,2020-06-04,Thursday,,Residential,11,21,21,34,3,13
+GB,2020-06-05,Friday,,Retail and Recreation,-96,-61,-61,-42,6,51
+GB,2020-06-05,Friday,,Grocery and Pharmacy,-78,-16,-15,16,6,53
+GB,2020-06-05,Friday,,Parks,-78,20,18,223,31,1084
+GB,2020-06-05,Friday,,Transit Stations,-89,-47,-48,5,13,238
+GB,2020-06-05,Friday,,Workplaces,-77,-52,-51,-34,6,44
+GB,2020-06-05,Friday,,Residential,14,21,21,34,3,10
+GB,2020-06-06,Saturday,,Retail and Recreation,-95,-67,-67,-45,6,49
+GB,2020-06-06,Saturday,,Grocery and Pharmacy,-72,-20,-20,8,6,59
+GB,2020-06-06,Saturday,,Parks,-82,-10,-11,103,24,729
+GB,2020-06-06,Saturday,,Transit Stations,-92,-47,-47,3,13,218
+GB,2020-06-06,Saturday,,Workplaces,-48,-32,-31,-20,4,24
+GB,2020-06-06,Saturday,,Residential,11,14,14,19,1,2
+GB,2020-06-07,Sunday,,Retail and Recreation,-93,-66,-67,-30,6,59
+GB,2020-06-07,Sunday,,Grocery and Pharmacy,-70,-22,-22,16,6,55
+GB,2020-06-07,Sunday,,Parks,-68,26,25,218,40,1458
+GB,2020-06-07,Sunday,,Transit Stations,-91,-38,-38,22,18,387
+GB,2020-06-07,Sunday,,Workplaces,-48,-26,-26,-6,6,39
+GB,2020-06-07,Sunday,,Residential,7,10,10,15,1,2
+GB,2020-06-08,Monday,,Retail and Recreation,-95,-53,-52,-32,6,70
+GB,2020-06-08,Monday,,Grocery and Pharmacy,-79,-15,-15,16,6,52
+GB,2020-06-08,Monday,,Parks,-78,50,49,161,37,1255
+GB,2020-06-08,Monday,,Transit Stations,-89,-43,-43,14,18,297
+GB,2020-06-08,Monday,,Workplaces,-75,-50,-49,-31,6,56
+GB,2020-06-08,Monday,,Residential,10,19,18,31,3,11
+GB,2020-06-09,Tuesday,,Retail and Recreation,-95,-54,-53,-32,6,64
+GB,2020-06-09,Tuesday,,Grocery and Pharmacy,-78,-14,-14,19,6,53
+GB,2020-06-09,Tuesday,,Parks,-76,64,64,190,39,1715
+GB,2020-06-09,Tuesday,,Transit Stations,-86,-42,-43,19,18,311
+GB,2020-06-09,Tuesday,,Workplaces,-75,-50,-49,-29,6,56
+GB,2020-06-09,Tuesday,,Residential,10,19,18,32,4,12
+GB,2020-06-10,Wednesday,,Retail and Recreation,-96,-58,-58,-39,7,60
+GB,2020-06-10,Wednesday,,Grocery and Pharmacy,-80,-17,-16,16,6,55
+GB,2020-06-10,Wednesday,,Parks,-83,6,4,210,26,842
+GB,2020-06-10,Wednesday,,Transit Stations,-87,-49,-49,-7,16,230
+GB,2020-06-10,Wednesday,,Workplaces,-77,-51,-50,-31,7,54
+GB,2020-06-10,Wednesday,,Residential,12,21,20,35,3,13
+GB,2020-06-11,Thursday,,Retail and Recreation,-96,-56,-56,-30,6,65
+GB,2020-06-11,Thursday,,Grocery and Pharmacy,-79,-15,-15,9,6,50
+GB,2020-06-11,Thursday,,Parks,-81,19,15,167,25,936
+GB,2020-06-11,Thursday,,Transit Stations,-89,-48,-48,-3,15,215
+GB,2020-06-11,Thursday,,Workplaces,-76,-51,-50,-30,6,51
+GB,2020-06-11,Thursday,,Residential,12,21,20,34,3,12
+GB,2020-06-12,Friday,,Retail and Recreation,-96,-59,-58,-40,6,59
+GB,2020-06-12,Friday,,Grocery and Pharmacy,-78,-15,-15,6,6,48
+GB,2020-06-12,Friday,,Parks,-80,17,14,188,31,1050
+GB,2020-06-12,Friday,,Transit Stations,-90,-48,-48,2,13,213
+GB,2020-06-12,Friday,,Workplaces,-73,-50,-49,-33,6,45
+GB,2020-06-12,Friday,,Residential,13,21,20,34,3,10
+GB,2020-06-13,Saturday,,Retail and Recreation,-93,-62,-62,-40,6,57
+GB,2020-06-13,Saturday,,Grocery and Pharmacy,-61,-14,-14,17,6,56
+GB,2020-06-13,Saturday,,Parks,-58,55,53,248,53,2617
+GB,2020-06-13,Saturday,,Transit Stations,-90,-36,-37,32,18,363
+GB,2020-06-13,Saturday,,Workplaces,-47,-22,-21,-7,6,36
+GB,2020-06-13,Saturday,,Residential,7,11,11,18,1,2
+GB,2020-06-14,Sunday,,Retail and Recreation,-92,-60,-60,-20,7,74
+GB,2020-06-14,Sunday,,Grocery and Pharmacy,-68,-17,-18,15,6,69
+GB,2020-06-14,Sunday,,Parks,-56,70,67,335,43,2297
+GB,2020-06-14,Sunday,,Transit Stations,-91,-30,-32,91,19,599
+GB,2020-06-14,Sunday,,Workplaces,-40,-18,-17,-3,6,39
+GB,2020-06-14,Sunday,,Residential,5,8,8,13,1,1
+GB,2020-06-15,Monday,,Retail and Recreation,-93,-43,-42,-22,7,85
+GB,2020-06-15,Monday,,Grocery and Pharmacy,-76,-12,-12,16,6,51
+GB,2020-06-15,Monday,,Parks,-76,67,67,203,41,1911
+GB,2020-06-15,Monday,,Transit Stations,-88,-39,-40,21,16,315
+GB,2020-06-15,Monday,,Workplaces,-74,-49,-47,-29,7,58
+GB,2020-06-15,Monday,,Residential,9,17,17,29,3,10
+GB,2020-06-16,Tuesday,,Retail and Recreation,-94,-46,-46,-25,7,78
+GB,2020-06-16,Tuesday,,Grocery and Pharmacy,-75,-11,-11,12,6,52
+GB,2020-06-16,Tuesday,,Parks,-76,59,52,204,37,2006
+GB,2020-06-16,Tuesday,,Transit Stations,-86,-41,-42,12,16,281
+GB,2020-06-16,Tuesday,,Workplaces,-75,-49,-48,-29,7,56
+GB,2020-06-16,Tuesday,,Residential,9,18,18,30,3,11
+GB,2020-06-17,Wednesday,,Retail and Recreation,-94,-49,-47,-32,7,75
+GB,2020-06-17,Wednesday,,Grocery and Pharmacy,-77,-12,-12,12,6,57
+GB,2020-06-17,Wednesday,,Parks,-79,41,39,262,28,1373
+GB,2020-06-17,Wednesday,,Transit Stations,-85,-42,-43,2,16,263
+GB,2020-06-17,Wednesday,,Workplaces,-75,-49,-48,-28,7,55
+GB,2020-06-17,Wednesday,,Residential,10,19,18,32,3,13
+GB,2020-06-18,Thursday,,Retail and Recreation,-95,-51,-51,-24,9,83
+GB,2020-06-18,Thursday,,Grocery and Pharmacy,-76,-13,-13,7,6,55
+GB,2020-06-18,Thursday,,Parks,-82,9,3,165,34,1345
+GB,2020-06-18,Thursday,,Transit Stations,-88,-47,-48,-3,15,212
+GB,2020-06-18,Thursday,,Workplaces,-77,-50,-49,-33,6,51
+GB,2020-06-18,Thursday,,Residential,12,20,20,33,3,13
+GB,2020-06-19,Friday,,Retail and Recreation,-94,-51,-50,-31,7,68
+GB,2020-06-19,Friday,,Grocery and Pharmacy,-71,-10,-9,14,6,49
+GB,2020-06-19,Friday,,Parks,-78,30,26,208,30,1225
+GB,2020-06-19,Friday,,Transit Stations,-88,-42,-43,7,15,244
+GB,2020-06-19,Friday,,Workplaces,-71,-48,-47,-31,6,46
+GB,2020-06-19,Friday,,Residential,11,19,18,31,3,9
+GB,2020-06-20,Saturday,,Retail and Recreation,-90,-54,-54,-27,7,67
+GB,2020-06-20,Saturday,,Grocery and Pharmacy,-50,-6,-6,22,7,71
+GB,2020-06-20,Saturday,,Parks,-63,60,59,353,37,1886
+GB,2020-06-20,Saturday,,Transit Stations,-91,-29,-31,55,18,416
+GB,2020-06-20,Saturday,,Workplaces,-38,-19,-18,-6,4,27
+GB,2020-06-20,Saturday,,Residential,5,9,9,12,1,1
+GB,2020-06-21,Sunday,,Retail and Recreation,-90,-57,-57,-32,7,61
+GB,2020-06-21,Sunday,,Grocery and Pharmacy,-57,-14,-15,9,7,61
+GB,2020-06-21,Sunday,,Parks,-66,42,42,245,34,1471
+GB,2020-06-21,Sunday,,Transit Stations,-91,-29,-30,87,19,550
+GB,2020-06-21,Sunday,,Workplaces,-40,-12,-10,5,6,54
+GB,2020-06-21,Sunday,,Residential,4,7,7,12,1,2
+GB,2020-06-22,Monday,,Retail and Recreation,-93,-43,-42,-23,8,80
+GB,2020-06-22,Monday,,Grocery and Pharmacy,-74,-12,-12,11,6,49
+GB,2020-06-22,Monday,,Parks,-70,78,78,286,47,3112
+GB,2020-06-22,Monday,,Transit Stations,-87,-38,-40,34,17,317
+GB,2020-06-22,Monday,,Workplaces,-76,-49,-48,-29,7,55
+GB,2020-06-22,Monday,,Residential,9,17,16,27,3,9
+GB,2020-06-23,Tuesday,,Retail and Recreation,-94,-44,-43,-26,7,79
+GB,2020-06-23,Tuesday,,Grocery and Pharmacy,-74,-8,-7,21,6,57
+GB,2020-06-23,Tuesday,,Parks,-70,95,93,266,56,3348
+GB,2020-06-23,Tuesday,,Transit Stations,-85,-37,-38,35,18,357
+GB,2020-06-23,Tuesday,,Workplaces,-76,-49,-48,-31,7,54
+GB,2020-06-23,Tuesday,,Residential,8,17,16,27,3,10
+GB,2020-06-24,Wednesday,,Retail and Recreation,-94,-46,-46,-23,7,82
+GB,2020-06-24,Wednesday,,Grocery and Pharmacy,-72,-5,-5,22,6,67
+GB,2020-06-24,Wednesday,,Parks,-70,96,86,370,51,4061
+GB,2020-06-24,Wednesday,,Transit Stations,-84,-35,-37,41,19,386
+GB,2020-06-24,Wednesday,,Workplaces,-73,-48,-47,-31,7,51
+GB,2020-06-24,Wednesday,,Residential,8,17,16,27,3,10
+GB,2020-06-25,Thursday,,Retail and Recreation,-94,-46,-46,-20,7,82
+GB,2020-06-25,Thursday,,Grocery and Pharmacy,-73,-3,-3,25,6,67
+GB,2020-06-25,Thursday,,Parks,-73,101,89,439,49,4884
+GB,2020-06-25,Thursday,,Transit Stations,-87,-35,-37,29,19,411
+GB,2020-06-25,Thursday,,Workplaces,-75,-48,-47,-32,6,51
+GB,2020-06-25,Thursday,,Residential,8,17,16,27,3,10
+GB,2020-06-26,Friday,,Retail and Recreation,-94,-49,-48,-32,7,68
+GB,2020-06-26,Friday,,Grocery and Pharmacy,-71,-7,-6,20,6,52
+GB,2020-06-26,Friday,,Parks,-72,60,54,239,41,2065
+GB,2020-06-26,Friday,,Transit Stations,-87,-38,-38,19,16,295
+GB,2020-06-26,Friday,,Workplaces,-74,-47,-46,-32,6,46
+GB,2020-06-26,Friday,,Residential,10,17,17,27,3,8
+GB,2020-06-27,Saturday,,Retail and Recreation,-92,-56,-55,-35,7,64
+GB,2020-06-27,Saturday,,Grocery and Pharmacy,-57,-13,-13,13,4,50
+GB,2020-06-27,Saturday,,Parks,-77,0,-2,116,22,635
+GB,2020-06-27,Saturday,,Transit Stations,-89,-39,-40,18,13,259
+GB,2020-06-27,Saturday,,Workplaces,-42,-23,-22,-11,4,24
+GB,2020-06-27,Saturday,,Residential,7,11,11,15,1,2
+GB,2020-06-28,Sunday,,Retail and Recreation,-90,-55,-54,-23,6,64
+GB,2020-06-28,Sunday,,Grocery and Pharmacy,-52,-17,-17,15,6,51
+GB,2020-06-28,Sunday,,Parks,-64,27,28,195,44,1762
+GB,2020-06-28,Sunday,,Transit Stations,-90,-33,-35,75,19,467
+GB,2020-06-28,Sunday,,Workplaces,-41,-16,-15,1,6,43
+GB,2020-06-28,Sunday,,Residential,5,8,7,13,1,2
+GB,2020-06-29,Monday,,Retail and Recreation,-93,-42,-41,-19,7,85
+GB,2020-06-29,Monday,,Grocery and Pharmacy,-74,-13,-12,9,4,48
+GB,2020-06-29,Monday,,Parks,-74,29,26,140,34,1356
+GB,2020-06-29,Monday,,Transit Stations,-86,-40,-41,4,16,267
+GB,2020-06-29,Monday,,Workplaces,-74,-47,-46,-29,7,57
+GB,2020-06-29,Monday,,Residential,10,17,16,28,3,10
+GB,2020-06-30,Tuesday,,Retail and Recreation,-93,-41,-40,-10,9,95
+GB,2020-06-30,Tuesday,,Grocery and Pharmacy,-76,-9,-9,18,6,60
+GB,2020-06-30,Tuesday,,Parks,-78,39,35,187,36,1287
+GB,2020-06-30,Tuesday,,Transit Stations,-85,-39,-39,31,19,316
+GB,2020-06-30,Tuesday,,Workplaces,-74,-47,-46,-29,7,60
+GB,2020-06-30,Tuesday,,Residential,8,17,17,29,3,13
+GB,2020-07-01,Wednesday,,Retail and Recreation,-92,-43,-42,-14,7,84
+GB,2020-07-01,Wednesday,,Grocery and Pharmacy,-75,-11,-11,12,4,50
+GB,2020-07-01,Wednesday,,Parks,-74,42,39,236,30,1334
+GB,2020-07-01,Wednesday,,Transit Stations,-82,-39,-39,8,18,272
+GB,2020-07-01,Wednesday,,Workplaces,-71,-46,-45,-29,7,56
+GB,2020-07-01,Wednesday,,Residential,9,17,17,29,3,12
+GB,2020-07-02,Thursday,,Retail and Recreation,-93,-43,-42,-10,7,87
+GB,2020-07-02,Thursday,,Grocery and Pharmacy,-75,-9,-9,16,4,54
+GB,2020-07-02,Thursday,,Parks,-78,44,43,211,30,1144
+GB,2020-07-02,Thursday,,Transit Stations,-84,-38,-39,11,18,294
+GB,2020-07-02,Thursday,,Workplaces,-74,-47,-46,-28,7,55
+GB,2020-07-02,Thursday,,Residential,9,17,17,30,3,12
+GB,2020-07-03,Friday,,Retail and Recreation,-92,-47,-46,-26,7,74
+GB,2020-07-03,Friday,,Grocery and Pharmacy,-71,-11,-10,15,6,54
+GB,2020-07-03,Friday,,Parks,-69,31,26,261,36,1853
+GB,2020-07-03,Friday,,Transit Stations,-84,-39,-40,9,15,254
+GB,2020-07-03,Friday,,Workplaces,-72,-46,-45,-30,6,48
+GB,2020-07-03,Friday,,Residential,11,17,17,28,3,7
+GB,2020-07-04,Saturday,,Retail and Recreation,-85,-48,-47,-13,6,71
+GB,2020-07-04,Saturday,,Grocery and Pharmacy,-54,-12,-13,28,6,64
+GB,2020-07-04,Saturday,,Parks,-69,23,25,182,30,1149
+GB,2020-07-04,Saturday,,Transit Stations,-85,-28,-29,51,18,395
+GB,2020-07-04,Saturday,,Workplaces,-38,-16,-15,-3,6,33
+GB,2020-07-04,Saturday,,Residential,5,8,8,13,1,2
+GB,2020-07-05,Sunday,,Retail and Recreation,-84,-45,-45,23,7,94
+GB,2020-07-05,Sunday,,Grocery and Pharmacy,-52,-16,-16,50,7,77
+GB,2020-07-05,Sunday,,Parks,-56,59,57,273,39,2108
+GB,2020-07-05,Sunday,,Transit Stations,-87,-22,-24,77,22,554
+GB,2020-07-05,Sunday,,Workplaces,-39,-13,-12,2,6,41
+GB,2020-07-05,Sunday,,Residential,3,5,5,11,1,1
+GB,2020-07-06,Monday,,Retail and Recreation,-89,-32,-31,23,7,121
+GB,2020-07-06,Monday,,Grocery and Pharmacy,-74,-9,-10,34,6,76
+GB,2020-07-06,Monday,,Parks,-70,81,78,276,37,2190
+GB,2020-07-06,Monday,,Transit Stations,-84,-29,-31,52,21,453
+GB,2020-07-06,Monday,,Workplaces,-72,-46,-45,-30,7,58
+GB,2020-07-06,Monday,,Residential,8,14,14,25,3,10
+GB,2020-07-07,Tuesday,,Retail and Recreation,-90,-35,-35,19,7,120
+GB,2020-07-07,Tuesday,,Grocery and Pharmacy,-75,-10,-11,31,6,84
+GB,2020-07-07,Tuesday,,Parks,-72,55,48,254,49,2694
+GB,2020-07-07,Tuesday,,Transit Stations,-81,-33,-36,34,18,388
+GB,2020-07-07,Tuesday,,Workplaces,-74,-47,-46,-28,7,57
+GB,2020-07-07,Tuesday,,Residential,8,15,15,27,3,11
+GB,2020-07-08,Wednesday,,Retail and Recreation,-91,-38,-37,15,7,116
+GB,2020-07-08,Wednesday,,Grocery and Pharmacy,-75,-12,-12,31,6,76
+GB,2020-07-08,Wednesday,,Parks,-75,33,26,275,31,1887
+GB,2020-07-08,Wednesday,,Transit Stations,-81,-35,-37,24,21,364
+GB,2020-07-08,Wednesday,,Workplaces,-71,-46,-45,-28,7,57
+GB,2020-07-08,Wednesday,,Residential,9,16,16,28,3,13
+GB,2020-07-09,Thursday,,Retail and Recreation,-91,-37,-37,6,7,115
+GB,2020-07-09,Thursday,,Grocery and Pharmacy,-74,-9,-10,26,6,80
+GB,2020-07-09,Thursday,,Parks,-74,41,35,243,34,1933
+GB,2020-07-09,Thursday,,Transit Stations,-83,-34,-35,25,19,380
+GB,2020-07-09,Thursday,,Workplaces,-71,-46,-45,-30,7,54
+GB,2020-07-09,Thursday,,Residential,9,16,15,27,3,12
+GB,2020-07-10,Friday,,Retail and Recreation,-90,-38,-37,15,7,102
+GB,2020-07-10,Friday,,Grocery and Pharmacy,-70,-8,-8,35,6,76
+GB,2020-07-10,Friday,,Parks,-66,77,72,303,43,2667
+GB,2020-07-10,Friday,,Transit Stations,-83,-27,-29,59,22,497
+GB,2020-07-10,Friday,,Workplaces,-69,-44,-43,-31,6,48
+GB,2020-07-10,Friday,,Residential,8,14,13,24,3,8
+GB,2020-07-11,Saturday,,Retail and Recreation,-84,-42,-42,35,7,119
+GB,2020-07-11,Saturday,,Grocery and Pharmacy,-51,-8,-10,65,7,119
+GB,2020-07-11,Saturday,,Parks,-49,81,75,366,40,2850
+GB,2020-07-11,Saturday,,Transit Stations,-83,-14,-16,113,25,740
+GB,2020-07-11,Saturday,,Workplaces,-33,-13,-12,5,4,29
+GB,2020-07-11,Saturday,,Residential,1,5,5,10,1,1
+GB,2020-07-12,Sunday,,Retail and Recreation,-83,-38,-40,66,10,194
+GB,2020-07-12,Sunday,,Grocery and Pharmacy,-49,-12,-14,78,7,145
+GB,2020-07-12,Sunday,,Parks,-43,108,99,498,42,3775
+GB,2020-07-12,Sunday,,Transit Stations,-84,-6,-9,128,30,1031
+GB,2020-07-12,Sunday,,Workplaces,-32,-9,-8,7,4,35
+GB,2020-07-12,Sunday,,Residential,1,3,3,8,1,1
+GB,2020-07-13,Monday,,Retail and Recreation,-89,-30,-30,43,7,147
+GB,2020-07-13,Monday,,Grocery and Pharmacy,-74,-9,-10,41,6,101
+GB,2020-07-13,Monday,,Parks,-60,73,62,317,44,3337
+GB,2020-07-13,Monday,,Transit Stations,-81,-29,-32,46,19,474
+GB,2020-07-13,Monday,,Workplaces,-76,-46,-45,-28,7,70
+GB,2020-07-13,Monday,,Residential,7,14,13,24,3,9
+GB,2020-07-14,Tuesday,,Retail and Recreation,-89,-30,-30,35,7,143
+GB,2020-07-14,Tuesday,,Grocery and Pharmacy,-73,-9,-9,35,6,94
+GB,2020-07-14,Tuesday,,Parks,-65,79,75,327,33,2749
+GB,2020-07-14,Tuesday,,Transit Stations,-80,-30,-32,47,22,465
+GB,2020-07-14,Tuesday,,Workplaces,-72,-46,-45,-29,7,63
+GB,2020-07-14,Tuesday,,Residential,7,15,14,25,3,11
+GB,2020-07-15,Wednesday,,Retail and Recreation,-88,-27,-27,34,7,153
+GB,2020-07-15,Wednesday,,Grocery and Pharmacy,-73,-10,-11,33,6,87
+GB,2020-07-15,Wednesday,,Parks,-64,57,50,308,37,2554
+GB,2020-07-15,Wednesday,,Transit Stations,-79,-37,-38,23,18,311
+GB,2020-07-15,Wednesday,,Workplaces,-69,-44,-43,-28,7,55
+GB,2020-07-15,Wednesday,,Residential,8,15,14,26,3,10
+GB,2020-07-16,Thursday,,Retail and Recreation,-88,-24,-24,44,7,171
+GB,2020-07-16,Thursday,,Grocery and Pharmacy,-73,-7,-8,38,6,87
+GB,2020-07-16,Thursday,,Parks,-67,89,81,351,40,3344
+GB,2020-07-16,Thursday,,Transit Stations,-80,-33,-35,33,19,401
+GB,2020-07-16,Thursday,,Workplaces,-69,-44,-43,-28,7,56
+GB,2020-07-16,Thursday,,Residential,7,14,14,24,3,10
+GB,2020-07-17,Friday,,Retail and Recreation,-88,-27,-27,50,7,161
+GB,2020-07-17,Friday,,Grocery and Pharmacy,-69,-7,-8,54,6,94
+GB,2020-07-17,Friday,,Parks,-58,103,92,421,47,4351
+GB,2020-07-17,Friday,,Transit Stations,-79,-29,-32,61,19,455
+GB,2020-07-17,Friday,,Workplaces,-68,-43,-42,-29,7,49
+GB,2020-07-17,Friday,,Residential,7,13,12,21,3,7
+GB,2020-07-18,Saturday,,Retail and Recreation,-80,-34,-35,61,9,179
+GB,2020-07-18,Saturday,,Grocery and Pharmacy,-49,-9,-11,77,7,145
+GB,2020-07-18,Saturday,,Parks,-44,67,60,390,54,3965
+GB,2020-07-18,Saturday,,Transit Stations,-79,-21,-25,105,19,586
+GB,2020-07-18,Saturday,,Workplaces,-30,-12,-12,4,4,25
+GB,2020-07-18,Saturday,,Residential,2,5,5,10,1,1
+GB,2020-07-19,Sunday,,Retail and Recreation,-81,-28,-31,100,12,331
+GB,2020-07-19,Sunday,,Grocery and Pharmacy,-53,-13,-16,90,9,180
+GB,2020-07-19,Sunday,,Parks,-54,77,71,475,46,3567
+GB,2020-07-19,Sunday,,Transit Stations,-82,-17,-20,103,24,770
+GB,2020-07-19,Sunday,,Workplaces,-30,-9,-8,6,4,32
+GB,2020-07-19,Sunday,,Residential,0,3,3,7,1,2
+GB,2020-07-20,Monday,,Retail and Recreation,-87,-18,-20,73,9,240
+GB,2020-07-20,Monday,,Grocery and Pharmacy,-72,-7,-8,54,6,131
+GB,2020-07-20,Monday,,Parks,-59,113,101,395,53,5480
+GB,2020-07-20,Monday,,Transit Stations,-79,-29,-31,66,21,547
+GB,2020-07-20,Monday,,Workplaces,-68,-45,-44,-26,7,55
+GB,2020-07-20,Monday,,Residential,6,13,12,22,3,9
+GB,2020-07-21,Tuesday,,Retail and Recreation,-87,-20,-21,65,9,240
+GB,2020-07-21,Tuesday,,Grocery and Pharmacy,-71,-7,-9,49,7,126
+GB,2020-07-21,Tuesday,,Parks,-60,116,103,427,50,5461
+GB,2020-07-21,Tuesday,,Transit Stations,-78,-30,-33,67,21,520
+GB,2020-07-21,Tuesday,,Workplaces,-68,-45,-44,-28,7,54
+GB,2020-07-21,Tuesday,,Residential,6,13,13,24,3,10
+GB,2020-07-22,Wednesday,,Retail and Recreation,-87,-22,-23,59,9,214
+GB,2020-07-22,Wednesday,,Grocery and Pharmacy,-70,-9,-10,46,6,107
+GB,2020-07-22,Wednesday,,Parks,-57,92,82,392,55,4542
+GB,2020-07-22,Wednesday,,Transit Stations,-78,-32,-35,50,19,429
+GB,2020-07-22,Wednesday,,Workplaces,-67,-45,-44,-29,6,51
+GB,2020-07-22,Wednesday,,Residential,7,14,13,24,3,9
+GB,2020-07-23,Thursday,,Retail and Recreation,-88,-22,-23,61,9,200
+GB,2020-07-23,Thursday,,Grocery and Pharmacy,-71,-6,-7,47,6,109
+GB,2020-07-23,Thursday,,Parks,-61,86,75,410,55,4203
+GB,2020-07-23,Thursday,,Transit Stations,-79,-33,-36,42,19,406
+GB,2020-07-23,Thursday,,Workplaces,-68,-46,-45,-30,6,50
+GB,2020-07-23,Thursday,,Residential,6,14,13,24,3,8
+GB,2020-07-24,Friday,,Retail and Recreation,-87,-26,-26,63,9,184
+GB,2020-07-24,Friday,,Grocery and Pharmacy,-69,-10,-12,52,6,106
+GB,2020-07-24,Friday,,Parks,-55,105,95,459,42,4299
+GB,2020-07-24,Friday,,Transit Stations,-76,-27,-30,76,21,523
+GB,2020-07-24,Friday,,Workplaces,-68,-44,-44,-30,6,45
+GB,2020-07-24,Friday,,Residential,7,12,12,22,3,7
+GB,2020-07-25,Saturday,,Retail and Recreation,-79,-34,-35,55,9,160
+GB,2020-07-25,Saturday,,Grocery and Pharmacy,-53,-12,-15,70,7,162
+GB,2020-07-25,Saturday,,Parks,-68,32,19,349,33,2833
+GB,2020-07-25,Saturday,,Transit Stations,-74,-24,-27,114,21,551
+GB,2020-07-25,Saturday,,Workplaces,-30,-14,-13,-1,4,21
+GB,2020-07-25,Saturday,,Residential,2,6,6,10,1,2
+GB,2020-07-26,Sunday,,Retail and Recreation,-76,-25,-29,112,12,335
+GB,2020-07-26,Sunday,,Grocery and Pharmacy,-49,-14,-17,93,7,167
+GB,2020-07-26,Sunday,,Parks,-43,80,67,455,36,3433
+GB,2020-07-26,Sunday,,Transit Stations,-76,-14,-17,116,24,745
+GB,2020-07-26,Sunday,,Workplaces,-26,-7,-7,7,4,31
+GB,2020-07-26,Sunday,,Residential,1,3,3,6,1,1
+GB,2020-07-27,Monday,,Retail and Recreation,-87,-23,-25,64,7,207
+GB,2020-07-27,Monday,,Grocery and Pharmacy,-74,-12,-13,47,6,134
+GB,2020-07-27,Monday,,Parks,-67,40,24,346,30,3614
+GB,2020-07-27,Monday,,Transit Stations,-78,-36,-38,44,18,390
+GB,2020-07-27,Monday,,Workplaces,-71,-50,-48,-34,6,49
+GB,2020-07-27,Monday,,Residential,8,14,14,24,3,8
+GB,2020-07-28,Tuesday,,Retail and Recreation,-87,-17,-19,86,9,263
+GB,2020-07-28,Tuesday,,Grocery and Pharmacy,-71,-7,-9,54,6,131
+GB,2020-07-28,Tuesday,,Parks,-61,104,92,474,47,5776
+GB,2020-07-28,Tuesday,,Transit Stations,-78,-31,-33,58,19,469
+GB,2020-07-28,Tuesday,,Workplaces,-70,-47,-46,-32,6,51
+GB,2020-07-28,Tuesday,,Residential,7,13,13,24,3,9
+GB,2020-07-29,Wednesday,,Retail and Recreation,-86,-17,-18,81,9,261
+GB,2020-07-29,Wednesday,,Grocery and Pharmacy,-70,-7,-9,57,6,128
+GB,2020-07-29,Wednesday,,Parks,-55,110,97,486,46,5328
+GB,2020-07-29,Wednesday,,Transit Stations,-77,-29,-32,61,21,506
+GB,2020-07-29,Wednesday,,Workplaces,-69,-46,-45,-32,6,48
+GB,2020-07-29,Wednesday,,Residential,6,13,12,23,3,9
+GB,2020-07-30,Thursday,,Retail and Recreation,-85,-15,-17,90,9,285
+GB,2020-07-30,Thursday,,Grocery and Pharmacy,-71,-4,-5,60,7,129
+GB,2020-07-30,Thursday,,Parks,-60,117,101,561,54,6930
+GB,2020-07-30,Thursday,,Transit Stations,-77,-29,-32,113,21,569
+GB,2020-07-30,Thursday,,Workplaces,-69,-47,-46,-33,6,48
+GB,2020-07-30,Thursday,,Residential,6,13,12,22,3,8
+GB,2020-07-31,Friday,,Retail and Recreation,-85,-22,-25,94,12,299
+GB,2020-07-31,Friday,,Grocery and Pharmacy,-70,-7,-10,75,7,168
+GB,2020-07-31,Friday,,Parks,-58,115,89,618,53,9104
+GB,2020-07-31,Friday,,Transit Stations,-75,-23,-28,128,24,729
+GB,2020-07-31,Friday,,Workplaces,-70,-47,-46,-32,6,44
+GB,2020-07-31,Friday,,Residential,6,11,11,18,3,5
+GB,2020-08-01,Saturday,,Retail and Recreation,-75,-28,-30,86,10,256
+GB,2020-08-01,Saturday,,Grocery and Pharmacy,-49,-9,-12,93,9,204
+GB,2020-08-01,Saturday,,Parks,-49,78,65,512,43,4578
+GB,2020-08-01,Saturday,,Transit Stations,-65,-15,-21,153,21,772
+GB,2020-08-01,Saturday,,Workplaces,-28,-12,-12,-1,4,23
+GB,2020-08-01,Saturday,,Residential,1,3,3,6,1,1
+GB,2020-08-02,Sunday,,Retail and Recreation,-75,-19,-24,140,15,435
+GB,2020-08-02,Sunday,,Grocery and Pharmacy,-45,-12,-15,103,7,202
+GB,2020-08-02,Sunday,,Parks,-45,90,78,524,38,3729
+GB,2020-08-02,Sunday,,Transit Stations,-69,-10,-15,120,24,862
+GB,2020-08-02,Sunday,,Workplaces,-27,-7,-7,6,4,28
+GB,2020-08-02,Sunday,,Residential,0,2,2,5,0,1
+GB,2020-08-03,Monday,,Retail and Recreation,-83,-6,-9,124,10,383
+GB,2020-08-03,Monday,,Grocery and Pharmacy,-72,-8,-10,69,6,167
+GB,2020-08-03,Monday,,Parks,-67,110,95,456,46,5902
+GB,2020-08-03,Monday,,Transit Stations,-77,-26,-29,75,22,617
+GB,2020-08-03,Monday,,Workplaces,-70,-48,-47,-31,6,50
+GB,2020-08-03,Monday,,Residential,6,11,11,21,3,8
+GB,2020-08-04,Tuesday,,Retail and Recreation,-83,-9,-11,120,10,354
+GB,2020-08-04,Tuesday,,Grocery and Pharmacy,-71,-10,-12,65,6,151
+GB,2020-08-04,Tuesday,,Parks,-59,90,76,557,52,6525
+GB,2020-08-04,Tuesday,,Transit Stations,-77,-31,-34,108,18,500
+GB,2020-08-04,Tuesday,,Workplaces,-71,-48,-47,-32,6,49
+GB,2020-08-04,Tuesday,,Residential,6,13,12,22,3,7
+GB,2020-08-05,Wednesday,,Retail and Recreation,-81,-7,-9,111,10,345
+GB,2020-08-05,Wednesday,,Grocery and Pharmacy,-70,-10,-13,65,7,142
+GB,2020-08-05,Wednesday,,Parks,-57,91,77,546,50,5884
+GB,2020-08-05,Wednesday,,Transit Stations,-76,-32,-35,52,19,409
+GB,2020-08-05,Wednesday,,Workplaces,-68,-46,-45,-30,6,47
+GB,2020-08-05,Wednesday,,Residential,6,13,12,22,3,7
+GB,2020-08-06,Thursday,,Retail and Recreation,-83,-13,-16,109,10,361
+GB,2020-08-06,Thursday,,Grocery and Pharmacy,-70,-6,-9,69,7,154
+GB,2020-08-06,Thursday,,Parks,-59,114,99,613,47,7191
+GB,2020-08-06,Thursday,,Transit Stations,-77,-29,-32,62,21,552
+GB,2020-08-06,Thursday,,Workplaces,-69,-47,-46,-32,6,49
+GB,2020-08-06,Thursday,,Residential,5,12,12,22,3,9
+GB,2020-08-07,Friday,,Retail and Recreation,-83,-20,-23,93,12,305
+GB,2020-08-07,Friday,,Grocery and Pharmacy,-68,-8,-11,73,7,150
+GB,2020-08-07,Friday,,Parks,-58,113,90,623,48,8991
+GB,2020-08-07,Friday,,Transit Stations,-75,-26,-30,89,21,646
+GB,2020-08-07,Friday,,Workplaces,-68,-46,-46,-31,6,45
+GB,2020-08-07,Friday,,Residential,5,11,10,19,3,7
+GB,2020-08-08,Saturday,,Retail and Recreation,-74,-27,-31,96,12,327
+GB,2020-08-08,Saturday,,Grocery and Pharmacy,-49,-9,-13,101,9,241
+GB,2020-08-08,Saturday,,Parks,-50,90,70,537,46,5787
+GB,2020-08-08,Saturday,,Transit Stations,-64,-14,-22,156,23,957
+GB,2020-08-08,Saturday,,Workplaces,-27,-11,-11,2,4,22
+GB,2020-08-08,Saturday,,Residential,-2,3,3,10,1,1
+GB,2020-08-09,Sunday,,Retail and Recreation,-73,-18,-24,143,16,547
+GB,2020-08-09,Sunday,,Grocery and Pharmacy,-47,-11,-16,104,7,243
+GB,2020-08-09,Sunday,,Parks,-48,95,76,484,46,5265
+GB,2020-08-09,Sunday,,Transit Stations,-67,-11,-16,113,23,953
+GB,2020-08-09,Sunday,,Workplaces,-25,-7,-7,11,4,28
+GB,2020-08-09,Sunday,,Residential,-2,1,1,7,0,1
+GB,2020-08-10,Monday,,Retail and Recreation,-80,-1,-5,132,12,452
+GB,2020-08-10,Monday,,Grocery and Pharmacy,-71,-8,-11,74,6,185
+GB,2020-08-10,Monday,,Parks,-58,108,88,492,47,7111
+GB,2020-08-10,Monday,,Transit Stations,-75,-27,-30,68,21,619
+GB,2020-08-10,Monday,,Workplaces,-70,-47,-46,-29,7,55
+GB,2020-08-10,Monday,,Residential,5,11,10,19,3,8
+GB,2020-08-11,Tuesday,,Retail and Recreation,-80,-2,-5,128,13,432
+GB,2020-08-11,Tuesday,,Grocery and Pharmacy,-69,-8,-11,69,7,170
+GB,2020-08-11,Tuesday,,Parks,-57,110,87,633,46,8573
+GB,2020-08-11,Tuesday,,Transit Stations,-76,-29,-32,81,21,568
+GB,2020-08-11,Tuesday,,Workplaces,-70,-47,-46,-31,7,55
+GB,2020-08-11,Tuesday,,Residential,5,11,11,20,3,9
+GB,2020-08-12,Wednesday,,Retail and Recreation,-80,-4,-7,123,13,402
+GB,2020-08-12,Wednesday,,Grocery and Pharmacy,-68,-8,-11,69,7,158
+GB,2020-08-12,Wednesday,,Parks,-56,91,70,608,42,6971
+GB,2020-08-12,Wednesday,,Transit Stations,-76,-31,-34,56,19,458
+GB,2020-08-12,Wednesday,,Workplaces,-70,-46,-45,-29,7,53
+GB,2020-08-12,Wednesday,,Residential,5,12,11,21,3,10
+GB,2020-08-13,Thursday,,Retail and Recreation,-83,-15,-17,104,10,344
+GB,2020-08-13,Thursday,,Grocery and Pharmacy,-69,-7,-9,62,7,155
+GB,2020-08-13,Thursday,,Parks,-64,82,62,546,42,6096
+GB,2020-08-13,Thursday,,Transit Stations,-77,-31,-34,94,21,525
+GB,2020-08-13,Thursday,,Workplaces,-71,-46,-45,-31,7,54
+GB,2020-08-13,Thursday,,Residential,6,13,12,22,3,11
+GB,2020-08-14,Friday,,Retail and Recreation,-83,-18,-20,88,10,273
+GB,2020-08-14,Friday,,Grocery and Pharmacy,-70,-9,-11,58,7,152
+GB,2020-08-14,Friday,,Parks,-62,77,60,480,45,5601
+GB,2020-08-14,Friday,,Transit Stations,-75,-27,-31,130,21,619
+GB,2020-08-14,Friday,,Workplaces,-68,-45,-44,-30,6,50
+GB,2020-08-14,Friday,,Residential,5,11,11,21,3,8
+GB,2020-08-15,Saturday,,Retail and Recreation,-71,-25,-28,80,10,262
+GB,2020-08-15,Saturday,,Grocery and Pharmacy,-50,-11,-14,76,9,207
+GB,2020-08-15,Saturday,,Parks,-65,54,36,422,47,5038
+GB,2020-08-15,Saturday,,Transit Stations,-64,-19,-24,144,21,771
+GB,2020-08-15,Saturday,,Workplaces,-29,-11,-11,5,4,24
+GB,2020-08-15,Saturday,,Residential,-1,4,4,10,1,2
+GB,2020-08-16,Sunday,,Retail and Recreation,-70,-22,-26,111,10,364
+GB,2020-08-16,Sunday,,Grocery and Pharmacy,-47,-15,-18,77,7,176
+GB,2020-08-16,Sunday,,Parks,-51,45,34,380,40,3128
+GB,2020-08-16,Sunday,,Transit Stations,-66,-20,-24,93,19,589
+GB,2020-08-16,Sunday,,Workplaces,-26,-8,-8,6,4,29
+GB,2020-08-16,Sunday,,Residential,0,3,3,8,0,1
+GB,2020-08-17,Monday,,Retail and Recreation,-79,-13,-11,37,9,227
+GB,2020-08-17,Monday,,Grocery and Pharmacy,-70,-16,-16,27,4,74
+GB,2020-08-17,Monday,,Parks,-58,-9,2,16,21,745
+GB,2020-08-17,Monday,,Transit Stations,-75,-41,-45,24,15,253
+GB,2020-08-17,Monday,,Workplaces,-71,-47,-46,-29,7,57
+GB,2020-08-17,Monday,,Residential,5,11,10,21,2,8
+GB,2020-08-18,Tuesday,,Retail and Recreation,-78,-13,-10,35,10,219
+GB,2020-08-18,Tuesday,,Grocery and Pharmacy,-69,-16,-15,23,4,72
+GB,2020-08-18,Tuesday,,Parks,-56,1,10,27,17,779
+GB,2020-08-18,Tuesday,,Transit Stations,-76,-41,-44,29,13,247
+GB,2020-08-18,Tuesday,,Workplaces,-68,-44,-43,-26,7,58
+GB,2020-08-18,Tuesday,,Residential,5,11,11,21,3,8
+GB,2020-08-19,Wednesday,,Retail and Recreation,-80,-18,-15,46,10,225
+GB,2020-08-19,Wednesday,,Grocery and Pharmacy,-71,-19,-19,21,6,80
+GB,2020-08-19,Wednesday,,Parks,-64,-22,-24,18,21,613
+GB,2020-08-19,Wednesday,,Transit Stations,-75,-44,-47,7,13,200
+GB,2020-08-19,Wednesday,,Workplaces,-69,-45,-44,-26,7,60
+GB,2020-08-19,Wednesday,,Residential,6,13,12,23,3,12
+GB,2020-08-20,Thursday,,Retail and Recreation,-81,-20,-18,41,9,214
+GB,2020-08-20,Thursday,,Grocery and Pharmacy,-68,-11,-11,20,4,73
+GB,2020-08-20,Thursday,,Parks,-55,15,19,58,34,1352
+GB,2020-08-20,Thursday,,Transit Stations,-75,-40,-43,21,14,259
+GB,2020-08-20,Thursday,,Workplaces,-69,-45,-43,-28,7,54
+GB,2020-08-20,Thursday,,Residential,5,11,10,20,3,8
+GB,2020-08-21,Friday,,Retail and Recreation,-82,-27,-25,27,6,137
+GB,2020-08-21,Friday,,Grocery and Pharmacy,-67,-14,-14,15,4,60
+GB,2020-08-21,Friday,,Parks,-62,-7,-5,48,21,856
+GB,2020-08-21,Friday,,Transit Stations,-74,-38,-43,32,13,330
+GB,2020-08-21,Friday,,Workplaces,-68,-44,-44,-27,7,49
+GB,2020-08-21,Friday,,Residential,6,11,11,21,1,6
+GB,2020-08-22,Saturday,,Retail and Recreation,-69,-30,-29,12,7,120
+GB,2020-08-22,Saturday,,Grocery and Pharmacy,-44,-16,-16,18,4,47
+GB,2020-08-22,Saturday,,Parks,-39,9,10,49,22,601
+GB,2020-08-22,Saturday,,Transit Stations,-66,-33,-35,36,13,285
+GB,2020-08-22,Saturday,,Workplaces,-26,-12,-11,-1,4,23
+GB,2020-08-22,Saturday,,Residential,1,4,3,11,1,1
+GB,2020-08-23,Sunday,,Retail and Recreation,-68,-30,-29,37,7,145
+GB,2020-08-23,Sunday,,Grocery and Pharmacy,-43,-20,-20,22,4,54
+GB,2020-08-23,Sunday,,Parks,-39,20,19,118,36,1308
+GB,2020-08-23,Sunday,,Transit Stations,-69,-37,-36,0,12,164
+GB,2020-08-23,Sunday,,Workplaces,-24,-10,-10,0,5,26
+GB,2020-08-23,Sunday,,Residential,0,2,2,7,0,1
+GB,2020-08-24,Monday,,Retail and Recreation,-77,-8,-5,43,10,254
+GB,2020-08-24,Monday,,Grocery and Pharmacy,-69,-15,-15,27,5,79
+GB,2020-08-24,Monday,,Parks,-62,-3,-2,48,45,1597
+GB,2020-08-24,Monday,,Transit Stations,-74,-38,-43,29,13,282
+GB,2020-08-24,Monday,,Workplaces,-69,-45,-43,-23,7,62
+GB,2020-08-24,Monday,,Residential,4,10,9,20,3,9
+GB,2020-08-25,Tuesday,,Retail and Recreation,-78,-14,-11,32,10,220
+GB,2020-08-25,Tuesday,,Grocery and Pharmacy,-69,-18,-18,24,4,71
+GB,2020-08-25,Tuesday,,Parks,-67,-24,-21,25,10,556
+GB,2020-08-25,Tuesday,,Transit Stations,-75,-44,-47,21,12,205
+GB,2020-08-25,Tuesday,,Workplaces,-69,-46,-45,-28,7,55
+GB,2020-08-25,Tuesday,,Residential,7,13,12,21,3,7
+GB,2020-08-26,Wednesday,,Retail and Recreation,-76,-6,-4,54,10,265
+GB,2020-08-26,Wednesday,,Grocery and Pharmacy,-66,-14,-14,19,4,64
+GB,2020-08-26,Wednesday,,Parks,-60,-2,9,35,7,966
+GB,2020-08-26,Wednesday,,Transit Stations,-73,-38,-41,29,13,246
+GB,2020-08-26,Wednesday,,Workplaces,-66,-43,-42,-23,7,58
+GB,2020-08-26,Wednesday,,Residential,5,10,10,19,3,7
+GB,2020-08-27,Thursday,,Retail and Recreation,-81,-22,-19,37,7,200
+GB,2020-08-27,Thursday,,Grocery and Pharmacy,-69,-14,-13,19,6,81
+GB,2020-08-27,Thursday,,Parks,-73,-19,-16,22,15,706
+GB,2020-08-27,Thursday,,Transit Stations,-75,-41,-45,15,13,253
+GB,2020-08-27,Thursday,,Workplaces,-69,-44,-43,-24,7,59
+GB,2020-08-27,Thursday,,Residential,6,12,12,22,3,8
+GB,2020-08-28,Friday,,Retail and Recreation,-80,-20,-18,36,7,158
+GB,2020-08-28,Friday,,Grocery and Pharmacy,-66,-11,-11,20,4,72
+GB,2020-08-28,Friday,,Parks,-70,-14,-15,31,18,780
+GB,2020-08-28,Friday,,Transit Stations,-72,-36,-40,37,13,325
+GB,2020-08-28,Friday,,Workplaces,-67,-44,-44,-25,7,53
+GB,2020-08-28,Friday,,Residential,5,10,10,19,1,6
+GB,2020-08-29,Saturday,,Retail and Recreation,-66,-26,-26,22,7,121
+GB,2020-08-29,Saturday,,Grocery and Pharmacy,-44,-14,-14,21,4,55
+GB,2020-08-29,Saturday,,Parks,-50,-7,-3,25,19,389
+GB,2020-08-29,Saturday,,Transit Stations,-63,-31,-34,36,12,296
+GB,2020-08-29,Saturday,,Workplaces,-27,-13,-12,-1,6,28
+GB,2020-08-29,Saturday,,Residential,0,3,3,6,1,1
+GB,2020-08-30,Sunday,,Retail and Recreation,-60,-20,-21,50,9,185
+GB,2020-08-30,Sunday,,Grocery and Pharmacy,-40,-17,-18,22,4,58
+GB,2020-08-30,Sunday,,Parks,-32,20,23,48,15,524
+GB,2020-08-30,Sunday,,Transit Stations,-69,-33,-34,1,12,193
+GB,2020-08-30,Sunday,,Workplaces,-27,-10,-9,2,6,32
+GB,2020-08-30,Sunday,,Residential,-2,0,0,3,1,1
+GB,2020-08-31,Monday,Summer Bank Holiday,Retail and Recreation,-85,-3,-2,46,13,309
+GB,2020-08-31,Monday,Summer Bank Holiday,Grocery and Pharmacy,-77,-21,-20,11,4,77
+GB,2020-08-31,Monday,Summer Bank Holiday,Parks,-65,16,28,55,39,2078
+GB,2020-08-31,Monday,Summer Bank Holiday,Transit Stations,-81,-46,-51,17,13,280
+GB,2020-08-31,Monday,Summer Bank Holiday,Workplaces,-81,-68,-70,-31,6,95
+GB,2020-08-31,Monday,Summer Bank Holiday,Residential,5,14,14,18,3,7
+GB,2020-09-01,Tuesday,,Retail and Recreation,-79,-16,-13,48,9,228
+GB,2020-09-01,Tuesday,,Grocery and Pharmacy,-67,-7,-7,25,6,79
+GB,2020-09-01,Tuesday,,Parks,-64,2,9,46,43,1415
+GB,2020-09-01,Tuesday,,Transit Stations,-73,-37,-39,26,15,242
+GB,2020-09-01,Tuesday,,Workplaces,-69,-42,-41,-18,7,65
+GB,2020-09-01,Tuesday,,Residential,4,10,9,19,3,9
+GB,2020-09-02,Wednesday,,Retail and Recreation,-79,-21,-18,35,7,180
+GB,2020-09-02,Wednesday,,Grocery and Pharmacy,-66,-12,-12,18,4,64
+GB,2020-09-02,Wednesday,,Parks,-64,-9,-16,49,28,915
+GB,2020-09-02,Wednesday,,Transit Stations,-73,-40,-41,15,13,187
+GB,2020-09-02,Wednesday,,Workplaces,-67,-41,-40,-17,7,60
+GB,2020-09-02,Wednesday,,Residential,5,11,11,21,3,8
+GB,2020-09-03,Thursday,,Retail and Recreation,-79,-21,-19,35,9,178
+GB,2020-09-03,Thursday,,Grocery and Pharmacy,-67,-11,-10,12,6,65
+GB,2020-09-03,Thursday,,Parks,-69,-10,-5,34,30,1025
+GB,2020-09-03,Thursday,,Transit Stations,-74,-39,-40,10,13,198
+GB,2020-09-03,Thursday,,Workplaces,-67,-41,-39,-16,7,63
+GB,2020-09-03,Thursday,,Residential,4,11,10,21,3,9
+GB,2020-09-04,Friday,,Retail and Recreation,-78,-22,-20,24,7,125
+GB,2020-09-04,Friday,,Grocery and Pharmacy,-65,-12,-11,8,4,51
+GB,2020-09-04,Friday,,Parks,-65,2,0,60,29,1180
+GB,2020-09-04,Friday,,Transit Stations,-71,-33,-36,27,15,268
+GB,2020-09-04,Friday,,Workplaces,-65,-38,-38,-14,7,58
+GB,2020-09-04,Friday,,Residential,4,9,8,18,1,6
+GB,2020-09-05,Saturday,,Retail and Recreation,-62,-25,-23,14,7,99
+GB,2020-09-05,Saturday,,Grocery and Pharmacy,-41,-12,-13,14,4,38
+GB,2020-09-05,Saturday,,Parks,-36,11,12,60,27,599
+GB,2020-09-05,Saturday,,Transit Stations,-65,-31,-32,24,11,216
+GB,2020-09-05,Saturday,,Workplaces,-28,-11,-10,1,4,32
+GB,2020-09-05,Saturday,,Residential,1,3,3,6,1,1
+GB,2020-09-06,Sunday,,Retail and Recreation,-60,-24,-23,35,7,119
+GB,2020-09-06,Sunday,,Grocery and Pharmacy,-41,-14,-14,20,4,47
+GB,2020-09-06,Sunday,,Parks,-35,31,28,101,41,1281
+GB,2020-09-06,Sunday,,Transit Stations,-66,-35,-35,-2,15,174
+GB,2020-09-06,Sunday,,Workplaces,-28,-10,-9,-1,6,31
+GB,2020-09-06,Sunday,,Residential,0,2,2,4,0,1
+GB,2020-09-07,Monday,,Retail and Recreation,-76,-19,-16,17,7,152
+GB,2020-09-07,Monday,,Grocery and Pharmacy,-68,-11,-11,24,6,69
+GB,2020-09-07,Monday,,Parks,-72,-16,-11,22,24,894
+GB,2020-09-07,Monday,,Transit Stations,-72,-35,-37,28,13,223
+GB,2020-09-07,Monday,,Workplaces,-68,-41,-40,-16,7,64
+GB,2020-09-07,Monday,,Residential,3,9,8,19,3,7
+GB,2020-09-08,Tuesday,,Retail and Recreation,-75,-19,-18,49,8,180
+GB,2020-09-08,Tuesday,,Grocery and Pharmacy,-64,-11,-10,22,4,63
+GB,2020-09-08,Tuesday,,Parks,-65,-3,10,40,22,1128
+GB,2020-09-08,Tuesday,,Transit Stations,-72,-35,-35,29,13,205
+GB,2020-09-08,Tuesday,,Workplaces,-66,-40,-39,-14,7,67
+GB,2020-09-08,Tuesday,,Residential,3,9,9,19,3,8
+GB,2020-09-09,Wednesday,,Retail and Recreation,-76,-21,-18,39,7,159
+GB,2020-09-09,Wednesday,,Grocery and Pharmacy,-64,-12,-12,19,4,61
+GB,2020-09-09,Wednesday,,Parks,-62,-4,4,37,20,957
+GB,2020-09-09,Wednesday,,Transit Stations,-71,-36,-36,19,12,184
+GB,2020-09-09,Wednesday,,Workplaces,-64,-38,-37,-9,7,65
+GB,2020-09-09,Wednesday,,Residential,3,9,9,20,3,8
+GB,2020-09-10,Thursday,,Retail and Recreation,-75,-21,-19,37,7,155
+GB,2020-09-10,Thursday,,Grocery and Pharmacy,-63,-10,-10,15,6,62
+GB,2020-09-10,Thursday,,Parks,-64,-3,3,27,24,891
+GB,2020-09-10,Thursday,,Transit Stations,-71,-35,-34,29,14,205
+GB,2020-09-10,Thursday,,Workplaces,-64,-38,-38,-10,7,63
+GB,2020-09-10,Thursday,,Residential,2,9,8,19,3,8
+GB,2020-09-11,Friday,,Retail and Recreation,-76,-15,-16,65,8,177
+GB,2020-09-11,Friday,,Grocery and Pharmacy,-63,-7,-9,45,6,93
+GB,2020-09-11,Friday,,Parks,-68,73,61,378,33,3110
+GB,2020-09-11,Friday,,Transit Stations,-68,-21,-23,85,18,401
+GB,2020-09-11,Friday,,Workplaces,-65,-36,-36,-11,7,58
+GB,2020-09-11,Friday,,Residential,2,8,7,18,2,6
+GB,2020-09-12,Saturday,,Retail and Recreation,-61,-18,-20,75,9,201
+GB,2020-09-12,Saturday,,Grocery and Pharmacy,-44,-8,-10,61,7,118
+GB,2020-09-12,Saturday,,Parks,-63,73,66,370,36,2816
+GB,2020-09-12,Saturday,,Transit Stations,-64,-16,-19,119,18,496
+GB,2020-09-12,Saturday,,Workplaces,-26,-7,-7,20,6,37
+GB,2020-09-12,Saturday,,Residential,0,3,2,8,1,1
+GB,2020-09-13,Sunday,,Retail and Recreation,-62,-12,-15,104,14,351
+GB,2020-09-13,Sunday,,Grocery and Pharmacy,-40,-9,-11,75,7,132
+GB,2020-09-13,Sunday,,Parks,-60,98,91,403,42,3009
+GB,2020-09-13,Sunday,,Transit Stations,-67,-9,-13,97,19,599
+GB,2020-09-13,Sunday,,Workplaces,-26,-5,-5,30,6,45
+GB,2020-09-13,Sunday,,Residential,-2,1,1,5,1,1
+GB,2020-09-14,Monday,,Retail and Recreation,-75,-9,-11,78,10,262
+GB,2020-09-14,Monday,,Grocery and Pharmacy,-65,-6,-8,47,6,111
+GB,2020-09-14,Monday,,Parks,-65,108,95,403,49,5429
+GB,2020-09-14,Monday,,Transit Stations,-71,-20,-23,71,18,459
+GB,2020-09-14,Monday,,Workplaces,-64,-35,-34,-6,7,65
+GB,2020-09-14,Monday,,Residential,1,8,7,17,3,8
+GB,2020-09-15,Tuesday,,Retail and Recreation,-74,-10,-12,81,10,268
+GB,2020-09-15,Tuesday,,Grocery and Pharmacy,-62,-6,-7,47,7,110
+GB,2020-09-15,Tuesday,,Parks,-66,99,86,415,42,4819
+GB,2020-09-15,Tuesday,,Transit Stations,-69,-22,-24,83,18,395
+GB,2020-09-15,Tuesday,,Workplaces,-65,-35,-34,-8,7,65
+GB,2020-09-15,Tuesday,,Residential,2,9,8,18,3,8
+GB,2020-09-16,Wednesday,,Retail and Recreation,-74,-13,-14,63,9,211
+GB,2020-09-16,Wednesday,,Grocery and Pharmacy,-63,-8,-9,38,7,91
+GB,2020-09-16,Wednesday,,Parks,-62,78,67,319,36,3462
+GB,2020-09-16,Wednesday,,Transit Stations,-70,-24,-26,56,16,341
+GB,2020-09-16,Wednesday,,Workplaces,-65,-34,-34,-8,7,60
+GB,2020-09-16,Wednesday,,Residential,2,9,8,19,3,8
+GB,2020-09-17,Thursday,,Retail and Recreation,-74,-11,-12,65,9,214
+GB,2020-09-17,Thursday,,Grocery and Pharmacy,-63,-7,-8,38,7,91
+GB,2020-09-17,Thursday,,Parks,-64,93,84,357,40,3754
+GB,2020-09-17,Thursday,,Transit Stations,-71,-23,-24,61,18,390
+GB,2020-09-17,Thursday,,Workplaces,-67,-35,-34,-9,7,62
+GB,2020-09-17,Thursday,,Residential,3,8,8,18,3,8
+GB,2020-09-18,Friday,,Retail and Recreation,-75,-15,-16,64,9,187
+GB,2020-09-18,Friday,,Grocery and Pharmacy,-63,-7,-9,44,6,93
+GB,2020-09-18,Friday,,Parks,-68,83,71,374,39,3432
+GB,2020-09-18,Friday,,Transit Stations,-68,-20,-22,77,18,409
+GB,2020-09-18,Friday,,Workplaces,-61,-33,-33,-6,7,58
+GB,2020-09-18,Friday,,Residential,2,7,7,17,3,7
+GB,2020-09-19,Saturday,,Retail and Recreation,-59,-18,-20,76,10,214
+GB,2020-09-19,Saturday,,Grocery and Pharmacy,-39,-8,-10,59,7,126
+GB,2020-09-19,Saturday,,Parks,-59,77,68,351,35,2928
+GB,2020-09-19,Saturday,,Transit Stations,-64,-17,-20,110,16,528
+GB,2020-09-19,Saturday,,Workplaces,-27,-8,-7,24,6,36
+GB,2020-09-19,Saturday,,Residential,-1,3,3,7,1,1
+GB,2020-09-20,Sunday,,Retail and Recreation,-60,-13,-16,88,13,320
+GB,2020-09-20,Sunday,,Grocery and Pharmacy,-40,-9,-11,66,7,121
+GB,2020-09-20,Sunday,,Parks,-57,88,82,377,37,2961
+GB,2020-09-20,Sunday,,Transit Stations,-68,-11,-15,105,19,616
+GB,2020-09-20,Sunday,,Workplaces,-25,-5,-5,32,6,47
+GB,2020-09-20,Sunday,,Residential,-1,2,2,6,1,1
+GB,2020-09-21,Monday,,Retail and Recreation,-73,-10,-12,66,9,218
+GB,2020-09-21,Monday,,Grocery and Pharmacy,-66,-6,-7,41,6,94
+GB,2020-09-21,Monday,,Parks,-67,92,82,349,40,3853
+GB,2020-09-21,Monday,,Transit Stations,-71,-23,-25,63,16,386
+GB,2020-09-21,Monday,,Workplaces,-64,-36,-35,-6,7,71
+GB,2020-09-21,Monday,,Residential,3,8,8,18,3,8
+GB,2020-09-22,Tuesday,,Retail and Recreation,-72,-13,-15,66,9,195
+GB,2020-09-22,Tuesday,,Grocery and Pharmacy,-62,-6,-7,39,7,92
+GB,2020-09-22,Tuesday,,Parks,-66,76,69,349,37,3008
+GB,2020-09-22,Tuesday,,Transit Stations,-70,-27,-28,44,15,284
+GB,2020-09-22,Tuesday,,Workplaces,-63,-35,-34,-5,7,67
+GB,2020-09-22,Tuesday,,Residential,3,9,9,18,3,7
+GB,2020-09-23,Wednesday,,Retail and Recreation,-76,-20,-21,35,9,148
+GB,2020-09-23,Wednesday,,Grocery and Pharmacy,-67,-9,-11,27,7,85
+GB,2020-09-23,Wednesday,,Parks,-74,23,14,236,24,1898
+GB,2020-09-23,Wednesday,,Transit Stations,-72,-32,-34,33,13,227
+GB,2020-09-23,Wednesday,,Workplaces,-65,-33,-33,-5,7,64
+GB,2020-09-23,Wednesday,,Residential,5,11,10,22,2,8
+GB,2020-09-24,Thursday,,Retail and Recreation,-77,-19,-19,44,7,139
+GB,2020-09-24,Thursday,,Grocery and Pharmacy,-66,-7,-8,29,6,80
+GB,2020-09-24,Thursday,,Parks,-77,33,24,256,24,2003
+GB,2020-09-24,Thursday,,Transit Stations,-73,-32,-34,23,13,237
+GB,2020-09-24,Thursday,,Workplaces,-64,-34,-33,-4,7,66
+GB,2020-09-24,Thursday,,Residential,4,10,10,21,3,8
+GB,2020-09-25,Friday,,Retail and Recreation,-77,-19,-20,17,7,118
+GB,2020-09-25,Friday,,Grocery and Pharmacy,-65,-6,-7,29,6,82
+GB,2020-09-25,Friday,,Parks,-77,35,27,278,30,2017
+GB,2020-09-25,Friday,,Transit Stations,-69,-28,-30,61,15,286
+GB,2020-09-25,Friday,,Workplaces,-61,-32,-32,-8,7,66
+GB,2020-09-25,Friday,,Residential,5,10,9,20,1,6
+GB,2020-09-26,Saturday,,Retail and Recreation,-59,-21,-22,46,9,146
+GB,2020-09-26,Saturday,,Grocery and Pharmacy,-43,-7,-8,50,7,106
+GB,2020-09-26,Saturday,,Parks,-67,34,25,266,33,2189
+GB,2020-09-26,Saturday,,Transit Stations,-67,-26,-30,57,13,357
+GB,2020-09-26,Saturday,,Workplaces,-25,-7,-6,22,6,38
+GB,2020-09-26,Saturday,,Residential,2,5,5,8,1,1
+GB,2020-09-27,Sunday,,Retail and Recreation,-61,-18,-21,56,12,219
+GB,2020-09-27,Sunday,,Grocery and Pharmacy,-45,-10,-12,49,6,90
+GB,2020-09-27,Sunday,,Parks,-69,46,37,298,39,2315
+GB,2020-09-27,Sunday,,Transit Stations,-70,-21,-24,59,16,422
+GB,2020-09-27,Sunday,,Workplaces,-28,-5,-5,33,6,50
+GB,2020-09-27,Sunday,,Residential,1,3,3,6,1,1
+GB,2020-09-28,Monday,,Retail and Recreation,-75,-12,-13,49,9,150
+GB,2020-09-28,Monday,,Grocery and Pharmacy,-67,-6,-6,32,6,82
+GB,2020-09-28,Monday,,Parks,-73,53,46,239,29,1886
+GB,2020-09-28,Monday,,Transit Stations,-73,-29,-31,52,15,295
+GB,2020-09-28,Monday,,Workplaces,-67,-33,-32,0,9,91
+GB,2020-09-28,Monday,,Residential,3,9,9,19,3,8
+GB,2020-09-29,Tuesday,,Retail and Recreation,-76,-14,-15,43,9,149
+GB,2020-09-29,Tuesday,,Grocery and Pharmacy,-66,-6,-6,31,6,81
+GB,2020-09-29,Tuesday,,Parks,-74,55,48,249,34,2013
+GB,2020-09-29,Tuesday,,Transit Stations,-72,-29,-31,44,15,264
+GB,2020-09-29,Tuesday,,Workplaces,-61,-32,-31,-1,7,75
+GB,2020-09-29,Tuesday,,Residential,4,10,9,20,3,9
+GB,2020-09-30,Wednesday,,Retail and Recreation,-76,-19,-19,34,7,113
+GB,2020-09-30,Wednesday,,Grocery and Pharmacy,-67,-8,-8,23,7,69
+GB,2020-09-30,Wednesday,,Parks,-77,8,2,180,21,1054
+GB,2020-09-30,Wednesday,,Transit Stations,-72,-33,-34,9,12,179
+GB,2020-09-30,Wednesday,,Workplaces,-63,-32,-32,-1,7,66
+GB,2020-09-30,Wednesday,,Residential,4,11,11,21,3,8
+GB,2020-10-01,Thursday,,Retail and Recreation,-76,-16,-16,36,7,122
+GB,2020-10-01,Thursday,,Grocery and Pharmacy,-64,-4,-4,29,6,72
+GB,2020-10-01,Thursday,,Parks,-76,43,36,256,27,1586
+GB,2020-10-01,Thursday,,Transit Stations,-73,-30,-31,22,15,240
+GB,2020-10-01,Thursday,,Workplaces,-59,-30,-29,1,7,68
+GB,2020-10-01,Thursday,,Residential,3,10,10,20,3,8
+GB,2020-10-02,Friday,,Retail and Recreation,-80,-25,-24,30,9,121
+GB,2020-10-02,Friday,,Grocery and Pharmacy,-68,-9,-9,29,7,82
+GB,2020-10-02,Friday,,Parks,-80,9,0,219,27,1505
+GB,2020-10-02,Friday,,Transit Stations,-71,-29,-30,32,15,242
+GB,2020-10-02,Friday,,Workplaces,-62,-30,-29,0,7,67
+GB,2020-10-02,Friday,,Residential,4,10,10,22,3,9
+GB,2020-10-03,Saturday,,Retail and Recreation,-63,-28,-28,24,7,83
+GB,2020-10-03,Saturday,,Grocery and Pharmacy,-40,-10,-10,41,6,70
+GB,2020-10-03,Saturday,,Parks,-73,-15,-19,139,24,729
+GB,2020-10-03,Saturday,,Transit Stations,-70,-34,-35,27,13,174
+GB,2020-10-03,Saturday,,Workplaces,-26,-10,-10,17,6,36
+GB,2020-10-03,Saturday,,Residential,1,7,7,11,1,2
+GB,2020-10-04,Sunday,,Retail and Recreation,-65,-27,-28,43,10,141
+GB,2020-10-04,Sunday,,Grocery and Pharmacy,-53,-14,-14,42,7,81
+GB,2020-10-04,Sunday,,Parks,-78,-1,-10,172,36,1554
+GB,2020-10-04,Sunday,,Transit Stations,-74,-29,-30,39,16,279
+GB,2020-10-04,Sunday,,Workplaces,-29,-8,-7,38,4,46
+GB,2020-10-04,Sunday,,Residential,2,5,5,10,1,2
+GB,2020-10-05,Monday,,Retail and Recreation,-77,-18,-18,28,7,117
+GB,2020-10-05,Monday,,Grocery and Pharmacy,-66,-8,-8,24,6,71
+GB,2020-10-05,Monday,,Parks,-77,29,23,205,28,1460
+GB,2020-10-05,Monday,,Transit Stations,-73,-28,-29,20,15,239
+GB,2020-10-05,Monday,,Workplaces,-61,-32,-31,0,7,72
+GB,2020-10-05,Monday,,Residential,4,10,10,20,3,8
+GB,2020-10-06,Tuesday,,Retail and Recreation,-77,-19,-19,30,7,115
+GB,2020-10-06,Tuesday,,Grocery and Pharmacy,-64,-7,-7,31,6,71
+GB,2020-10-06,Tuesday,,Parks,-78,27,21,201,27,1348
+GB,2020-10-06,Tuesday,,Transit Stations,-72,-30,-31,16,13,209
+GB,2020-10-06,Tuesday,,Workplaces,-62,-32,-31,-1,7,71
+GB,2020-10-06,Tuesday,,Residential,4,10,10,20,3,8
+GB,2020-10-07,Wednesday,,Retail and Recreation,-76,-18,-17,30,7,115
+GB,2020-10-07,Wednesday,,Grocery and Pharmacy,-63,-7,-7,25,6,67
+GB,2020-10-07,Wednesday,,Parks,-74,38,33,250,24,1276
+GB,2020-10-07,Wednesday,,Transit Stations,-73,-30,-31,21,13,227
+GB,2020-10-07,Wednesday,,Workplaces,-59,-30,-30,0,7,68
+GB,2020-10-07,Wednesday,,Residential,4,10,10,20,3,7
+GB,2020-10-08,Thursday,,Retail and Recreation,-77,-20,-20,17,7,103
+GB,2020-10-08,Thursday,,Grocery and Pharmacy,-63,-7,-7,22,6,67
+GB,2020-10-08,Thursday,,Parks,-77,27,21,232,22,1272
+GB,2020-10-08,Thursday,,Transit Stations,-74,-32,-33,22,13,212
+GB,2020-10-08,Thursday,,Workplaces,-61,-31,-30,-1,7,69
+GB,2020-10-08,Thursday,,Residential,5,11,10,21,3,8
+GB,2020-10-09,Friday,,Retail and Recreation,-77,-22,-22,26,7,98
+GB,2020-10-09,Friday,,Grocery and Pharmacy,-64,-7,-8,27,6,59
+GB,2020-10-09,Friday,,Parks,-76,28,22,248,22,1324
+GB,2020-10-09,Friday,,Transit Stations,-73,-29,-30,27,13,225
+GB,2020-10-09,Friday,,Workplaces,-59,-30,-29,2,7,66
+GB,2020-10-09,Friday,,Residential,4,10,10,19,3,6
+GB,2020-10-10,Saturday,,Retail and Recreation,-58,-24,-24,37,7,106
+GB,2020-10-10,Saturday,,Grocery and Pharmacy,-34,-7,-8,34,7,75
+GB,2020-10-10,Saturday,,Parks,-64,21,16,192,27,1270
+GB,2020-10-10,Saturday,,Transit Stations,-70,-30,-32,29,12,240
+GB,2020-10-10,Saturday,,Workplaces,-28,-6,-6,24,6,45
+GB,2020-10-10,Saturday,,Residential,3,6,5,10,1,1
+GB,2020-10-11,Sunday,,Retail and Recreation,-56,-21,-22,47,9,154
+GB,2020-10-11,Sunday,,Grocery and Pharmacy,-33,-11,-12,41,6,65
+GB,2020-10-11,Sunday,,Parks,-66,54,47,364,28,1635
+GB,2020-10-11,Sunday,,Transit Stations,-74,-24,-25,57,15,332
+GB,2020-10-11,Sunday,,Workplaces,-28,-4,-4,38,7,56
+GB,2020-10-11,Sunday,,Residential,2,4,3,8,1,1
+GB,2020-10-12,Monday,,Retail and Recreation,-77,-22,-21,23,7,110
+GB,2020-10-12,Monday,,Grocery and Pharmacy,-68,-10,-10,25,6,71
+GB,2020-10-12,Monday,,Parks,-78,16,11,194,22,1158
+GB,2020-10-12,Monday,,Transit Stations,-74,-32,-34,19,13,218
+GB,2020-10-12,Monday,,Workplaces,-61,-33,-32,0,9,86
+GB,2020-10-12,Monday,,Residential,5,11,10,20,3,7
+GB,2020-10-13,Tuesday,,Retail and Recreation,-77,-21,-21,31,7,120
+GB,2020-10-13,Tuesday,,Grocery and Pharmacy,-67,-8,-8,32,7,77
+GB,2020-10-13,Tuesday,,Parks,-80,21,15,189,27,1352
+GB,2020-10-13,Tuesday,,Transit Stations,-73,-33,-33,32,13,220
+GB,2020-10-13,Tuesday,,Workplaces,-62,-33,-32,-2,9,85
+GB,2020-10-13,Tuesday,,Residential,4,11,11,21,3,8
+GB,2020-10-14,Wednesday,,Retail and Recreation,-76,-20,-20,26,7,114
+GB,2020-10-14,Wednesday,,Grocery and Pharmacy,-64,-7,-7,29,6,68
+GB,2020-10-14,Wednesday,,Parks,-77,28,22,240,21,1313
+GB,2020-10-14,Wednesday,,Transit Stations,-73,-32,-33,23,13,225
+GB,2020-10-14,Wednesday,,Workplaces,-61,-31,-30,-1,9,82
+GB,2020-10-14,Wednesday,,Residential,4,11,11,21,3,8
+GB,2020-10-15,Thursday,,Retail and Recreation,-76,-20,-19,27,7,121
+GB,2020-10-15,Thursday,,Grocery and Pharmacy,-63,-5,-5,28,7,68
+GB,2020-10-15,Thursday,,Parks,-77,35,29,254,28,1609
+GB,2020-10-15,Thursday,,Transit Stations,-75,-31,-33,37,13,246
+GB,2020-10-15,Thursday,,Workplaces,-61,-31,-30,-1,9,82
+GB,2020-10-15,Thursday,,Residential,5,11,11,21,3,8
+GB,2020-10-16,Friday,,Retail and Recreation,-76,-22,-21,25,7,103
+GB,2020-10-16,Friday,,Grocery and Pharmacy,-61,-4,-5,30,6,62
+GB,2020-10-16,Friday,,Parks,-74,32,28,281,24,1402
+GB,2020-10-16,Friday,,Transit Stations,-72,-29,-30,30,13,235
+GB,2020-10-16,Friday,,Workplaces,-58,-30,-29,1,9,79
+GB,2020-10-16,Friday,,Residential,5,10,10,19,3,6
+GB,2020-10-17,Saturday,,Retail and Recreation,-66,-26,-26,34,9,125
+GB,2020-10-17,Saturday,,Grocery and Pharmacy,-39,-6,-7,37,7,73
+GB,2020-10-17,Saturday,,Parks,-67,27,24,192,25,1067
+GB,2020-10-17,Saturday,,Transit Stations,-71,-32,-34,32,13,230
+GB,2020-10-17,Saturday,,Workplaces,-30,-8,-7,21,6,54
+GB,2020-10-17,Saturday,,Residential,3,6,6,11,1,2
+GB,2020-10-18,Sunday,,Retail and Recreation,-64,-24,-25,38,9,136
+GB,2020-10-18,Sunday,,Grocery and Pharmacy,-41,-10,-11,37,6,60
+GB,2020-10-18,Sunday,,Parks,-67,40,36,235,25,1020
+GB,2020-10-18,Sunday,,Transit Stations,-75,-29,-30,45,16,284
+GB,2020-10-18,Sunday,,Workplaces,-30,-7,-7,34,7,56
+GB,2020-10-18,Sunday,,Residential,2,5,5,9,1,1
+GB,2020-10-19,Monday,,Retail and Recreation,-78,-19,-19,38,7,127
+GB,2020-10-19,Monday,,Grocery and Pharmacy,-66,-7,-8,26,6,72
+GB,2020-10-19,Monday,,Parks,-77,37,32,239,28,1659
+GB,2020-10-19,Monday,,Transit Stations,-76,-32,-35,31,15,264
+GB,2020-10-19,Monday,,Workplaces,-63,-34,-33,-1,9,88
+GB,2020-10-19,Monday,,Residential,5,11,11,21,3,9
+GB,2020-10-20,Tuesday,,Retail and Recreation,-79,-20,-20,40,7,126
+GB,2020-10-20,Tuesday,,Grocery and Pharmacy,-64,-6,-7,28,6,72
+GB,2020-10-20,Tuesday,,Parks,-76,37,32,220,27,1313
+GB,2020-10-20,Tuesday,,Transit Stations,-75,-34,-35,26,13,231
+GB,2020-10-20,Tuesday,,Workplaces,-63,-34,-32,-2,9,86
+GB,2020-10-20,Tuesday,,Residential,5,12,11,22,3,9
+GB,2020-10-21,Wednesday,,Retail and Recreation,-81,-25,-25,16,6,105
+GB,2020-10-21,Wednesday,,Grocery and Pharmacy,-66,-9,-9,21,7,75
+GB,2020-10-21,Wednesday,,Parks,-81,2,-4,191,19,945
+GB,2020-10-21,Wednesday,,Transit Stations,-75,-37,-37,6,13,176
+GB,2020-10-21,Wednesday,,Workplaces,-61,-33,-32,-5,9,78
+GB,2020-10-21,Wednesday,,Residential,6,13,12,24,3,10
+GB,2020-10-22,Thursday,,Retail and Recreation,-78,-18,-18,42,9,137
+GB,2020-10-22,Thursday,,Grocery and Pharmacy,-63,-4,-5,29,6,71
+GB,2020-10-22,Thursday,,Parks,-76,42,36,266,30,1739
+GB,2020-10-22,Thursday,,Transit Stations,-75,-33,-34,20,13,217
+GB,2020-10-22,Thursday,,Workplaces,-61,-33,-31,-3,9,79
+GB,2020-10-22,Thursday,,Residential,5,11,11,22,3,9
+GB,2020-10-23,Friday,,Retail and Recreation,-78,-22,-22,30,9,111
+GB,2020-10-23,Friday,,Grocery and Pharmacy,-62,-4,-5,30,6,65
+GB,2020-10-23,Friday,,Parks,-74,27,23,237,24,1411
+GB,2020-10-23,Friday,,Transit Stations,-74,-33,-34,33,13,210
+GB,2020-10-23,Friday,,Workplaces,-60,-33,-32,-9,7,66
+GB,2020-10-23,Friday,,Residential,6,11,11,21,3,7
+GB,2020-10-24,Saturday,,Retail and Recreation,-81,-32,-30,31,9,214
+GB,2020-10-24,Saturday,,Grocery and Pharmacy,-46,-10,-10,38,7,107
+GB,2020-10-24,Saturday,,Parks,-79,-4,-6,184,24,984
+GB,2020-10-24,Saturday,,Transit Stations,-79,-38,-39,60,12,231
+GB,2020-10-24,Saturday,,Workplaces,-45,-11,-10,19,7,73
+GB,2020-10-24,Saturday,,Residential,4,8,7,18,1,6
+GB,2020-10-25,Sunday,,Retail and Recreation,-82,-24,-23,69,9,311
+GB,2020-10-25,Sunday,,Grocery and Pharmacy,-42,-9,-10,65,6,111
+GB,2020-10-25,Sunday,,Parks,-74,36,32,297,33,1863
+GB,2020-10-25,Sunday,,Transit Stations,-78,-31,-31,27,15,304
+GB,2020-10-25,Sunday,,Workplaces,-42,-8,-7,31,7,80
+GB,2020-10-25,Sunday,,Residential,2,5,4,13,1,3
+GB,2020-10-26,Monday,,Retail and Recreation,-77,-15,-14,64,10,305
+GB,2020-10-26,Monday,,Grocery and Pharmacy,-66,-6,-7,44,7,112
+GB,2020-10-26,Monday,,Parks,-73,51,44,310,44,3310
+GB,2020-10-26,Monday,,Transit Stations,-76,-37,-38,27,15,265
+GB,2020-10-26,Monday,,Workplaces,-65,-43,-43,-17,7,68
+GB,2020-10-26,Monday,,Residential,6,12,12,22,3,8
+GB,2020-10-27,Tuesday,,Retail and Recreation,-79,-19,-18,52,9,258
+GB,2020-10-27,Tuesday,,Grocery and Pharmacy,-64,-7,-8,34,7,105
+GB,2020-10-27,Tuesday,,Parks,-79,16,6,264,24,2057
+GB,2020-10-27,Tuesday,,Transit Stations,-75,-40,-42,17,13,212
+GB,2020-10-27,Tuesday,,Workplaces,-65,-43,-43,-19,9,67
+GB,2020-10-27,Tuesday,,Residential,6,14,14,24,3,9
+GB,2020-10-28,Wednesday,,Retail and Recreation,-78,-17,-16,66,9,285
+GB,2020-10-28,Wednesday,,Grocery and Pharmacy,-63,-6,-7,42,7,107
+GB,2020-10-28,Wednesday,,Parks,-75,33,27,332,30,2372
+GB,2020-10-28,Wednesday,,Transit Stations,-74,-39,-39,24,15,230
+GB,2020-10-28,Wednesday,,Workplaces,-64,-42,-42,-16,7,68
+GB,2020-10-28,Wednesday,,Residential,7,13,13,23,3,9
+GB,2020-10-29,Thursday,,Retail and Recreation,-80,-20,-18,35,10,247
+GB,2020-10-29,Thursday,,Grocery and Pharmacy,-64,-7,-7,31,7,90
+GB,2020-10-29,Thursday,,Parks,-79,9,-1,254,25,1920
+GB,2020-10-29,Thursday,,Transit Stations,-76,-42,-43,11,13,199
+GB,2020-10-29,Thursday,,Workplaces,-65,-43,-43,-19,7,67
+GB,2020-10-29,Thursday,,Residential,6,14,14,24,3,10
+GB,2020-10-30,Friday,,Retail and Recreation,-78,-21,-19,39,9,208
+GB,2020-10-30,Friday,,Grocery and Pharmacy,-61,-3,-4,35,6,73
+GB,2020-10-30,Friday,,Parks,-74,34,31,281,30,1933
+GB,2020-10-30,Friday,,Transit Stations,-76,-37,-38,35,13,226
+GB,2020-10-30,Friday,,Workplaces,-62,-41,-41,-16,7,65
+GB,2020-10-30,Friday,,Residential,6,13,12,24,3,8
+GB,2020-10-31,Saturday,,Retail and Recreation,-76,-33,-31,13,7,152
+GB,2020-10-31,Saturday,,Grocery and Pharmacy,-37,-6,-6,29,6,70
+GB,2020-10-31,Saturday,,Parks,-71,-9,-11,107,18,574
+GB,2020-10-31,Saturday,,Transit Stations,-76,-39,-40,23,10,177
+GB,2020-10-31,Saturday,,Workplaces,-43,-11,-10,16,7,65
+GB,2020-10-31,Saturday,,Residential,4,8,7,16,1,4
+GB,2020-11-01,Sunday,,Retail and Recreation,-77,-26,-23,20,7,212
+GB,2020-11-01,Sunday,,Grocery and Pharmacy,-40,-12,-12,30,6,78
+GB,2020-11-01,Sunday,,Parks,-72,-1,-2,98,19,527
+GB,2020-11-01,Sunday,,Transit Stations,-75,-35,-34,11,13,217
+GB,2020-11-01,Sunday,,Workplaces,-43,-8,-7,30,9,93
+GB,2020-11-01,Sunday,,Residential,2,5,5,13,1,3
+GB,2020-11-02,Monday,,Retail and Recreation,-75,-11,-8,25,10,239
+GB,2020-11-02,Monday,,Grocery and Pharmacy,-64,-5,-4,28,7,84
+GB,2020-11-02,Monday,,Parks,-82,15,13,165,21,756
+GB,2020-11-02,Monday,,Transit Stations,-76,-35,-35,9,12,192
+GB,2020-11-02,Monday,,Workplaces,-59,-32,-31,-3,7,73
+GB,2020-11-02,Monday,,Residential,4,10,10,20,3,8
+GB,2020-11-03,Tuesday,,Retail and Recreation,-73,-9,-5,23,10,262
+GB,2020-11-03,Tuesday,,Grocery and Pharmacy,-60,-3,-3,33,7,73
+GB,2020-11-03,Tuesday,,Parks,-76,14,11,213,21,721
+GB,2020-11-03,Tuesday,,Transit Stations,-73,-33,-33,7,13,183
+GB,2020-11-03,Tuesday,,Workplaces,-59,-31,-30,-5,9,73
+GB,2020-11-03,Tuesday,,Residential,5,10,10,20,3,8
+GB,2020-11-04,Wednesday,,Retail and Recreation,-70,-4,1,31,12,329
+GB,2020-11-04,Wednesday,,Grocery and Pharmacy,-57,-2,-2,29,6,73
+GB,2020-11-04,Wednesday,,Parks,-73,25,23,223,24,899
+GB,2020-11-04,Wednesday,,Transit Stations,-73,-31,-31,9,13,214
+GB,2020-11-04,Wednesday,,Workplaces,-58,-29,-28,-1,9,71
+GB,2020-11-04,Wednesday,,Residential,3,9,9,21,3,9
+GB,2020-11-05,Thursday,,Retail and Recreation,-91,-50,-52,-11,6,134
+GB,2020-11-05,Thursday,,Grocery and Pharmacy,-74,-13,-14,15,7,69
+GB,2020-11-05,Thursday,,Parks,-88,13,12,155,19,676
+GB,2020-11-05,Thursday,,Transit Stations,-82,-45,-45,-13,12,144
+GB,2020-11-05,Thursday,,Workplaces,-66,-37,-36,-14,7,69
+GB,2020-11-05,Thursday,,Residential,7,16,15,28,3,11
+GB,2020-11-06,Friday,,Retail and Recreation,-91,-52,-54,-8,7,130
+GB,2020-11-06,Friday,,Grocery and Pharmacy,-74,-12,-12,11,6,60
+GB,2020-11-06,Friday,,Parks,-88,15,14,210,21,738
+GB,2020-11-06,Friday,,Transit Stations,-83,-46,-46,-10,10,129
+GB,2020-11-06,Friday,,Workplaces,-66,-37,-36,-16,7,62
+GB,2020-11-06,Friday,,Residential,6,17,16,29,3,11
+GB,2020-11-07,Saturday,,Retail and Recreation,-89,-57,-59,-11,9,159
+GB,2020-11-07,Saturday,,Grocery and Pharmacy,-62,-14,-15,14,7,69
+GB,2020-11-07,Saturday,,Parks,-83,24,22,251,30,1216
+GB,2020-11-07,Saturday,,Transit Stations,-85,-54,-54,-19,10,115
+GB,2020-11-07,Saturday,,Workplaces,-45,-27,-27,-3,6,49
+GB,2020-11-07,Saturday,,Residential,4,13,13,16,1,4
+GB,2020-11-08,Sunday,,Retail and Recreation,-87,-58,-60,-13,7,142
+GB,2020-11-08,Sunday,,Grocery and Pharmacy,-69,-18,-19,6,6,53
+GB,2020-11-08,Sunday,,Parks,-84,9,8,266,30,996
+GB,2020-11-08,Sunday,,Transit Stations,-88,-52,-52,-15,10,140
+GB,2020-11-08,Sunday,,Workplaces,-47,-28,-29,-7,6,54
+GB,2020-11-08,Sunday,,Residential,5,10,10,14,1,2
+GB,2020-11-09,Monday,,Retail and Recreation,-89,-43,-46,-2,9,189
+GB,2020-11-09,Monday,,Grocery and Pharmacy,-75,-13,-14,14,6,60
+GB,2020-11-09,Monday,,Parks,-87,12,9,158,19,671
+GB,2020-11-09,Monday,,Transit Stations,-83,-44,-44,-15,12,142
+GB,2020-11-09,Monday,,Workplaces,-66,-37,-37,-18,9,75
+GB,2020-11-09,Monday,,Residential,7,15,14,26,3,12
+GB,2020-11-10,Tuesday,,Retail and Recreation,-90,-43,-45,-7,9,174
+GB,2020-11-10,Tuesday,,Grocery and Pharmacy,-73,-11,-11,13,6,56
+GB,2020-11-10,Tuesday,,Parks,-84,23,21,211,25,868
+GB,2020-11-10,Tuesday,,Transit Stations,-82,-42,-42,-7,12,148
+GB,2020-11-10,Tuesday,,Workplaces,-67,-37,-36,-17,7,74
+GB,2020-11-10,Tuesday,,Residential,7,15,15,27,3,13
+GB,2020-11-11,Wednesday,,Retail and Recreation,-91,-45,-47,-12,7,158
+GB,2020-11-11,Wednesday,,Grocery and Pharmacy,-72,-12,-12,10,6,56
+GB,2020-11-11,Wednesday,,Parks,-86,5,4,157,19,618
+GB,2020-11-11,Wednesday,,Transit Stations,-81,-44,-44,-9,10,132
+GB,2020-11-11,Wednesday,,Workplaces,-66,-37,-36,-18,7,69
+GB,2020-11-11,Wednesday,,Residential,7,16,15,29,3,12
+GB,2020-11-12,Thursday,,Retail and Recreation,-92,-43,-46,-10,7,165
+GB,2020-11-12,Thursday,,Grocery and Pharmacy,-73,-9,-8,18,6,61
+GB,2020-11-12,Thursday,,Parks,-85,26,25,197,22,870
+GB,2020-11-12,Thursday,,Transit Stations,-85,-43,-43,-7,12,156
+GB,2020-11-12,Thursday,,Workplaces,-68,-37,-36,-18,7,70
+GB,2020-11-12,Thursday,,Residential,7,15,15,28,3,13
+GB,2020-11-13,Friday,,Retail and Recreation,-92,-46,-48,-10,9,159
+GB,2020-11-13,Friday,,Grocery and Pharmacy,-71,-8,-8,16,6,56
+GB,2020-11-13,Friday,,Parks,-85,16,16,199,21,762
+GB,2020-11-13,Friday,,Transit Stations,-84,-43,-43,-9,10,141
+GB,2020-11-13,Friday,,Workplaces,-65,-36,-36,-17,7,63
+GB,2020-11-13,Friday,,Residential,7,16,16,29,3,11
+GB,2020-11-14,Saturday,,Retail and Recreation,-92,-55,-58,-13,10,212
+GB,2020-11-14,Saturday,,Grocery and Pharmacy,-63,-14,-14,13,7,68
+GB,2020-11-14,Saturday,,Parks,-88,-22,-26,70,22,520
+GB,2020-11-14,Saturday,,Transit Stations,-88,-55,-56,-6,9,112
+GB,2020-11-14,Saturday,,Workplaces,-46,-27,-29,-3,6,63
+GB,2020-11-14,Saturday,,Residential,6,13,13,18,1,6
+GB,2020-11-15,Sunday,,Retail and Recreation,-87,-54,-57,-9,9,173
+GB,2020-11-15,Sunday,,Grocery and Pharmacy,-65,-18,-17,6,6,50
+GB,2020-11-15,Sunday,,Parks,-84,-2,-3,179,24,714
+GB,2020-11-15,Sunday,,Transit Stations,-91,-52,-52,-14,9,125
+GB,2020-11-15,Sunday,,Workplaces,-50,-27,-28,-1,7,68
+GB,2020-11-15,Sunday,,Residential,4,10,10,13,1,3
+GB,2020-11-16,Monday,,Retail and Recreation,-90,-42,-44,-5,9,164
+GB,2020-11-16,Monday,,Grocery and Pharmacy,-74,-13,-13,14,6,57
+GB,2020-11-16,Monday,,Parks,-85,10,9,145,21,647
+GB,2020-11-16,Monday,,Transit Stations,-85,-43,-43,-11,10,139
+GB,2020-11-16,Monday,,Workplaces,-66,-37,-36,-17,7,72
+GB,2020-11-16,Monday,,Residential,7,15,14,27,3,11
+GB,2020-11-17,Tuesday,,Retail and Recreation,-91,-43,-44,-9,9,153
+GB,2020-11-17,Tuesday,,Grocery and Pharmacy,-72,-10,-10,13,6,57
+GB,2020-11-17,Tuesday,,Parks,-86,14,14,133,22,648
+GB,2020-11-17,Tuesday,,Transit Stations,-83,-43,-42,-13,12,138
+GB,2020-11-17,Tuesday,,Workplaces,-69,-37,-36,-19,7,72
+GB,2020-11-17,Tuesday,,Residential,7,15,15,27,3,12
+GB,2020-11-18,Wednesday,,Retail and Recreation,-91,-44,-47,-2,9,172
+GB,2020-11-18,Wednesday,,Grocery and Pharmacy,-72,-11,-12,17,6,59
+GB,2020-11-18,Wednesday,,Parks,-84,-1,-4,130,18,626
+GB,2020-11-18,Wednesday,,Transit Stations,-83,-45,-45,-10,10,125
+GB,2020-11-18,Wednesday,,Workplaces,-65,-37,-36,-19,7,67
+GB,2020-11-18,Wednesday,,Residential,7,16,15,28,3,12
+GB,2020-11-19,Thursday,,Retail and Recreation,-92,-43,-45,4,9,192
+GB,2020-11-19,Thursday,,Grocery and Pharmacy,-74,-7,-7,21,6,64
+GB,2020-11-19,Thursday,,Parks,-88,13,12,197,24,729
+GB,2020-11-19,Thursday,,Transit Stations,-86,-43,-43,-6,12,157
+GB,2020-11-19,Thursday,,Workplaces,-66,-37,-36,-18,7,70
+GB,2020-11-19,Thursday,,Residential,7,16,15,29,3,13
+GB,2020-11-20,Friday,,Retail and Recreation,-92,-46,-49,-9,9,179
+GB,2020-11-20,Friday,,Grocery and Pharmacy,-72,-7,-6,16,6,60
+GB,2020-11-20,Friday,,Parks,-89,-9,-10,125,18,504
+GB,2020-11-20,Friday,,Transit Stations,-85,-45,-45,-14,10,126
+GB,2020-11-20,Friday,,Workplaces,-64,-37,-36,-18,7,64
+GB,2020-11-20,Friday,,Residential,7,16,16,29,3,12
+GB,2020-11-21,Saturday,,Retail and Recreation,-88,-52,-54,-10,9,174
+GB,2020-11-21,Saturday,,Grocery and Pharmacy,-56,-10,-10,13,6,51
+GB,2020-11-21,Saturday,,Parks,-78,2,0,152,24,710
+GB,2020-11-21,Saturday,,Transit Stations,-90,-52,-52,-23,9,106
+GB,2020-11-21,Saturday,,Workplaces,-44,-25,-26,-4,6,54
+GB,2020-11-21,Saturday,,Residential,6,12,13,16,1,4
+GB,2020-11-22,Sunday,,Retail and Recreation,-85,-50,-52,-4,9,174
+GB,2020-11-22,Sunday,,Grocery and Pharmacy,-62,-13,-13,13,6,52
+GB,2020-11-22,Sunday,,Parks,-74,30,27,273,30,1167
+GB,2020-11-22,Sunday,,Transit Stations,-91,-46,-46,-5,12,172
+GB,2020-11-22,Sunday,,Workplaces,-44,-25,-26,1,7,61
+GB,2020-11-22,Sunday,,Residential,4,9,9,12,1,2
+GB,2020-11-23,Monday,,Retail and Recreation,-89,-40,-41,5,9,171
+GB,2020-11-23,Monday,,Grocery and Pharmacy,-74,-10,-10,17,6,58
+GB,2020-11-23,Monday,,Parks,-85,13,13,171,24,819
+GB,2020-11-23,Monday,,Transit Stations,-85,-43,-43,-6,10,141
+GB,2020-11-23,Monday,,Workplaces,-65,-37,-36,-19,7,71
+GB,2020-11-23,Monday,,Residential,7,14,14,26,3,11
+GB,2020-11-24,Tuesday,,Retail and Recreation,-90,-41,-43,2,7,163
+GB,2020-11-24,Tuesday,,Grocery and Pharmacy,-73,-8,-8,17,6,60
+GB,2020-11-24,Tuesday,,Parks,-86,12,10,190,23,814
+GB,2020-11-24,Tuesday,,Transit Stations,-84,-43,-43,-7,12,144
+GB,2020-11-24,Tuesday,,Workplaces,-67,-37,-36,-18,7,72
+GB,2020-11-24,Tuesday,,Residential,7,15,15,27,3,12
+GB,2020-11-25,Wednesday,,Retail and Recreation,-90,-42,-45,12,9,210
+GB,2020-11-25,Wednesday,,Grocery and Pharmacy,-75,-9,-9,15,6,67
+GB,2020-11-25,Wednesday,,Parks,-84,-1,-1,135,15,472
+GB,2020-11-25,Wednesday,,Transit Stations,-83,-44,-44,-2,10,146
+GB,2020-11-25,Wednesday,,Workplaces,-67,-36,-35,-16,7,71
+GB,2020-11-25,Wednesday,,Residential,7,15,15,28,3,13
+GB,2020-11-26,Thursday,,Retail and Recreation,-91,-40,-43,15,7,211
+GB,2020-11-26,Thursday,,Grocery and Pharmacy,-75,-7,-7,19,6,69
+GB,2020-11-26,Thursday,,Parks,-87,16,16,203,25,780
+GB,2020-11-26,Thursday,,Transit Stations,-86,-43,-43,-3,12,164
+GB,2020-11-26,Thursday,,Workplaces,-68,-36,-35,-16,7,73
+GB,2020-11-26,Thursday,,Residential,6,15,15,28,3,13
+GB,2020-11-27,Friday,,Retail and Recreation,-91,-43,-45,1,9,159
+GB,2020-11-27,Friday,,Grocery and Pharmacy,-74,-5,-5,17,6,64
+GB,2020-11-27,Friday,,Parks,-87,7,4,204,22,686
+GB,2020-11-27,Friday,,Transit Stations,-85,-43,-43,-10,10,147
+GB,2020-11-27,Friday,,Workplaces,-67,-36,-35,-13,7,64
+GB,2020-11-27,Friday,,Residential,7,16,15,28,3,11
+GB,2020-11-28,Saturday,,Retail and Recreation,-87,-50,-52,-3,10,174
+GB,2020-11-28,Saturday,,Grocery and Pharmacy,-58,-9,-9,15,6,55
+GB,2020-11-28,Saturday,,Parks,-78,-5,-9,132,27,810
+GB,2020-11-28,Saturday,,Transit Stations,-89,-51,-50,-10,9,128
+GB,2020-11-28,Saturday,,Workplaces,-42,-23,-24,0,6,50
+GB,2020-11-28,Saturday,,Residential,4,12,12,15,1,3
+GB,2020-11-29,Sunday,,Retail and Recreation,-85,-49,-51,-3,10,169
+GB,2020-11-29,Sunday,,Grocery and Pharmacy,-66,-13,-13,13,6,54
+GB,2020-11-29,Sunday,,Parks,-79,7,4,190,22,714
+GB,2020-11-29,Sunday,,Transit Stations,-91,-47,-47,-8,10,158
+GB,2020-11-29,Sunday,,Workplaces,-43,-24,-24,1,7,59
+GB,2020-11-29,Sunday,,Residential,4,9,9,12,1,2
+GB,2020-11-30,Monday,,Retail and Recreation,-89,-36,-37,8,9,170
+GB,2020-11-30,Monday,,Grocery and Pharmacy,-75,-6,-6,23,6,69
+GB,2020-11-30,Monday,,Parks,-87,-3,-4,116,18,553
+GB,2020-11-30,Monday,,Transit Stations,-85,-43,-43,-3,10,147
+GB,2020-11-30,Monday,,Workplaces,-64,-36,-35,-16,7,70
+GB,2020-11-30,Monday,,Residential,7,14,14,26,3,10
+GB,2020-12-01,Tuesday,,Retail and Recreation,-89,-37,-38,7,9,151
+GB,2020-12-01,Tuesday,,Grocery and Pharmacy,-72,-4,-4,20,6,63
+GB,2020-12-01,Tuesday,,Parks,-84,15,13,119,24,622
+GB,2020-12-01,Tuesday,,Transit Stations,-83,-41,-41,-1,12,156
+GB,2020-12-01,Tuesday,,Workplaces,-66,-34,-33,-15,7,70
+GB,2020-12-01,Tuesday,,Residential,6,14,14,26,3,11
+GB,2020-12-02,Wednesday,,Retail and Recreation,-85,-26,-25,2,9,109
+GB,2020-12-02,Wednesday,,Grocery and Pharmacy,-64,-4,-4,23,6,61
+GB,2020-12-02,Wednesday,,Parks,-83,-1,-2,124,17,438
+GB,2020-12-02,Wednesday,,Transit Stations,-80,-39,-39,2,10,155
+GB,2020-12-02,Wednesday,,Workplaces,-61,-30,-30,-12,7,62
+GB,2020-12-02,Wednesday,,Residential,7,13,13,23,3,8
+GB,2020-12-03,Thursday,,Retail and Recreation,-85,-29,-28,-1,9,108
+GB,2020-12-03,Thursday,,Grocery and Pharmacy,-65,-5,-5,24,6,71
+GB,2020-12-03,Thursday,,Parks,-84,-16,-16,97,13,303
+GB,2020-12-03,Thursday,,Transit Stations,-82,-40,-40,1,12,152
+GB,2020-12-03,Thursday,,Workplaces,-62,-32,-31,-13,7,62
+GB,2020-12-03,Thursday,,Residential,8,14,13,24,3,9
+GB,2020-12-04,Friday,,Retail and Recreation,-83,-31,-29,-7,9,102
+GB,2020-12-04,Friday,,Grocery and Pharmacy,-60,-3,-4,30,6,61
+GB,2020-12-04,Friday,,Parks,-78,-11,-13,121,22,594
+GB,2020-12-04,Friday,,Transit Stations,-80,-38,-38,-1,10,144
+GB,2020-12-04,Friday,,Workplaces,-57,-31,-31,-15,7,51
+GB,2020-12-04,Friday,,Residential,7,13,13,22,3,6
+GB,2020-12-05,Saturday,,Retail and Recreation,-70,-32,-31,-10,9,88
+GB,2020-12-05,Saturday,,Grocery and Pharmacy,-28,-3,-3,32,6,52
+GB,2020-12-05,Saturday,,Parks,-63,0,-3,109,24,680
+GB,2020-12-05,Saturday,,Transit Stations,-85,-37,-38,26,12,203
+GB,2020-12-05,Saturday,,Workplaces,-29,-12,-12,8,6,39
+GB,2020-12-05,Saturday,,Residential,5,8,8,13,1,2
+GB,2020-12-06,Sunday,,Retail and Recreation,-71,-34,-33,-10,9,98
+GB,2020-12-06,Sunday,,Grocery and Pharmacy,-36,-7,-8,24,6,51
+GB,2020-12-06,Sunday,,Parks,-66,4,3,122,21,659
+GB,2020-12-06,Sunday,,Transit Stations,-85,-35,-36,22,12,201
+GB,2020-12-06,Sunday,,Workplaces,-30,-13,-13,6,6,36
+GB,2020-12-06,Sunday,,Residential,3,6,6,10,1,1
+GB,2020-12-07,Monday,,Retail and Recreation,-82,-22,-20,4,7,110
+GB,2020-12-07,Monday,,Grocery and Pharmacy,-64,-2,-2,37,7,75
+GB,2020-12-07,Monday,,Parks,-79,3,2,141,18,511
+GB,2020-12-07,Monday,,Transit Stations,-82,-37,-37,11,12,178
+GB,2020-12-07,Monday,,Workplaces,-61,-33,-32,-13,7,65
+GB,2020-12-07,Monday,,Residential,6,12,11,22,3,8
+GB,2020-12-08,Tuesday,,Retail and Recreation,-82,-25,-24,-1,7,102
+GB,2020-12-08,Tuesday,,Grocery and Pharmacy,-63,-2,-2,38,7,73
+GB,2020-12-08,Tuesday,,Parks,-79,1,0,123,21,552
+GB,2020-12-08,Tuesday,,Transit Stations,-79,-38,-38,9,12,165
+GB,2020-12-08,Tuesday,,Workplaces,-62,-31,-30,-11,7,65
+GB,2020-12-08,Tuesday,,Residential,7,12,12,22,3,7
+GB,2020-12-09,Wednesday,,Retail and Recreation,-82,-26,-26,0,7,97
+GB,2020-12-09,Wednesday,,Grocery and Pharmacy,-62,-2,-2,35,6,70
+GB,2020-12-09,Wednesday,,Parks,-77,1,-1,147,18,481
+GB,2020-12-09,Wednesday,,Transit Stations,-79,-38,-38,6,12,164
+GB,2020-12-09,Wednesday,,Workplaces,-60,-31,-30,-10,7,61
+GB,2020-12-09,Wednesday,,Residential,6,12,12,22,3,7
+GB,2020-12-10,Thursday,,Retail and Recreation,-83,-27,-26,-2,9,99
+GB,2020-12-10,Thursday,,Grocery and Pharmacy,-59,-1,-1,32,6,68
+GB,2020-12-10,Thursday,,Parks,-77,4,4,144,19,545
+GB,2020-12-10,Thursday,,Transit Stations,-80,-37,-38,6,12,178
+GB,2020-12-10,Thursday,,Workplaces,-61,-31,-30,-12,7,62
+GB,2020-12-10,Thursday,,Residential,7,13,12,22,3,8
+GB,2020-12-11,Friday,,Retail and Recreation,-83,-30,-29,-5,7,91
+GB,2020-12-11,Friday,,Grocery and Pharmacy,-57,-1,-1,30,6,60
+GB,2020-12-11,Friday,,Parks,-72,3,2,163,20,591
+GB,2020-12-11,Friday,,Transit Stations,-79,-36,-36,8,10,154
+GB,2020-12-11,Friday,,Workplaces,-60,-30,-30,-13,7,56
+GB,2020-12-11,Friday,,Residential,6,12,12,21,3,6
+GB,2020-12-12,Saturday,,Retail and Recreation,-70,-32,-32,-9,9,91
+GB,2020-12-12,Saturday,,Grocery and Pharmacy,-28,-2,-3,30,6,56
+GB,2020-12-12,Saturday,,Parks,-66,1,0,86,23,624
+GB,2020-12-12,Saturday,,Transit Stations,-80,-34,-35,32,10,198
+GB,2020-12-12,Saturday,,Workplaces,-23,-10,-11,7,6,30
+GB,2020-12-12,Saturday,,Residential,3,8,8,11,1,2
+GB,2020-12-13,Sunday,,Retail and Recreation,-72,-40,-39,-10,9,97
+GB,2020-12-13,Sunday,,Grocery and Pharmacy,-38,-11,-11,20,6,47
+GB,2020-12-13,Sunday,,Parks,-79,-29,-30,47,15,284
+GB,2020-12-13,Sunday,,Transit Stations,-81,-41,-42,15,10,165
+GB,2020-12-13,Sunday,,Workplaces,-29,-14,-14,6,6,32
+GB,2020-12-13,Sunday,,Residential,5,7,7,11,1,1
+GB,2020-12-14,Monday,,Retail and Recreation,-82,-21,-20,9,8,121
+GB,2020-12-14,Monday,,Grocery and Pharmacy,-63,1,1,41,6,86
+GB,2020-12-14,Monday,,Parks,-77,9,7,174,21,624
+GB,2020-12-14,Monday,,Transit Stations,-78,-36,-36,11,13,168
+GB,2020-12-14,Monday,,Workplaces,-65,-33,-32,-11,7,74
+GB,2020-12-14,Monday,,Residential,5,12,11,21,3,8
+GB,2020-12-15,Tuesday,,Retail and Recreation,-79,-20,-20,8,10,115
+GB,2020-12-15,Tuesday,,Grocery and Pharmacy,-56,4,4,39,7,81
+GB,2020-12-15,Tuesday,,Parks,-73,17,16,126,23,574
+GB,2020-12-15,Tuesday,,Transit Stations,-75,-35,-35,7,12,174
+GB,2020-12-15,Tuesday,,Workplaces,-64,-33,-32,-12,9,75
+GB,2020-12-15,Tuesday,,Residential,6,12,11,19,3,7
+GB,2020-12-16,Wednesday,,Retail and Recreation,-88,-27,-27,1,9,136
+GB,2020-12-16,Wednesday,,Grocery and Pharmacy,-65,0,0,43,6,82
+GB,2020-12-16,Wednesday,,Parks,-84,-9,-11,111,16,467
+GB,2020-12-16,Wednesday,,Transit Stations,-78,-40,-40,4,12,170
+GB,2020-12-16,Wednesday,,Workplaces,-64,-33,-32,-11,9,78
+GB,2020-12-16,Wednesday,,Residential,6,13,13,25,3,10
+GB,2020-12-17,Thursday,,Retail and Recreation,-90,-23,-21,2,9,139
+GB,2020-12-17,Thursday,,Grocery and Pharmacy,-63,6,6,38,7,79
+GB,2020-12-17,Thursday,,Parks,-83,19,19,202,24,796
+GB,2020-12-17,Thursday,,Transit Stations,-79,-37,-37,15,13,202
+GB,2020-12-17,Thursday,,Workplaces,-65,-33,-32,-12,9,84
+GB,2020-12-17,Thursday,,Residential,6,13,12,25,3,11
+GB,2020-12-18,Friday,,Retail and Recreation,-90,-29,-28,-1,9,138
+GB,2020-12-18,Friday,,Grocery and Pharmacy,-62,1,2,42,7,76
+GB,2020-12-18,Friday,,Parks,-84,-6,-6,129,18,514
+GB,2020-12-18,Friday,,Transit Stations,-77,-39,-39,3,12,165
+GB,2020-12-18,Friday,,Workplaces,-65,-36,-35,-12,7,77
+GB,2020-12-18,Friday,,Residential,6,14,14,27,3,10
+GB,2020-12-19,Saturday,,Retail and Recreation,-87,-35,-34,-9,9,118
+GB,2020-12-19,Saturday,,Grocery and Pharmacy,-38,2,1,46,7,72
+GB,2020-12-19,Saturday,,Parks,-83,-1,-3,97,21,593
+GB,2020-12-19,Saturday,,Transit Stations,-71,-35,-37,32,13,231
+GB,2020-12-19,Saturday,,Workplaces,-34,-12,-12,4,6,37
+GB,2020-12-19,Saturday,,Residential,4,8,8,12,1,2
+GB,2020-12-20,Sunday,,Retail and Recreation,-88,-40,-38,5,18,293
+GB,2020-12-20,Sunday,,Grocery and Pharmacy,-65,-4,-3,22,7,96
+GB,2020-12-20,Sunday,,Parks,-86,9,9,172,22,756
+GB,2020-12-20,Sunday,,Transit Stations,-77,-37,-38,20,16,273
+GB,2020-12-20,Sunday,,Workplaces,-40,-13,-11,9,10,87
+GB,2020-12-20,Sunday,,Residential,3,7,7,12,1,4
+GB,2020-12-21,Monday,,Retail and Recreation,-91,-21,-19,38,19,422
+GB,2020-12-21,Monday,,Grocery and Pharmacy,-72,18,20,58,10,175
+GB,2020-12-21,Monday,,Parks,-89,-1,-2,139,21,610
+GB,2020-12-21,Monday,,Transit Stations,-85,-45,-45,14,15,230
+GB,2020-12-21,Monday,,Workplaces,-74,-48,-47,-22,9,90
+GB,2020-12-21,Monday,,Residential,7,16,15,28,4,18
+GB,2020-12-22,Tuesday,,Retail and Recreation,-93,-19,-17,43,19,435
+GB,2020-12-22,Tuesday,,Grocery and Pharmacy,-71,24,25,67,12,197
+GB,2020-12-22,Tuesday,,Parks,-90,24,25,142,30,886
+GB,2020-12-22,Tuesday,,Transit Stations,-86,-44,-44,14,18,282
+GB,2020-12-22,Tuesday,,Workplaces,-77,-49,-48,-25,9,88
+GB,2020-12-22,Tuesday,,Residential,7,16,15,28,4,21
+GB,2020-12-23,Wednesday,,Retail and Recreation,-93,-21,-20,45,20,451
+GB,2020-12-23,Wednesday,,Grocery and Pharmacy,-72,30,31,75,12,227
+GB,2020-12-23,Wednesday,,Parks,-91,-8,-8,129,21,575
+GB,2020-12-23,Wednesday,,Transit Stations,-88,-47,-46,11,15,232
+GB,2020-12-23,Wednesday,,Workplaces,-75,-53,-51,-33,7,62
+GB,2020-12-23,Wednesday,,Residential,9,18,17,29,4,18
+GB,2020-12-24,Thursday,,Retail and Recreation,-96,-30,-29,11,18,289
+GB,2020-12-24,Thursday,,Grocery and Pharmacy,-77,19,19,55,10,168
+GB,2020-12-24,Thursday,,Parks,-93,27,22,287,37,1467
+GB,2020-12-24,Thursday,,Transit Stations,-91,-51,-51,7,15,234
+GB,2020-12-24,Thursday,,Workplaces,-80,-65,-64,-48,6,31
+GB,2020-12-24,Thursday,,Residential,12,21,20,31,3,14
+GB,2020-12-25,Friday,Christmas,Retail and Recreation,-100,-92,-93,-83,3,8
+GB,2020-12-25,Friday,Christmas,Grocery and Pharmacy,-97,-90,-91,-76,3,12
+GB,2020-12-25,Friday,Christmas,Parks,-95,-18,-22,188,22,713
+GB,2020-12-25,Friday,Christmas,Transit Stations,-99,-80,-81,-53,10,94
+GB,2020-12-25,Friday,Christmas,Workplaces,-91,-85,-85,-75,3,9
+GB,2020-12-25,Friday,Christmas,Residential,19,27,25,40,3,21
+GB,2020-12-26,Saturday,,Retail and Recreation,-96,-81,-82,-52,7,49
+GB,2020-12-26,Saturday,,Grocery and Pharmacy,-85,-64,-65,-47,6,32
+GB,2020-12-26,Saturday,,Parks,-91,-27,-27,108,25,629
+GB,2020-12-26,Saturday,,Transit Stations,-94,-74,-75,-29,7,87
+GB,2020-12-26,Saturday,,Workplaces,-68,-55,-56,-37,6,27
+GB,2020-12-26,Saturday,,Residential,10,15,15,21,3,5
+GB,2020-12-27,Sunday,,Retail and Recreation,-90,-57,-59,-21,13,150
+GB,2020-12-27,Sunday,,Grocery and Pharmacy,-75,-23,-23,10,7,71
+GB,2020-12-27,Sunday,,Parks,-85,7,7,180,25,851
+GB,2020-12-27,Sunday,,Transit Stations,-87,-52,-54,13,12,188
+GB,2020-12-27,Sunday,,Workplaces,-47,-31,-32,-10,7,43
+GB,2020-12-27,Sunday,,Residential,6,10,10,13,3,3
+GB,2020-12-28,Monday,Boxing Day,Retail and Recreation,-97,-50,-52,1,15,200
+GB,2020-12-28,Monday,Boxing Day,Grocery and Pharmacy,-89,-23,-23,10,7,87
+GB,2020-12-28,Monday,Boxing Day,Parks,-93,23,22,152,36,1304
+GB,2020-12-28,Monday,Boxing Day,Transit Stations,-93,-66,-67,-17,10,145
+GB,2020-12-28,Monday,Boxing Day,Workplaces,-86,-77,-78,-56,4,22
+GB,2020-12-28,Monday,Boxing Day,Residential,18,26,26,33,4,12
+GB,2020-12-29,Tuesday,,Retail and Recreation,-95,-43,-44,-1,13,196
+GB,2020-12-29,Tuesday,,Grocery and Pharmacy,-83,-9,-8,30,7,96
+GB,2020-12-29,Tuesday,,Parks,-92,22,18,142,30,1124
+GB,2020-12-29,Tuesday,,Transit Stations,-89,-59,-60,-17,10,151
+GB,2020-12-29,Tuesday,,Workplaces,-81,-68,-68,-45,6,30
+GB,2020-12-29,Tuesday,,Residential,15,24,24,32,4,12
+GB,2020-12-30,Wednesday,,Retail and Recreation,-95,-39,-41,0,16,246
+GB,2020-12-30,Wednesday,,Grocery and Pharmacy,-81,0,0,46,10,137
+GB,2020-12-30,Wednesday,,Parks,-91,25,23,171,34,1202
+GB,2020-12-30,Wednesday,,Transit Stations,-90,-58,-58,-10,12,162
+GB,2020-12-30,Wednesday,,Workplaces,-79,-66,-66,-43,6,29
+GB,2020-12-30,Wednesday,,Residential,15,23,23,33,4,12
+GB,2020-12-31,Thursday,,Retail and Recreation,-96,-50,-50,-17,9,99
+GB,2020-12-31,Thursday,,Grocery and Pharmacy,-82,5,5,33,9,108
+GB,2020-12-31,Thursday,,Parks,-94,22,19,235,36,1493
+GB,2020-12-31,Thursday,,Transit Stations,-91,-62,-63,-18,9,112
+GB,2020-12-31,Thursday,,Workplaces,-81,-69,-69,-52,4,21
+GB,2020-12-31,Thursday,,Residential,17,25,25,32,3,10
+GB,2021-01-01,Friday,,Retail and Recreation,-98,-83,-83,-66,4,19
+GB,2021-01-01,Friday,,Grocery and Pharmacy,-95,-66,-66,-52,4,30
+GB,2021-01-01,Friday,,Parks,-95,3,0,247,31,1125
+GB,2021-01-01,Friday,,Transit Stations,-95,-80,-81,-56,6,38
+GB,2021-01-01,Friday,,Workplaces,-89,-84,-84,-76,3,6
+GB,2021-01-01,Friday,,Residential,25,32,32,39,3,8
+GB,2021-01-02,Saturday,,Retail and Recreation,-93,-66,-66,-45,7,61
+GB,2021-01-02,Saturday,,Grocery and Pharmacy,-73,-23,-23,0,7,65
+GB,2021-01-02,Saturday,,Parks,-88,-3,-3,140,27,827
+GB,2021-01-02,Saturday,,Transit Stations,-85,-62,-62,-1,7,93
+GB,2021-01-02,Saturday,,Workplaces,-56,-39,-39,-23,6,32
+GB,2021-01-02,Saturday,,Residential,12,15,16,18,1,2
+GB,2021-01-03,Sunday,,Retail and Recreation,-90,-63,-64,-34,7,66
+GB,2021-01-03,Sunday,,Grocery and Pharmacy,-74,-22,-23,4,7,62
+GB,2021-01-03,Sunday,,Parks,-87,-5,-8,147,24,729
+GB,2021-01-03,Sunday,,Transit Stations,-82,-56,-57,-9,10,109
+GB,2021-01-03,Sunday,,Workplaces,-48,-29,-29,-13,6,30
+GB,2021-01-03,Sunday,,Residential,9,11,11,15,1,1
+GB,2021-01-04,Monday,,Retail and Recreation,-92,-50,-50,-25,9,92
+GB,2021-01-04,Monday,,Grocery and Pharmacy,-77,-15,-15,8,7,71
+GB,2021-01-04,Monday,,Parks,-90,-11,-10,114,19,475
+GB,2021-01-04,Monday,,Transit Stations,-85,-57,-57,-17,10,110
+GB,2021-01-04,Monday,,Workplaces,-76,-48,-46,-23,10,117
+GB,2021-01-04,Monday,,Residential,12,19,18,30,3,14
+GB,2021-01-05,Tuesday,,Retail and Recreation,-93,-57,-57,-39,6,54
+GB,2021-01-05,Tuesday,,Grocery and Pharmacy,-81,-20,-20,5,6,62
+GB,2021-01-05,Tuesday,,Parks,-91,-11,-13,145,22,563
+GB,2021-01-05,Tuesday,,Transit Stations,-86,-58,-59,-27,10,101
+GB,2021-01-05,Tuesday,,Workplaces,-73,-49,-48,-27,9,76
+GB,2021-01-05,Tuesday,,Residential,12,20,20,33,4,14
+GB,2021-01-06,Wednesday,,Retail and Recreation,-94,-59,-58,-41,6,47
+GB,2021-01-06,Wednesday,,Grocery and Pharmacy,-80,-21,-21,0,6,53
+GB,2021-01-06,Wednesday,,Parks,-89,-8,-9,128,18,474
+GB,2021-01-06,Wednesday,,Transit Stations,-87,-57,-58,-29,10,103
+GB,2021-01-06,Wednesday,,Workplaces,-75,-48,-47,-28,9,70
+GB,2021-01-06,Wednesday,,Residential,13,21,20,33,3,13
+GB,2021-01-07,Thursday,,Retail and Recreation,-94,-59,-59,-43,6,45
+GB,2021-01-07,Thursday,,Grocery and Pharmacy,-81,-20,-20,4,6,53
+GB,2021-01-07,Thursday,,Parks,-91,-4,-6,107,19,566
+GB,2021-01-07,Thursday,,Transit Stations,-87,-58,-57,-30,10,108
+GB,2021-01-07,Thursday,,Workplaces,-73,-49,-48,-31,7,68
+GB,2021-01-07,Thursday,,Residential,13,21,21,34,4,14
+GB,2021-01-08,Friday,,Retail and Recreation,-95,-62,-62,-46,6,45
+GB,2021-01-08,Friday,,Grocery and Pharmacy,-80,-22,-22,3,6,52
+GB,2021-01-08,Friday,,Parks,-92,-14,-15,89,18,496
+GB,2021-01-08,Friday,,Transit Stations,-86,-59,-59,-30,9,88
+GB,2021-01-08,Friday,,Workplaces,-73,-48,-47,-29,7,58
+GB,2021-01-08,Friday,,Residential,14,22,21,35,3,11
+GB,2021-01-09,Saturday,,Retail and Recreation,-93,-66,-65,-49,6,46
+GB,2021-01-09,Saturday,,Grocery and Pharmacy,-67,-21,-21,7,7,53
+GB,2021-01-09,Saturday,,Parks,-87,-5,-8,141,24,824
+GB,2021-01-09,Saturday,,Transit Stations,-88,-61,-61,2,7,90
+GB,2021-01-09,Saturday,,Workplaces,-50,-32,-32,-14,4,28
+GB,2021-01-09,Saturday,,Residential,11,15,15,19,1,2
+GB,2021-01-10,Sunday,,Retail and Recreation,-92,-67,-67,-42,6,45
+GB,2021-01-10,Sunday,,Grocery and Pharmacy,-75,-26,-26,-2,6,46
+GB,2021-01-10,Sunday,,Parks,-90,-8,-9,144,21,589
+GB,2021-01-10,Sunday,,Transit Stations,-89,-59,-60,-7,9,105
+GB,2021-01-10,Sunday,,Workplaces,-50,-31,-31,-13,6,35
+GB,2021-01-10,Sunday,,Residential,8,12,12,16,1,2
+GB,2021-01-11,Monday,,Retail and Recreation,-93,-56,-56,-36,6,52
+GB,2021-01-11,Monday,,Grocery and Pharmacy,-80,-23,-23,1,6,46
+GB,2021-01-11,Monday,,Parks,-91,-8,-9,136,19,553
+GB,2021-01-11,Monday,,Transit Stations,-87,-58,-57,-27,10,102
+GB,2021-01-11,Monday,,Workplaces,-74,-48,-48,-26,9,74
+GB,2021-01-11,Monday,,Residential,12,19,19,31,3,12
+GB,2021-01-12,Tuesday,,Retail and Recreation,-94,-57,-57,-35,6,52
+GB,2021-01-12,Tuesday,,Grocery and Pharmacy,-80,-22,-22,4,6,56
+GB,2021-01-12,Tuesday,,Parks,-91,1,-1,168,19,674
+GB,2021-01-12,Tuesday,,Transit Stations,-87,-57,-57,-28,11,117
+GB,2021-01-12,Tuesday,,Workplaces,-74,-49,-48,-28,7,71
+GB,2021-01-12,Tuesday,,Residential,12,20,19,33,3,15
+GB,2021-01-13,Wednesday,,Retail and Recreation,-94,-61,-60,-46,6,43
+GB,2021-01-13,Wednesday,,Grocery and Pharmacy,-81,-26,-25,-5,6,45
+GB,2021-01-13,Wednesday,,Parks,-92,-24,-24,50,16,331
+GB,2021-01-13,Wednesday,,Transit Stations,-87,-60,-60,-33,10,97
+GB,2021-01-13,Wednesday,,Workplaces,-74,-49,-48,-25,7,68
+GB,2021-01-13,Wednesday,,Residential,13,21,20,33,4,14
+GB,2021-01-14,Thursday,,Retail and Recreation,-95,-63,-63,-47,6,46
+GB,2021-01-14,Thursday,,Grocery and Pharmacy,-82,-27,-27,-5,6,57
+GB,2021-01-14,Thursday,,Parks,-94,-24,-26,50,16,429
+GB,2021-01-14,Thursday,,Transit Stations,-88,-61,-61,-33,10,98
+GB,2021-01-14,Thursday,,Workplaces,-75,-51,-50,-33,7,65
+GB,2021-01-14,Thursday,,Residential,13,21,21,34,4,15
+GB,2021-01-15,Friday,,Retail and Recreation,-95,-62,-62,-47,4,46
+GB,2021-01-15,Friday,,Grocery and Pharmacy,-79,-22,-22,7,6,47
+GB,2021-01-15,Friday,,Parks,-90,-6,-7,111,21,584
+GB,2021-01-15,Friday,,Transit Stations,-88,-58,-58,-32,9,96
+GB,2021-01-15,Friday,,Workplaces,-73,-50,-49,-33,7,55
+GB,2021-01-15,Friday,,Residential,13,21,20,33,3,11
+GB,2021-01-16,Saturday,,Retail and Recreation,-95,-68,-68,-49,6,47
+GB,2021-01-16,Saturday,,Grocery and Pharmacy,-71,-25,-25,0,6,57
+GB,2021-01-16,Saturday,,Parks,-92,-24,-25,51,22,558
+GB,2021-01-16,Saturday,,Transit Stations,-90,-63,-63,-32,9,72
+GB,2021-01-16,Saturday,,Workplaces,-51,-35,-35,-17,6,27
+GB,2021-01-16,Saturday,,Residential,11,15,15,20,1,3
+GB,2021-01-17,Sunday,,Retail and Recreation,-92,-65,-66,-40,6,44
+GB,2021-01-17,Sunday,,Grocery and Pharmacy,-70,-26,-27,-7,6,41
+GB,2021-01-17,Sunday,,Parks,-85,13,8,270,29,1166
+GB,2021-01-17,Sunday,,Transit Stations,-91,-57,-57,-21,10,131
+GB,2021-01-17,Sunday,,Workplaces,-54,-31,-31,-17,6,32
+GB,2021-01-17,Sunday,,Residential,8,11,11,14,1,1
+GB,2021-01-18,Monday,,Retail and Recreation,-93,-57,-57,-35,6,52
+GB,2021-01-18,Monday,,Grocery and Pharmacy,-78,-25,-24,2,6,46
+GB,2021-01-18,Monday,,Parks,-88,-2,-2,108,16,537
+GB,2021-01-18,Monday,,Transit Stations,-88,-57,-57,-28,10,109
+GB,2021-01-18,Monday,,Workplaces,-75,-49,-48,-27,7,69
+GB,2021-01-18,Monday,,Residential,11,19,18,30,3,12
+GB,2021-01-19,Tuesday,,Retail and Recreation,-94,-60,-59,-43,6,45
+GB,2021-01-19,Tuesday,,Grocery and Pharmacy,-80,-25,-25,3,4,43
+GB,2021-01-19,Tuesday,,Parks,-89,-16,-16,101,18,451
+GB,2021-01-19,Tuesday,,Transit Stations,-87,-59,-59,-27,10,99
+GB,2021-01-19,Tuesday,,Workplaces,-76,-50,-49,-29,7,66
+GB,2021-01-19,Tuesday,,Residential,12,20,19,32,3,13
+GB,2021-01-20,Wednesday,,Retail and Recreation,-94,-62,-62,-44,6,45
+GB,2021-01-20,Wednesday,,Grocery and Pharmacy,-81,-27,-27,-3,6,49
+GB,2021-01-20,Wednesday,,Parks,-90,-30,-30,66,13,300
+GB,2021-01-20,Wednesday,,Transit Stations,-87,-60,-61,-32,10,98
+GB,2021-01-20,Wednesday,,Workplaces,-74,-50,-49,-30,7,64
+GB,2021-01-20,Wednesday,,Residential,13,21,20,34,4,14
+GB,2021-01-21,Thursday,,Retail and Recreation,-95,-59,-58,-43,6,45
+GB,2021-01-21,Thursday,,Grocery and Pharmacy,-80,-21,-21,4,6,50
+GB,2021-01-21,Thursday,,Parks,-90,-1,-1,98,22,642
+GB,2021-01-21,Thursday,,Transit Stations,-88,-58,-58,-28,10,112
+GB,2021-01-21,Thursday,,Workplaces,-75,-50,-49,-31,7,63
+GB,2021-01-21,Thursday,,Residential,12,20,20,33,3,13
+GB,2021-01-22,Friday,,Retail and Recreation,-95,-60,-59,-42,4,48
+GB,2021-01-22,Friday,,Grocery and Pharmacy,-77,-19,-19,9,6,50
+GB,2021-01-22,Friday,,Parks,-89,6,4,159,27,882
+GB,2021-01-22,Friday,,Transit Stations,-89,-57,-57,-26,10,103
+GB,2021-01-22,Friday,,Workplaces,-71,-48,-47,-31,7,56
+GB,2021-01-22,Friday,,Residential,13,20,20,32,3,11
+GB,2021-01-23,Saturday,,Retail and Recreation,-93,-65,-65,-46,6,50
+GB,2021-01-23,Saturday,,Grocery and Pharmacy,-62,-21,-21,6,6,51
+GB,2021-01-23,Saturday,,Parks,-85,-5,-8,161,25,873
+GB,2021-01-23,Saturday,,Transit Stations,-92,-60,-60,-27,9,87
+GB,2021-01-23,Saturday,,Workplaces,-52,-32,-32,-16,4,27
+GB,2021-01-23,Saturday,,Residential,10,14,14,18,1,2
+GB,2021-01-24,Sunday,,Retail and Recreation,-94,-70,-70,-43,7,55
+GB,2021-01-24,Sunday,,Grocery and Pharmacy,-77,-30,-30,-10,9,69
+GB,2021-01-24,Sunday,,Parks,-90,-2,-6,169,34,1227
+GB,2021-01-24,Sunday,,Transit Stations,-94,-59,-60,-31,10,125
+GB,2021-01-24,Sunday,,Workplaces,-50,-35,-35,-15,6,41
+GB,2021-01-24,Sunday,,Residential,8,12,11,15,1,2
+GB,2021-01-25,Monday,,Retail and Recreation,-93,-56,-56,-31,7,62
+GB,2021-01-25,Monday,,Grocery and Pharmacy,-80,-22,-22,-2,6,54
+GB,2021-01-25,Monday,,Parks,-89,5,2,131,24,818
+GB,2021-01-25,Monday,,Transit Stations,-89,-56,-57,-22,10,123
+GB,2021-01-25,Monday,,Workplaces,-76,-51,-50,-27,9,71
+GB,2021-01-25,Monday,,Residential,12,19,19,30,4,13
+GB,2021-01-26,Tuesday,,Retail and Recreation,-94,-59,-58,-40,6,50
+GB,2021-01-26,Tuesday,,Grocery and Pharmacy,-80,-23,-23,8,6,46
+GB,2021-01-26,Tuesday,,Parks,-91,-20,-21,106,16,387
+GB,2021-01-26,Tuesday,,Transit Stations,-87,-59,-59,-27,10,103
+GB,2021-01-26,Tuesday,,Workplaces,-77,-50,-49,-28,7,68
+GB,2021-01-26,Tuesday,,Residential,12,20,19,32,3,13
+GB,2021-01-27,Wednesday,,Retail and Recreation,-94,-58,-57,-37,6,54
+GB,2021-01-27,Wednesday,,Grocery and Pharmacy,-78,-20,-19,9,6,54
+GB,2021-01-27,Wednesday,,Parks,-91,-8,-8,99,18,464
+GB,2021-01-27,Wednesday,,Transit Stations,-87,-57,-57,-23,10,117
+GB,2021-01-27,Wednesday,,Workplaces,-76,-48,-48,-27,7,67
+GB,2021-01-27,Wednesday,,Residential,12,20,19,33,3,14
+GB,2021-01-28,Thursday,,Retail and Recreation,-94,-58,-57,-39,6,50
+GB,2021-01-28,Thursday,,Grocery and Pharmacy,-79,-19,-19,11,6,50
+GB,2021-01-28,Thursday,,Parks,-91,-7,-8,92,24,613
+GB,2021-01-28,Thursday,,Transit Stations,-88,-58,-57,-27,9,112
+GB,2021-01-28,Thursday,,Workplaces,-76,-49,-48,-29,7,64
+GB,2021-01-28,Thursday,,Residential,12,20,19,33,3,13
+GB,2021-01-29,Friday,,Retail and Recreation,-95,-58,-57,-39,6,56
+GB,2021-01-29,Friday,,Grocery and Pharmacy,-76,-15,-15,20,6,54
+GB,2021-01-29,Friday,,Parks,-90,-2,-2,126,22,659
+GB,2021-01-29,Friday,,Transit Stations,-88,-56,-56,-22,9,115
+GB,2021-01-29,Friday,,Workplaces,-74,-47,-46,-30,7,58
+GB,2021-01-29,Friday,,Residential,13,20,19,33,3,11
+GB,2021-01-30,Saturday,,Retail and Recreation,-95,-65,-65,-41,7,60
+GB,2021-01-30,Saturday,,Grocery and Pharmacy,-72,-21,-21,3,7,63
+GB,2021-01-30,Saturday,,Parks,-95,-32,-36,102,24,707
+GB,2021-01-30,Saturday,,Transit Stations,-92,-62,-63,-19,9,98
+GB,2021-01-30,Saturday,,Workplaces,-48,-32,-32,-14,4,30
+GB,2021-01-30,Saturday,,Residential,10,14,14,20,1,3
+GB,2021-01-31,Sunday,,Retail and Recreation,-92,-63,-63,-37,7,58
+GB,2021-01-31,Sunday,,Grocery and Pharmacy,-70,-23,-23,-6,6,48
+GB,2021-01-31,Sunday,,Parks,-88,1,0,197,27,972
+GB,2021-01-31,Sunday,,Transit Stations,-93,-56,-58,-17,10,136
+GB,2021-01-31,Sunday,,Workplaces,-50,-30,-30,-13,6,37
+GB,2021-01-31,Sunday,,Residential,7,11,10,14,1,2
+GB,2021-02-01,Monday,,Retail and Recreation,-93,-53,-53,-34,7,61
+GB,2021-02-01,Monday,,Grocery and Pharmacy,-78,-20,-20,7,6,51
+GB,2021-02-01,Monday,,Parks,-92,6,4,205,21,775
+GB,2021-02-01,Monday,,Transit Stations,-89,-54,-55,-22,10,131
+GB,2021-02-01,Monday,,Workplaces,-75,-48,-47,-25,9,71
+GB,2021-02-01,Monday,,Residential,11,18,17,30,3,13
+GB,2021-02-02,Tuesday,,Retail and Recreation,-93,-57,-56,-36,6,59
+GB,2021-02-02,Tuesday,,Grocery and Pharmacy,-77,-22,-21,9,6,59
+GB,2021-02-02,Tuesday,,Parks,-90,-6,-6,126,24,746
+GB,2021-02-02,Tuesday,,Transit Stations,-87,-57,-57,-27,9,106
+GB,2021-02-02,Tuesday,,Workplaces,-75,-49,-49,-26,7,68
+GB,2021-02-02,Tuesday,,Residential,11,20,19,31,3,12
+GB,2021-02-03,Wednesday,,Retail and Recreation,-94,-57,-56,-40,6,52
+GB,2021-02-03,Wednesday,,Grocery and Pharmacy,-77,-20,-19,10,6,49
+GB,2021-02-03,Wednesday,,Parks,-91,-7,-6,135,22,643
+GB,2021-02-03,Wednesday,,Transit Stations,-86,-57,-57,-27,10,119
+GB,2021-02-03,Wednesday,,Workplaces,-75,-48,-47,-27,7,67
+GB,2021-02-03,Wednesday,,Residential,12,20,19,32,3,14
+GB,2021-02-04,Thursday,,Retail and Recreation,-94,-57,-57,-38,6,53
+GB,2021-02-04,Thursday,,Grocery and Pharmacy,-78,-19,-18,7,7,55
+GB,2021-02-04,Thursday,,Parks,-91,-6,-7,167,19,607
+GB,2021-02-04,Thursday,,Transit Stations,-88,-57,-57,-17,10,127
+GB,2021-02-04,Thursday,,Workplaces,-74,-48,-47,-29,7,66
+GB,2021-02-04,Thursday,,Residential,11,20,19,33,3,15
+GB,2021-02-05,Friday,,Retail and Recreation,-94,-57,-57,-35,6,55
+GB,2021-02-05,Friday,,Grocery and Pharmacy,-73,-14,-13,16,6,53
+GB,2021-02-05,Friday,,Parks,-89,7,4,181,30,1150
+GB,2021-02-05,Friday,,Transit Stations,-88,-56,-56,-23,10,114
+GB,2021-02-05,Friday,,Workplaces,-71,-47,-46,-28,7,58
+GB,2021-02-05,Friday,,Residential,12,19,19,31,3,10
+GB,2021-02-06,Saturday,,Retail and Recreation,-93,-63,-63,-41,7,60
+GB,2021-02-06,Saturday,,Grocery and Pharmacy,-61,-17,-17,15,6,56
+GB,2021-02-06,Saturday,,Parks,-88,-14,-14,107,32,1002
+GB,2021-02-06,Saturday,,Transit Stations,-91,-60,-60,-17,7,92
+GB,2021-02-06,Saturday,,Workplaces,-48,-30,-29,-10,4,34
+GB,2021-02-06,Saturday,,Residential,10,14,14,18,1,2
+GB,2021-02-07,Sunday,,Retail and Recreation,-94,-67,-67,-43,7,57
+GB,2021-02-07,Sunday,,Grocery and Pharmacy,-78,-27,-26,-4,7,61
+GB,2021-02-07,Sunday,,Parks,-94,-20,-22,98,21,670
+GB,2021-02-07,Sunday,,Transit Stations,-93,-61,-61,-26,9,104
+GB,2021-02-07,Sunday,,Workplaces,-53,-31,-31,-9,7,53
+GB,2021-02-07,Sunday,,Residential,7,11,11,16,1,3
+GB,2021-02-08,Monday,,Retail and Recreation,-93,-58,-57,-33,7,69
+GB,2021-02-08,Monday,,Grocery and Pharmacy,-79,-24,-24,3,6,65
+GB,2021-02-08,Monday,,Parks,-92,-9,-11,124,16,644
+GB,2021-02-08,Monday,,Transit Stations,-89,-58,-59,-27,10,111
+GB,2021-02-08,Monday,,Workplaces,-75,-51,-49,-28,9,76
+GB,2021-02-08,Monday,,Residential,12,19,19,31,4,15
+GB,2021-02-09,Tuesday,,Retail and Recreation,-94,-57,-57,-37,6,63
+GB,2021-02-09,Tuesday,,Grocery and Pharmacy,-78,-19,-19,15,6,61
+GB,2021-02-09,Tuesday,,Parks,-93,-6,-8,151,18,606
+GB,2021-02-09,Tuesday,,Transit Stations,-87,-58,-58,-21,12,124
+GB,2021-02-09,Tuesday,,Workplaces,-78,-50,-50,-30,10,81
+GB,2021-02-09,Tuesday,,Residential,12,20,20,32,4,16
+GB,2021-02-10,Wednesday,,Retail and Recreation,-94,-56,-56,-37,6,61
+GB,2021-02-10,Wednesday,,Grocery and Pharmacy,-75,-16,-16,14,6,53
+GB,2021-02-10,Wednesday,,Parks,-91,-3,-3,156,19,561
+GB,2021-02-10,Wednesday,,Transit Stations,-87,-57,-57,-23,10,122
+GB,2021-02-10,Wednesday,,Workplaces,-76,-48,-48,-28,9,73
+GB,2021-02-10,Wednesday,,Residential,12,20,19,32,3,14
+GB,2021-02-11,Thursday,,Retail and Recreation,-94,-55,-55,-34,6,59
+GB,2021-02-11,Thursday,,Grocery and Pharmacy,-77,-13,-13,20,6,60
+GB,2021-02-11,Thursday,,Parks,-92,-3,-5,148,19,550
+GB,2021-02-11,Thursday,,Transit Stations,-88,-56,-56,-12,11,134
+GB,2021-02-11,Thursday,,Workplaces,-75,-48,-47,-29,7,67
+GB,2021-02-11,Thursday,,Residential,11,20,19,33,3,14
+GB,2021-02-12,Friday,,Retail and Recreation,-94,-55,-55,-34,6,63
+GB,2021-02-12,Friday,,Grocery and Pharmacy,-73,-9,-9,17,7,64
+GB,2021-02-12,Friday,,Parks,-91,-7,-8,144,19,580
+GB,2021-02-12,Friday,,Transit Stations,-88,-56,-56,-13,10,119
+GB,2021-02-12,Friday,,Workplaces,-75,-47,-46,-29,7,58
+GB,2021-02-12,Friday,,Residential,13,20,19,33,3,11
+GB,2021-02-13,Saturday,,Retail and Recreation,-92,-61,-61,-37,7,66
+GB,2021-02-13,Saturday,,Grocery and Pharmacy,-58,-8,-8,16,6,64
+GB,2021-02-13,Saturday,,Parks,-89,-21,-22,127,25,696
+GB,2021-02-13,Saturday,,Transit Stations,-90,-61,-62,6,8,106
+GB,2021-02-13,Saturday,,Workplaces,-48,-30,-30,-9,6,35
+GB,2021-02-13,Saturday,,Residential,10,14,14,18,1,2
+GB,2021-02-14,Sunday,,Retail and Recreation,-91,-63,-63,-38,7,58
+GB,2021-02-14,Sunday,,Grocery and Pharmacy,-69,-20,-20,-2,6,48
+GB,2021-02-14,Sunday,,Parks,-88,-25,-28,153,25,643
+GB,2021-02-14,Sunday,,Transit Stations,-92,-60,-60,-17,9,101
+GB,2021-02-14,Sunday,,Workplaces,-50,-29,-29,-14,6,39
+GB,2021-02-14,Sunday,,Residential,9,11,11,15,1,1
+GB,2021-02-15,Monday,,Retail and Recreation,-92,-48,-48,-28,7,73
+GB,2021-02-15,Monday,,Grocery and Pharmacy,-75,-14,-14,13,6,55
+GB,2021-02-15,Monday,,Parks,-89,26,24,216,33,1311
+GB,2021-02-15,Monday,,Transit Stations,-89,-54,-54,-17,10,129
+GB,2021-02-15,Monday,,Workplaces,-76,-51,-51,-29,7,61
+GB,2021-02-15,Monday,,Residential,11,18,17,29,3,11
+GB,2021-02-16,Tuesday,,Retail and Recreation,-93,-51,-50,-29,6,70
+GB,2021-02-16,Tuesday,,Grocery and Pharmacy,-74,-11,-11,23,6,64
+GB,2021-02-16,Tuesday,,Parks,-91,12,11,215,27,1001
+GB,2021-02-16,Tuesday,,Transit Stations,-87,-55,-56,-17,13,136
+GB,2021-02-16,Tuesday,,Workplaces,-76,-51,-51,-29,7,65
+GB,2021-02-16,Tuesday,,Residential,11,19,18,31,3,14
+GB,2021-02-17,Wednesday,,Retail and Recreation,-93,-51,-51,-30,7,72
+GB,2021-02-17,Wednesday,,Grocery and Pharmacy,-73,-14,-13,12,6,61
+GB,2021-02-17,Wednesday,,Parks,-90,7,2,203,25,974
+GB,2021-02-17,Wednesday,,Transit Stations,-86,-55,-56,-17,12,136
+GB,2021-02-17,Wednesday,,Workplaces,-75,-50,-49,-29,7,63
+GB,2021-02-17,Wednesday,,Residential,12,20,19,32,3,14
+GB,2021-02-18,Thursday,,Retail and Recreation,-94,-51,-50,-30,6,67
+GB,2021-02-18,Thursday,,Grocery and Pharmacy,-74,-11,-11,16,6,58
+GB,2021-02-18,Thursday,,Parks,-89,19,16,170,30,1052
+GB,2021-02-18,Thursday,,Transit Stations,-88,-55,-55,-12,10,133
+GB,2021-02-18,Thursday,,Workplaces,-75,-51,-50,-33,7,58
+GB,2021-02-18,Thursday,,Residential,12,20,19,32,3,13
+GB,2021-02-19,Friday,,Retail and Recreation,-94,-55,-54,-33,7,66
+GB,2021-02-19,Friday,,Grocery and Pharmacy,-72,-11,-10,12,6,57
+GB,2021-02-19,Friday,,Parks,-89,2,-2,177,32,1137
+GB,2021-02-19,Friday,,Transit Stations,-89,-56,-57,-13,9,114
+GB,2021-02-19,Friday,,Workplaces,-73,-50,-49,-30,6,51
+GB,2021-02-19,Friday,,Residential,13,20,20,32,3,9
+GB,2021-02-20,Saturday,,Retail and Recreation,-91,-59,-59,-35,7,71
+GB,2021-02-20,Saturday,,Grocery and Pharmacy,-49,-12,-13,14,7,52
+GB,2021-02-20,Saturday,,Parks,-80,5,2,267,45,1877
+GB,2021-02-20,Saturday,,Transit Stations,-90,-57,-58,-4,9,113
+GB,2021-02-20,Saturday,,Workplaces,-46,-28,-27,-7,6,37
+GB,2021-02-20,Saturday,,Residential,9,13,13,16,1,1
+GB,2021-02-21,Sunday,,Retail and Recreation,-89,-58,-58,-30,7,75
+GB,2021-02-21,Sunday,,Grocery and Pharmacy,-63,-17,-17,10,6,57
+GB,2021-02-21,Sunday,,Parks,-79,29,26,192,36,1442
+GB,2021-02-21,Sunday,,Transit Stations,-91,-50,-51,-8,12,178
+GB,2021-02-21,Sunday,,Workplaces,-46,-25,-25,-8,6,42
+GB,2021-02-21,Sunday,,Residential,6,9,9,12,1,1
+GB,2021-02-22,Monday,,Retail and Recreation,-92,-49,-48,-25,7,82
+GB,2021-02-22,Monday,,Grocery and Pharmacy,-75,-14,-14,14,6,61
+GB,2021-02-22,Monday,,Parks,-89,17,12,174,24,1026
+GB,2021-02-22,Monday,,Transit Stations,-89,-52,-53,-12,12,153
+GB,2021-02-22,Monday,,Workplaces,-74,-46,-45,-22,7,74
+GB,2021-02-22,Monday,,Residential,10,17,17,30,3,14
+GB,2021-02-23,Tuesday,,Retail and Recreation,-93,-51,-50,-26,7,69
+GB,2021-02-23,Tuesday,,Grocery and Pharmacy,-73,-13,-12,10,6,54
+GB,2021-02-23,Tuesday,,Parks,-87,15,12,197,33,1479
+GB,2021-02-23,Tuesday,,Transit Stations,-86,-54,-55,-11,10,130
+GB,2021-02-23,Tuesday,,Workplaces,-73,-46,-45,-23,7,70
+GB,2021-02-23,Tuesday,,Residential,10,18,18,29,4,11
+GB,2021-02-24,Wednesday,,Retail and Recreation,-92,-51,-50,-29,7,69
+GB,2021-02-24,Wednesday,,Grocery and Pharmacy,-72,-12,-11,11,6,57
+GB,2021-02-24,Wednesday,,Parks,-87,11,9,190,28,1143
+GB,2021-02-24,Wednesday,,Transit Stations,-86,-53,-55,-18,10,130
+GB,2021-02-24,Wednesday,,Workplaces,-74,-45,-44,-23,7,68
+GB,2021-02-24,Wednesday,,Residential,10,18,18,30,3,12
+GB,2021-02-25,Thursday,,Retail and Recreation,-93,-49,-48,-30,6,72
+GB,2021-02-25,Thursday,,Grocery and Pharmacy,-74,-8,-8,14,6,63
+GB,2021-02-25,Thursday,,Parks,-90,27,25,211,30,1059
+GB,2021-02-25,Thursday,,Transit Stations,-88,-52,-52,-5,12,158
+GB,2021-02-25,Thursday,,Workplaces,-73,-45,-44,-26,7,68
+GB,2021-02-25,Thursday,,Residential,9,18,17,31,3,14
+GB,2021-02-26,Friday,,Retail and Recreation,-93,-48,-48,-24,6,77
+GB,2021-02-26,Friday,,Grocery and Pharmacy,-69,-3,-3,23,6,64
+GB,2021-02-26,Friday,,Parks,-85,46,43,260,39,1789
+GB,2021-02-26,Friday,,Transit Stations,-87,-50,-49,-8,12,143
+GB,2021-02-26,Friday,,Workplaces,-71,-44,-43,-25,7,59
+GB,2021-02-26,Friday,,Residential,11,17,17,29,3,10
+GB,2021-02-27,Saturday,,Retail and Recreation,-90,-53,-53,-31,9,80
+GB,2021-02-27,Saturday,,Grocery and Pharmacy,-49,-6,-6,23,6,56
+GB,2021-02-27,Saturday,,Parks,-76,49,46,294,45,2189
+GB,2021-02-27,Saturday,,Transit Stations,-90,-51,-51,5,10,140
+GB,2021-02-27,Saturday,,Workplaces,-45,-24,-23,-6,6,39
+GB,2021-02-27,Saturday,,Residential,6,11,11,14,1,1
+GB,2021-02-28,Sunday,,Retail and Recreation,-89,-52,-52,-26,9,88
+GB,2021-02-28,Sunday,,Grocery and Pharmacy,-67,-10,-10,13,6,64
+GB,2021-02-28,Sunday,,Parks,-82,52,48,263,36,2061
+GB,2021-02-28,Sunday,,Transit Stations,-91,-46,-47,3,13,228
+GB,2021-02-28,Sunday,,Workplaces,-45,-22,-21,-6,6,47
+GB,2021-02-28,Sunday,,Residential,5,8,8,12,1,2
+GB,2021-03-01,Monday,,Retail and Recreation,-92,-45,-44,-20,7,88
+GB,2021-03-01,Monday,,Grocery and Pharmacy,-73,-10,-10,16,6,61
+GB,2021-03-01,Monday,,Parks,-88,24,20,165,30,1351
+GB,2021-03-01,Monday,,Transit Stations,-88,-51,-51,-10,12,148
+GB,2021-03-01,Monday,,Workplaces,-73,-45,-44,-22,9,74
+GB,2021-03-01,Monday,,Residential,9,16,16,28,3,12
+GB,2021-03-02,Tuesday,,Retail and Recreation,-92,-47,-47,-26,6,77
+GB,2021-03-02,Tuesday,,Grocery and Pharmacy,-73,-9,-9,16,6,63
+GB,2021-03-02,Tuesday,,Parks,-88,25,20,215,25,1151
+GB,2021-03-02,Tuesday,,Transit Stations,-86,-51,-52,-2,12,151
+GB,2021-03-02,Tuesday,,Workplaces,-73,-45,-44,-23,7,73
+GB,2021-03-02,Tuesday,,Residential,9,17,17,29,3,13
+GB,2021-03-03,Wednesday,,Retail and Recreation,-93,-50,-50,-30,7,72
+GB,2021-03-03,Wednesday,,Grocery and Pharmacy,-75,-11,-11,11,6,62
+GB,2021-03-03,Wednesday,,Parks,-90,-2,-3,141,19,554
+GB,2021-03-03,Wednesday,,Transit Stations,-86,-53,-53,-6,12,137
+GB,2021-03-03,Wednesday,,Workplaces,-74,-44,-43,-25,7,70
+GB,2021-03-03,Wednesday,,Residential,10,18,17,32,3,14
+GB,2021-03-04,Thursday,,Retail and Recreation,-93,-50,-49,-31,6,70
+GB,2021-03-04,Thursday,,Grocery and Pharmacy,-74,-8,-8,14,6,60
+GB,2021-03-04,Thursday,,Parks,-89,4,2,147,20,593
+GB,2021-03-04,Thursday,,Transit Stations,-88,-53,-53,-18,12,140
+GB,2021-03-04,Thursday,,Workplaces,-72,-45,-44,-27,7,69
+GB,2021-03-04,Thursday,,Residential,10,18,18,31,3,14
+GB,2021-03-05,Friday,,Retail and Recreation,-93,-50,-49,-29,7,74
+GB,2021-03-05,Friday,,Grocery and Pharmacy,-71,-5,-5,20,6,61
+GB,2021-03-05,Friday,,Parks,-89,16,14,195,25,863
+GB,2021-03-05,Friday,,Transit Stations,-87,-51,-50,-14,10,132
+GB,2021-03-05,Friday,,Workplaces,-71,-43,-42,-26,7,61
+GB,2021-03-05,Friday,,Residential,11,18,17,30,3,11
+GB,2021-03-06,Saturday,,Retail and Recreation,-91,-54,-54,-29,9,82
+GB,2021-03-06,Saturday,,Grocery and Pharmacy,-54,-6,-6,18,7,59
+GB,2021-03-06,Saturday,,Parks,-82,20,18,176,30,1202
+GB,2021-03-06,Saturday,,Transit Stations,-90,-53,-53,-10,10,118
+GB,2021-03-06,Saturday,,Workplaces,-43,-23,-23,-7,6,39
+GB,2021-03-06,Saturday,,Residential,6,12,12,15,1,2
+GB,2021-03-07,Sunday,,Retail and Recreation,-89,-53,-53,-28,9,82
+GB,2021-03-07,Sunday,,Grocery and Pharmacy,-63,-10,-10,12,6,59
+GB,2021-03-07,Sunday,,Parks,-81,35,31,262,34,1568
+GB,2021-03-07,Sunday,,Transit Stations,-92,-48,-49,-6,12,184
+GB,2021-03-07,Sunday,,Workplaces,-44,-21,-21,-4,6,48
+GB,2021-03-07,Sunday,,Residential,5,9,9,12,1,1
+GB,2021-03-08,Monday,,Retail and Recreation,-91,-43,-42,-18,7,92
+GB,2021-03-08,Monday,,Grocery and Pharmacy,-71,-6,-6,20,7,62
+GB,2021-03-08,Monday,,Parks,-87,23,20,190,30,1211
+GB,2021-03-08,Monday,,Transit Stations,-87,-47,-47,-1,12,158
+GB,2021-03-08,Monday,,Workplaces,-71,-42,-41,-22,9,74
+GB,2021-03-08,Monday,,Residential,8,15,14,27,3,10
+GB,2021-03-09,Tuesday,,Retail and Recreation,-91,-45,-43,-19,6,78
+GB,2021-03-09,Tuesday,,Grocery and Pharmacy,-71,-5,-4,18,6,63
+GB,2021-03-09,Tuesday,,Parks,-84,39,37,245,36,1538
+GB,2021-03-09,Tuesday,,Transit Stations,-84,-46,-46,-2,12,171
+GB,2021-03-09,Tuesday,,Workplaces,-70,-41,-40,-20,7,72
+GB,2021-03-09,Tuesday,,Residential,7,15,15,26,3,10
+GB,2021-03-10,Wednesday,,Retail and Recreation,-93,-52,-51,-30,7,73
+GB,2021-03-10,Wednesday,,Grocery and Pharmacy,-73,-10,-10,11,6,62
+GB,2021-03-10,Wednesday,,Parks,-89,-22,-22,90,15,360
+GB,2021-03-10,Wednesday,,Transit Stations,-85,-51,-51,-12,11,131
+GB,2021-03-10,Wednesday,,Workplaces,-72,-41,-40,-19,7,70
+GB,2021-03-10,Wednesday,,Residential,10,17,17,30,3,11
+GB,2021-03-11,Thursday,,Retail and Recreation,-93,-49,-48,-25,7,73
+GB,2021-03-11,Thursday,,Grocery and Pharmacy,-71,-4,-4,20,6,63
+GB,2021-03-11,Thursday,,Parks,-89,1,1,124,19,600
+GB,2021-03-11,Thursday,,Transit Stations,-86,-48,-48,-2,12,158
+GB,2021-03-11,Thursday,,Workplaces,-70,-41,-40,-21,7,70
+GB,2021-03-11,Thursday,,Residential,8,16,16,29,3,11
+GB,2021-03-12,Friday,,Retail and Recreation,-93,-49,-48,-26,7,79
+GB,2021-03-12,Friday,,Grocery and Pharmacy,-70,1,1,28,6,71
+GB,2021-03-12,Friday,,Parks,-89,7,5,153,24,792
+GB,2021-03-12,Friday,,Transit Stations,-87,-46,-46,-4,10,148
+GB,2021-03-12,Friday,,Workplaces,-69,-39,-38,-20,7,62
+GB,2021-03-12,Friday,,Residential,8,16,15,28,3,9
+GB,2021-03-13,Saturday,,Retail and Recreation,-91,-52,-52,-22,9,96
+GB,2021-03-13,Saturday,,Grocery and Pharmacy,-49,7,8,40,9,105
+GB,2021-03-13,Saturday,,Parks,-82,-4,-7,130,25,775
+GB,2021-03-13,Saturday,,Transit Stations,-90,-53,-53,-4,9,122
+GB,2021-03-13,Saturday,,Workplaces,-42,-22,-22,1,6,41
+GB,2021-03-13,Saturday,,Residential,7,11,11,15,1,2
