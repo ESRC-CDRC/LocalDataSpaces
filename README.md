@@ -12,15 +12,15 @@ It contains the different types of reports created by the Local Data Spaces Scie
 # Research Team
 The report was compiled by the Local Data Spaces team, which includes:
 
-Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
-Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk
-Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: jacob.macdonald@liverpool.ac.uk
-Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk
+Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk <br>
+Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk<br>
+Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: jacob.macdonald@liverpool.ac.uk<br>
+Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk<br>
 
 # Contact
-The piece of work was funded by the ESRC’s (UKRI) Local Data Spaces Project, which is novel collaboration between the ONS, JBC and ESRC designed to open up secure data to Local Authorities to support responses to COVID-19. If you would like to contact the team about any of the data presenting in this report or discuss further opportunities within the Local Data Spaces project, please contact one of the following:
-Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
-Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk
+The piece of work was funded by the ESRC’s (UKRI) Local Data Spaces Project, which is novel collaboration between the ONS, JBC and ESRC designed to open up secure data to Local Authorities to support responses to COVID-19. If you would like to contact the team about any of the data presenting in this report or discuss further opportunities within the Local Data Spaces project, please contact one of the following:<br>
+Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk<br>
+Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk<br>
 
 # Note
 This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates.
