@@ -7,6 +7,7 @@ It contains the different types of reports created by the Local Data Spaces Scie
 * Demographic
 * Impact of COVID on BAME population
 * Women hospitalization risk
+* Mobility Reports
 
 
 # Research Team
