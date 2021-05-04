@@ -9,6 +9,8 @@ It contains the different types of reports created by the Local Data Spaces Scie
 * Women hospitalization risk
 * Mobility Reports
 
+The html reports are available for download in the geodatapacks section of data.cdrc.ac.uk/geodata-packs
+
 
 # Research Team
 The report was compiled by the Local Data Spaces team, which includes:
