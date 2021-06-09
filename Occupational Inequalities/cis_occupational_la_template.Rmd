@@ -1,0 +1,220 @@
+---
+title: "Occupational Inequalities in COVID-19: `r name`"
+author: "Local Data Spaces ADR UK Research Team"
+pdf_document: null
+output:
+  html_document:
+    code_folding: hide
+    theme: cosmo
+    toc: true
+---
+
+<style>
+h1, h2, h3 {
+  font-family: Times;
+  font-size: 16pt;
+  text-align: left;
+  margin-top: 50px
+  }
+body {
+  font-family: Arial;
+  font-size: 12pt;
+  text-align: justify
+  }
+p.caption {
+  font-size: 10pt;
+  font-style: italic;
+}
+</style>
+
+## **Introduction**
+
+The following report presents data for `r paste0("<b>", name[1], " (CIS: ", i, ")</b>")`. Where multiple Local Authorities have been combined together, this was to preserve data security and prevent data disclosure.
+
+The aim of the report is to identify local patterns in occupational inequalities of COVID-19 prevalence. It presents some descriptive statistics across different aspects of employment and work. Data presented in the report relate to the period 1st May 2020 to 31st January 2021. All counts less than 10 have been suppressed for data security, as per ONS guidance.
+
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates.
+
+## **Data and Sources**
+
+Local profiling is based on data from the Office for National Statistics's (ONS's) Secure Research Service (SRS). Specifically:
+
+* ONS COVID-19 Infection Survey : [see here for more information](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/methodologies/covid19infectionsurveypilotmethodsandfurtherinformation#14-day-estimates)
+
+Estimates are generated from the ONS COVID Infection Survey (CIS) which is large survey of households across the UK with the purpose to estimate the prevalence of COVID-19 and help efforts in response to the pandemic. Only private households are included in the study, meaning that the data do not include people resident in communal establishments (e.g., care homes) or hospitals. Individuals taking part in the survey are provided a test for COVID-19. The survey also covers a range of socio-demographic information helping to identify population groups at greater risk of COVID-19. 
+
+## **Summary of the Covid Infection Survey (CIS)**
+
+The CIS contains `r sum(plot1$count[plot1$geography_code == i])` individuals from `r head(plot1$geography_name[plot1$geography_code == i], 1)` (`r i`) between 1st May 2020 and 31st January 2021. 
+
+Over the study period, the percentage of individuals who tested positive for COVID-19 was `r round(plot2$pc_positive[plot2$geography_code == i], digits = 2)`% (95% Confidence Intervals (CIs) `r round(plot2$lwr[plot2$geography_code == i], digits = 2)`% to `r round(plot2$upr[plot2$geography_code == i], digits = 2)`%). The England average for this period was 0.90% (95% CIs = 0.89% to 0.91%). 
+
+The rest of the report presents COVID-19 prevalence by different measures of occupation, work and employment.
+
+## **Employment Status**
+
+Figure 1 below presents the percentage of tests that were positive by the employment status of individuals. The graph can be interpreted as the prevalence of COVID-19 for each employment status group over the period. Values for `r head(plot1$geography_name[plot1$geography_code == i], 1)` (`r i`) are plotted, along with the England average. For both, the point estimate and 95% Confidence Intervals are presented. Individuals who are not working include the following populations: retired, unemployed, long-term sick and other economically inactive groups. Please note, that where categories are not presented this is because their values have been redacted to prevent data disclosure issues (i.e., counts < 10).
+
+```{r}
+# Subset Local Authority and join on England average
+for_plotting <- rbind(plot3[plot3$geography_code == i,], plot3_eng)
+
+# Plot
+p <- ggplot(for_plotting, aes(x = work_status, y = pc_positive, group = geography_code, color = geography_code)) + # Plot percentages
+  geom_point(size = 2, position=position_dodge(width=0.5)) + # Plot values as points
+  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0, position=position_dodge(width=0.5)) + # Add confidence intervals
+  xlab("Employment status") + # Edit labels
+  ylab("Percentage of tests positive for COVID-19 (%)") +
+  ggtitle("Figure 1: COVID-19 prevalence by work status") +
+  scale_color_manual(values = c("#482677FF", "#55C667FF")) + # Change colours to match viridis colours (colour blind friendly)
+  ylim(0, max(for_plotting$upr)) + # Set y axis bounds
+  labs(color = "Region") +
+  coord_flip() # Swap axes in plotting
+p # Print
+
+```
+
+Figure 2 below presents an expanded version of employment status with additional categories. Specifically, the employment and self-employment groups have now been split up by whether individuals were currently working or not (i.e., furloughed), individuals who were not working (but not furloughed) have been divided into whether individuals were retired and whether individuals are looking for work or not, and students have been split by age. The plot presents percentage of tests that were returned as positive again for `r head(plot1$geography_name[plot1$geography_code == i], 1)` (`r i`) in comparison to the England average. Please note, that where categories are not presented this is because their values have been redacted to prevent data disclosure issues (i.e., counts < 10).
+
+```{r}
+# Subset Local Authority and join on England average
+for_plotting <- rbind(plot4[plot4$geography_code == i,], plot4_eng)
+
+# Plot
+p <- ggplot(for_plotting, aes(x = work_status_v1, y = pc_positive, group = geography_code, color = geography_code)) + # Plot percentages
+  geom_point(size = 2, position=position_dodge(width=0.5)) + # Plot values as points
+  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0, position=position_dodge(width=0.5)) + # Add confidence intervals
+  xlab("Employment status") + # Edit labels
+  ylab("Percentage of tests positive for COVID-19 (%)") +
+  ggtitle("Figure 2: COVID-19 patterns by expanded work status") +
+  scale_color_manual(values = c("#482677FF", "#55C667FF")) + # Change colours to match viridis colours (colour blind friendly)
+  ylim(0, max(for_plotting$upr)) + # Set y axis bounds
+  labs(color = "Region") +
+  coord_flip() # Swap axes in plotting
+p # Print
+
+```
+
+## **Work Sector**
+
+Figure 3 considers the percentage of tests that were positive by sector of employment for an individual’s main job. Employment sector has been categorised into 15 groups that incorporate broad categories aggregating specific occupations (e.g., health care would include doctors, nurses, and other health care officials). The plot allows us to consider how different occupations vary in COVID-19 prevalence. Data are plotted for both `r head(plot1$geography_name[plot1$geography_code == i], 1)` (`r i`) and the England average. Please note, that where categories are not presented this is because their values have been redacted to prevent data disclosure issues (i.e., counts < 10).
+
+```{r}
+# Subset Local Authority and join on England average
+for_plotting <- rbind(plot5[plot5$geography_code == i,], plot5_eng)
+
+# Plot
+p <- ggplot(for_plotting, aes(x = work_sector, y = pc_positive, group = geography_code, color = geography_code)) + # Plot percentages
+  geom_point(size = 2, position=position_dodge(width=0.5)) + # Plot values as points
+  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0, position=position_dodge(width=0.5)) + # Add confidence intervals
+  xlab("Work sector") + # Edit labels
+  ylab("Percentage of tests positive for COVID-19 (%)") +
+  ggtitle("Figure 3: COVID-19 prevalence by work sector") +
+  scale_color_manual(values = c("#482677FF", "#55C667FF")) + # Change colours to match viridis colours (colour blind friendly)
+  ylim(0, max(for_plotting$upr)) + # Set y axis bounds
+  labs(color = "Region") +
+  coord_flip() # Swap axes in plotting
+p # Print
+
+```
+
+## **Work location**
+
+Figure 4 considers the percentage of individuals with a positive test by the main location of where individuals were working at the time (i.e., those with the ability to work from home, those who work outside of the home, and individuals who do a mixture). Estimates are presented for both `r head(plot1$geography_name[plot1$geography_code == i], 1)` (`r i`) and the England average. Please note, that where categories are not presented this is because their values have been redacted to prevent data disclosure issues (i.e., counts < 10).
+
+```{r}
+# Subset Local Authority and join on England average
+for_plotting <- rbind(plot6[plot6$geography_code == i,], plot6_eng)
+
+# Plot
+p <- ggplot(for_plotting, aes(x = work_location, y = pc_positive, group = geography_code, color = geography_code)) + # Plot percentages
+  geom_point(size = 2, position=position_dodge(width=0.5)) + # Plot values as points
+  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0, position=position_dodge(width=0.5)) + # Add confidence intervals
+  xlab("Work location") + # Edit labels
+  ylab("Percentage of tests positive for COVID-19 (%)") +
+  ggtitle("Figure 4: COVID-19 prevalence by work location") +
+  scale_color_manual(values = c("#482677FF", "#55C667FF")) + # Change colours to match viridis colours (colour blind friendly)
+  ylim(0, max(for_plotting$upr)) + # Set y axis bounds
+  labs(color = "Region") +
+  coord_flip() # Swap axes in plotting
+p # Print
+
+```
+
+## **Work social distancing**
+
+Figure 5 below presents data on trends in the percentage of positive tests grouped by the ability for individuals to maintain social distancing behaviours in their work if they work outside of their home. Estimates are presented for both `r head(plot1$geography_name[plot1$geography_code == i], 1)` (`r i`) and the England average. Please note, that where categories are not presented this is because their values have been redacted to prevent data disclosure issues (i.e., counts < 10).
+
+```{r}
+# Subset Local Authority and join on England average
+for_plotting <- rbind(plot7[plot7$geography_code == i,], plot7_eng)
+
+# Plot
+p <- ggplot(for_plotting, aes(x = work_social_distancing, y = pc_positive, group = geography_code, color = geography_code)) + # Plot percentages
+  geom_point(size = 2, position=position_dodge(width=0.5)) + # Plot values as points
+  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0, position=position_dodge(width=0.5)) + # Add confidence intervals
+  xlab("Ability to social distance at work") + # Edit labels
+  ylab("Percentage of tests positive for COVID-19 (%)") +
+  ggtitle("Figure 5: COVID-19 patterns by work social distancing") +
+  scale_color_manual(values = c("#482677FF", "#55C667FF")) + # Change colours to match viridis colours (colour blind friendly)
+  ylim(0, max(for_plotting$upr)) + # Set y axis bounds
+  labs(color = "Region") +
+  coord_flip() # Swap axes in plotting
+p # Print
+
+```
+
+## **Individuals who work directly with patients**
+
+Finally, Figure 6 considers the percentage of individuals with positive COVID-19 tests who are employed in jobs that work directly alongside or with patients (e.g. in health or social care settings). Again, we plot data for both `r head(plot1$geography_name[plot1$geography_code == i], 1)` (`r i`) and England overall. Please note, that where categories are not presented this is because their values have been redacted to prevent data disclosure issues (i.e., counts < 10).
+
+```{r}
+# Subset Local Authority and join on England average
+for_plotting <- rbind(plot8[plot8$geography_code == i,], plot8_eng)
+
+# Plot
+p <- ggplot(for_plotting, aes(x = work_direct_contact_patients_etc, y = pc_positive, group = geography_code, color = geography_code)) + # Plot percentages
+  geom_point(size = 2, position=position_dodge(width=0.5)) + # Plot values as points
+  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0, position=position_dodge(width=0.5)) + # Add confidence intervals
+  xlab("Work has direct contact with patients") + # Edit labels
+  ylab("Percentage of tests positive for COVID-19 (%)") +
+  ggtitle("Figure 6: COVID-19 prevalence by if work with patients") +
+  scale_color_manual(values = c("#482677FF", "#55C667FF")) + # Change colours to match viridis colours (colour blind friendly)
+  ylim(0, max(for_plotting$upr)) + # Set y axis bounds
+  labs(color = "Region") +
+  coord_flip() # Swap axes in plotting
+p # Print
+
+```
+
+
+## **Research Team**
+
+The [Local Data Spaces Project (LDS)](https://www.adruk.org/our-work/browse-all-projects/local-data-spaces-helping-local-authorities-tackle-the-covid-19-pandemic-362/) and series of local profiles were funded by the [ESRC (UKRI)](https://esrc.ukri.org/). The project is a novel collaboration between the [Office for National Statistics (ONS)](https://www.ons.gov.uk/), [Joint Biosecurity Centre (JBC)](https://www.gov.uk/government/groups/joint-biosecurity-centre) and [Administrative Data Research (ADR) UK](https://www.adruk.org/) designed to leverage secure data held within the [ONS Secure Research Service (SRS)](https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme) to support data-driven Local Authority responses to COVID-19.
+
+The LDS local profiles were designed and developed by the ADR UK research team. Please get in contact with any of the following for questions or technical points related to any of the data or outputs presented in this report.
+  
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk 
+* Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: jacob.macdonald@liverpool.ac.uk
+* Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk
+
+Code, data and project workflow to replicate or expand the analysis for each local area are available by request internally within the ONS Secure Research Services (SRS) environment. Local analysts will be able to request and work with the series of code developed to clean, organize and generate local profiles after setting up their initial SRS project space.
+
+Coding products for replication of visuals (without any underlying SRS-based data and appropriately disclosed) are available online at the following Github repository: [https://github.com/ESRC-CDRC/LocalDataSpaces](https://github.com/ESRC-CDRC/LocalDataSpaces)
+
+For [SRS access](https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme), support and to request the project files, please contact: 
+
+* srs.customer.support@ons.gov.uk
+
+For broader details on the LDS project or to discuss further opportunities, please contact:
+
+* Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk
+
+
+## **Partners**
+
+```{r patnerlogos, echo=TRUE, out.width="50%", out.height="50%", fig.show='hold', fig.align="center"}
+knitr::include_graphics(paste0(wd.data, "/reportlogos.png"))
+
+```
