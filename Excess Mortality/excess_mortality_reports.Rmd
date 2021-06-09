@@ -1,0 +1,164 @@
+---
+title: "Inequalities in excess mortality (Jan-Nov 2020): `r names[1]`"
+author: "Local Data Spaces ADR UK Research Team"
+pdf_document: null
+output:
+  html_document:
+    code_folding: hide
+    theme: cosmo
+    toc: true
+---
+
+<style>
+h1, h2, h3 {
+  font-family: Times;
+  font-size: 16pt;
+  text-align: left;
+  margin-top: 50px
+  }
+body {
+  font-family: Arial;
+  font-size: 12pt;
+  text-align: justify
+  }
+p.caption {
+  font-size: 10pt;
+  font-style: italic;
+}
+</style>
+
+## **Introduction**
+
+In this report, we derive key measures of excess mortality by quintile of neighbourhood deprivation to investigate health inequalities during the COVID-19 pandemic. The following report presents data for `r paste0("<b>", names[1], " (LAD: ", i, ")</b>")`.
+
+All counts less than 10 have been suppressed to minimise data disclosure issues, as per ONS guidance. This may lead to plots where parts of lines appear missing as they have been redacted.
+
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates.
+
+## **Data and Sources**
+
+Local profiling is based on official Office for National Statistics (ONS) mortality records accessible via the ONS's Secure Research Service (SRS). Specifically:
+
+* Death Registrations, England and Wales: [doi.org/10.5255/UKDA-SN-8200-5](http://doi.org/10.5255/UKDA-SN-8200-5)
+
+Data are individual mortality records collected from registered deaths (1993-Present). It is a legal requirement that all deaths are registered, meaning data coverage includes all deaths in England. The data covered in this report concerns all data taken from the 1st January 2020 upto 30th November 2020. Data for November are marked as provisional and we note that some deaths may have been delayed in their reporting in November and therefore not covered in these data. 
+
+Neighbourhood deprivation is defined using [2019 Index of Multiple Deprivation (England)](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019). Where quintiles are presented for Local Authorities, we refer to the England national quintiles to allow direct comparison to national patterns. Each quintile represents 20% of areas in England (and roughly 20% of the population). As such, some Local Authorities may not have sufficient data for each quintile depending on the mix of their local population.
+
+## **National level benchmarks**
+
+The first section examines inequalities in excess mortality for England overall to provide benchmarks when interpreting local patterns presented below.
+
+Figure 1 below presents total excess mortality per month by sex and quintile of deprivation. Excess mortality was calculated as the total number of deaths in each month of 2020 compared to the average number of deaths for 2015-2019. It gives the extent of observed deaths when compared to what we might expect in 'normal' years. These data represent the crude or raw values, and have not been age-standardisesd.
+
+```{r}
+fig1
+
+```
+
+The plot shows a large increase in the number of deaths between March and May, where there were several thousand additional deaths than would normally be expected. This effect coincides with the first wave of COVID-19. Trends were consistent across deprivation quintile and by sex, although the largest increase was observed in the most deprived communities (especially in males). Excess deaths then decline over Summer, especially for the most deprived areas where there are fewer deaths than expected. The specific trend for the most deprived areas reflects that deaths among deprived communities were concentrated during this first wave, with fewer in Summer than normal years where deaths are more evenly spread through the year. There is also another small increase in October reflecting the second wave of the pandemic, although this was not as high as the peak observed in April. The drop in November likely reflects the under-reporting of deaths in the month.
+
+Figure 2 presents the relative difference of the number of deaths in 2020 compared to the expected number of deaths based on prior trends (i.e., mean deaths 2015-2019). This helps to normalise between different levels of total deaths between our groups, allowing us to examine relative trends in excess mortality. To interpret the specific value, we refer to the value of 1 which represents no difference in the number of deaths in 2020 compared to the mean for 2015-2019. Values above 1 represent a greater number of deaths than expected, with specific values corresponding to the percentage of additional deaths in 2020 in relation to a value of 1 (e.g., 1.2 represents 20% greater deaths in 2020, 1.4 is 40% more, and 0.8 is 20% fewer). The measure is equivalent to the observed / expected.
+
+```{r}
+fig2
+
+```
+
+A similar pattern is observed to Figure 1, where concentrations in deaths observed in the first wave between March and May. During this period, there are more than twice as many deaths than we would normally expect. This sharply declines and remains fairly consistent for the rest of the year for most groups at roughly 10% additional deaths than expected (bar the most deprived areas).
+
+## **Local patterns for `r names[1]`**
+
+This section recreates the same plots and data in the previous section, but for `r names[1]` (`r i`). If any values are missing from the plots below, this is because they were redacted due to low number issues, which can be problematic when dividing up the data by deprivation and sex for local populations.
+
+Figure 3 plots trends in excess mortality by sex and deprivation quintile and is comparable to Figure 1. To interpret the plot, values above 0 represent the number of additional deaths beyond what we would expect when compared to the average for 2015-2019. Values below 0 represent fewer deaths than expected. We plot the trend line, as well as the individual points.
+
+```{r}
+# Plot excess_vs_eng
+p <- ggplot(for_plotting, aes(x = DODMT, y = excess_deaths, group = factor(imd_quintile_e), color = factor(imd_quintile_e))) + # Plot excess deaths per month
+  geom_point(alpha = 0.5) +
+  geom_line() + # Plot values as line plot
+  facet_wrap(~SEX, labeller = labeller(SEX = sex.labs)) + # Stratify plot by sex
+  xlab("Month") + # Edit labels
+  ylab("Number of excess deaths (vs 2015-19)") +
+  labs(color = "Deprivation Quintile") +
+  ggtitle("Figure 3: Excess deaths in 2020 by deprivation and sex") +
+  ylim(min(for_plotting$excess_deaths), max(for_plotting$excess_deaths)) + # Set y axis bounds
+  scale_color_viridis_d(name = "Deprivation Quintile", labels = c("Most Deprived", "Quintile 2", "Quintile 3", "Quintile 4", "Least Deprived")) + # Edit legend labels
+  scale_x_continuous(breaks = c(1,3,5,7,9,11), labels = c("Jan", "Mar", "May", "July", "Sept", "Nov")) # Revise month from number to label
+p # Print
+
+```
+
+Figure 4 presents the ratio of deaths in 2020 compared to mean deaths between 2015-2019 and is comparable to Figure 2. Again, it can be interpreted as the relative extent of excess mortality for each month, where a value above 1 relates to a greater proportion of deaths in 2020 versus what might be expected in 'normal' years. We plot the trend line, as well as the individual points.
+
+```{r}
+# Plot
+p <- ggplot(for_plotting, aes(x = DODMT, y = ratio_local, group = factor(imd_quintile_e), color = factor(imd_quintile_e))) + # Plot excess deaths per month
+  geom_point(alpha = 0.5) +
+  geom_line() + # Plot values as line plot
+  facet_wrap(~SEX, labeller = labeller(SEX = sex.labs)) + # Stratify plot by sex
+  xlab("Month") + # Edit labels
+  ylab("Ratio of deaths in 2020 vs. mean deaths 2015-2019") +
+  labs(color = "Deprivation Quintile") +
+  ggtitle("Figure 4: Relative differences in excess mortality in 2020") +
+  ylim(min(for_plotting$ratio_local), max(for_plotting$ratio_local)) + # Set y axis bounds
+  scale_color_viridis_d(name = "Deprivation Quintile", labels = c("Most Deprived", "Quintile 2", "Quintile 3", "Quintile 4", "Least Deprived")) + # Edit legend labels
+  scale_x_continuous(breaks = c(1,3,5,7,9,11), labels = c("Jan", "Mar", "May", "July", "Sept", "Nov")) # Revise month from number to label
+p # Print
+
+```
+
+Finally, Figure 5 presents the relative difference in the values reported in Figure 4 to the national average presented in Figure 2. Here the plot tells us for each deprivation quintile and sex, whether mortality rates have been higher or lower than what has happened in England overall. It allows a Local Authority to benchmark whether populations and communities in their local area are doing 'better' or 'worse' than the national average. We plot the trend line, as well as the individual points.
+
+A value above 1 represents where excess deaths where higher for that group than compared to the England average, and a value below 0 suggests fewer deaths than the national average. A value of 1 means no difference. Specific values can be interpreted similarly, with values representing the percentage difference (i.e., a value of 1.3 suggests 30% higher excess deaths than compared to the national average). The metric allows us to compare excess mortality while normalising population sizes. Please consider this an experimental statistic.
+
+```{r}
+# Plot 
+p <- ggplot(for_plotting, aes(x = DODMT, y = ratio_ratio, group = factor(imd_quintile_e), color = factor(imd_quintile_e))) + # Plot excess deaths per month
+  geom_point(alpha = 0.5) +
+  geom_line() + # Plot values as line plot
+  facet_wrap(~SEX, labeller = labeller(SEX = sex.labs)) + # Stratify plot by sex
+  xlab("Month") + # Edit labels
+  ylab("Percentage difference in excess deaths compared to national average") +
+  labs(color = "Deprivation Quintile") +
+  ggtitle("Figure 5: Relative difference in excess deaths (vs England average)") +
+  ylim(min(for_plotting$ratio_ratio), max(for_plotting$ratio_ratio)) + # Set y axis bounds
+  scale_color_viridis_d(name = "Deprivation Quintile", labels = c("Most Deprived", "Quintile 2", "Quintile 3", "Quintile 4", "Least Deprived")) + # Edit legend labels
+  scale_x_continuous(breaks = c(1,3,5,7,9,11), labels = c("Jan", "Mar", "May", "July", "Sept", "Nov")) # Revise month from number to label
+p # Print
+
+```
+
+
+
+## **Research Team**
+
+The [Local Data Spaces Project (LDS)](https://www.adruk.org/our-work/browse-all-projects/local-data-spaces-helping-local-authorities-tackle-the-covid-19-pandemic-362/) and series of local profiles were funded by the [ESRC (UKRI)](https://esrc.ukri.org/). The project is a novel collaboration between the [Office for National Statistics (ONS)](https://www.ons.gov.uk/), [Joint Biosecurity Centre (JBC)](https://www.gov.uk/government/groups/joint-biosecurity-centre) and [Administrative Data Research (ADR) UK](https://www.adruk.org/) designed to leverage secure data held within the [ONS Secure Research Service (SRS)](https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme) to support data-driven Local Authority responses to COVID-19.
+
+The LDS local profiles were designed and developed by the ADR UK research team. Please get in contact with any of the following for questions or technical points related to any of the data or outputs presented in this report.
+  
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk 
+* Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: jacob.macdonald@liverpool.ac.uk
+* Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk
+
+Code, data and project workflow to replicate or expand the analysis for each local area are available by request internally within the ONS Secure Research Services (SRS) environment. Local analysts will be able to request and work with the series of code developed to clean, organize and generate local profiles after setting up their initial SRS project space. 
+
+Coding products for replication of visuals (without any underlying SRS-based data and appropriately disclosed) are available online at the following Github repository: [https://github.com/ESRC-CDRC/LocalDataSpaces](https://github.com/ESRC-CDRC/LocalDataSpaces)
+
+For [SRS access](https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme), support and to request the project files, please contact: 
+
+* srs.customer.support@ons.gov.uk
+
+For broader details on the LDS project or to discuss further opportunities, please contact:
+
+* Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk
+
+
+## **Partners**
+
+```{r patnerlogos, echo=TRUE, out.width="50%", out.height="50%", fig.show='hold', fig.align="center"}
+knitr::include_graphics(paste0(wd.data, "/reportlogos.png"))
+
+```
