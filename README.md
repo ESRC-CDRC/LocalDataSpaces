@@ -1,5 +1,5 @@
 # Local Data Spaces
-The reposiotry contains code and data to produce the reports parts of the Local Data Spaces project.
+The repository contains code and data to produce the reports parts of the Local Data Spaces project.
 It contains the different types of reports created by the Local Data Spaces Scientists involved in the project:
 * Ethnic Inequalities
 * Geospatial Inequalities
