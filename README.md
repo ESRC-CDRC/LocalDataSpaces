@@ -4,8 +4,12 @@ It contains the different types of reports created by the Local Data Spaces Scie
 * Ethnic Inequalities
 * Geospatial Inequalities
 * Occupational risk
-* Demographic
-* Impact of COVID on BAME population
+* Demographic Inequalities
+* Population and Housing
+* Social Economy
+* Excess Mortality
+* Occupational Inequalities
+* Industry Sector Densities
 * Women hospitalization risk
 * Mobility Reports
 
