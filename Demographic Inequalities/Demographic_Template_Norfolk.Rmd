@@ -1,0 +1,355 @@
+---
+title: "Demographic Inequalities in COVID-19 Risk: `r pillar2_info_sub$LA_NAME[1]` (`r pillar2_info_sub$RGN_NM[1]`)"
+author: "Local Data Spaces ADR UK Research Team"
+output: bookdown::html_document2
+# fig_captions: true # uncomment if using interactive visualisations (ggplotly)
+---
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+  font-family: Arial;
+}
+h1, h2, h3 { 
+font-size: 16pt; 
+font-family: Times}
+
+p.caption {
+  font-size: 10pt;
+  font-style: italic;
+}
+
+</style>
+
+## Introduction
+
+This reports highlights Demographic Inequalities (Sex and Age) in COVID-19 transmission in the Local Authority of __`r pillar2_info_sub$LA_NAME[1]` (LAD: `r pillar2_info_sub$LA_CODE[1]`) __. Principally, 7-day rolling average COVID-19 positivity rates will be used to inform demographic differences, and data will be compared to regional __(`r pillar2_info_sub$RGN_NM[1]` - `r pillar2_info_sub$RGN_CD[1]`)__ and National averages. 
+
+The Local Data Spaces programme, from which this report was produced, was created by the [Office for National Statistics (ONS)](https://www.ons.gov.uk/) and [Joint Biosecurity Centre (JBC)](https://www.gov.uk/government/groups/joint-biosecurity-centre) in response to user needs arising from the COVID-19 pandemic and allows Local Authorities to benefit from the range of health data and non-health data stored in the [ONS Secure Research Service (SRS)](https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme#accessing-the-secure-research-service-srs). This approach enables analyses generated to address questions that are of relevance at a local context. While this work provides Local Authority profiles, its benefit is drawn from the ability to easily compare and contrast against the regional and national backdrop.
+
+## Data and Sources
+
+This report uses the [NHS Test and Trace Dataset (National Pathology Exchange Pillar 2 Data)](https://www.gov.uk/government/publications/nhs-test-and-trace-statistics-england-methodology/nhs-test-and-trace-statistics-england-methodology).
+The NHS Test and Trace System was launched on 28th May 2020 to help track the spread of COVID-19 in the UK. It contains both symptomatic and asymptomatic testing data from the National Pathology Exchange Pillar 2 database. This data has been made available via ONS Secure Research Service to identify flare ups of COVID-19 across the UK, and provide advice and support to decision makers at local levels. __The NHS Test and Trace dataset contains `r pillar2_info_sub$total[1]` records from `r pillar2_info_sub$LA_NAME[1]`, spanning the time period of `r pillar2_info_sub$min_date[1]` to `r pillar2_info_sub$max_date[1]` . To produce this report at Norfolk level, the records from the 7 LADs within the county have been used, as this work generated data at Local Authority level. The Local Authority level data was aggregated, and a mean value generated. It is this mean value for Norfolk that is presented within this report.__ 
+
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates. Please note, that where categories are not presented this is because their values have been redacted to prevent data disclosure issues (i.e., counts < 10).
+
+
+```{r Libraries, echo=FALSE, message=FALSE, warning=FALSE}
+# Set library folder
+#lib_base="P:\\Working\\Libraries"
+#lib_base="C:\\Users\\medsleea\\Documents\\R\\R-4.0.3\\library"
+#assign(".lib.loc", lib_base, envir = environment(.libPaths))
+#rm(lib_base)
+
+# Libraries
+library(data.table)
+library(ggplot2)
+library(tidyr)
+library(knitr)
+library(gtools)
+library(biscale)
+library(dplyr)
+library(cowplot)
+
+```
+
+## COVID-19 Cases 
+
+The plot presents daily COVID-19 cases in blue. Regional comparisons are provided in white, with National comparisons in black (calculated as Mean Number of Tests per week). 
+
+```{r Daily_Cases, echo=FALSE, fig.width=10, fig.height=4, message=FALSE, warning=FALSE, fig.cap=paste("Figure 1-Weekly COVID-19 Cases.\n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+# Read in labels for vertical lines 
+tiers <- data.frame("Label"=c("National Lockdown","Rule of Six Outdoors","Tiers Introduced", "Hospitality Reopened","         Rule of Six Outdoors and Indoors","National Lockdown","Tiers Introduced", "Tier 4 Introduced", "National Lockdown", "Rule of Six Outdoors", "Outdoor Hospitality and Retail Reopened"),
+                    "Date"=c("2020/03/23","2020/06/01","2020/07/04","2020/09/14","2020/10/14","2020/11/01","2020/12/02","2020/12/19", "2021/01/06", "2021/03/29", "2021/04/12"))
+tiers$Date <- as.Date(tiers$Date)
+
+data_1$appointmentdate <- as.Date(data_1$appointmentdate)
+# Plot
+p <- ggplot(data_1, aes(x = appointmentdate, y = Freq, group=1)) +# Plot count of individuals in NHS Test and Trace per day
+  #geom_point() + # Display points 
+  geom_line(data=tests_average, aes(x=appointmentdate, y=Tests,text=paste0(appointmentdate, " \nNational Average Positive Cases: ", round(Tests,0))), color="black", alpha=0.8, group=1, )  + geom_line(data=tests_reg_average[tests_reg_average$Region==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=Tests,text=paste0(appointmentdate, "\nRegional Average Positive Cases: ", round(Tests,0))), color="white", alpha=0.8, group=1, size=1) +
+  geom_vline(data=tiers, xintercept=as.numeric(tiers$Date), color="dark grey", alpha=0.4) +
+  annotate("text", x=tiers$Date, y=max(data_1$Freq, na.rm=TRUE)/2,label=tiers$Label, angle=90, alpha=0.3, size=3) +
+  geom_line(aes(text=paste0(appointmentdate, "\nPositive Cases: ", Freq, sep="")), color="blue") + # display trend line (not smoothed to see changes)
+  xlab("Date") + # Labels hereafter
+  ylab("COVID-19 Tests") +
+  scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="COVID-19 Cases by Week") + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + theme_classic() + theme(axis.text.x=element_text(angle=90))  +  theme_classic() +
+    theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+
+p # comment this out if wishing to output interactive visualisations
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # remove comment if wishing to output interactive visualisations
+```
+
+## COVID-19 Testing Uptake 
+
+The plot presents weekly sums of COVID-19 tests per 100k population (the sum of COVID-19 tests divided by total population in the Local Authority, multiplied by 100,000), with Regional comparisons provided in white and National comparisons in black. 
+
+```{r Tests_100k , echo=FALSE, fig.width=10, fig.height=4, message=FALSE, warning=FALSE, fig.cap=paste("Figure 2-Weekly COVID-19 Cases.\n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+# p <- ggplot(data_2, aes(x=appointmentdate, y=total_100k)) + geom_line(data=pos_averages[pos_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", alpha=0.7, se=F) + geom_line(data=pos_averages[pos_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white", alpha=0.9, se=F) + # display trend line (not smoothed to see changes)
+#   geom_line(color="blue", alpha=0.9, se=F) +
+#   xlab("Date") + # Labels hereafter
+#   ylab("COVID-19 Tests\n per 100k Population") +
+#   scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="COVID-19 Tests per 100k Population") + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + theme_classic() + theme(axis.text.x=element_text(angle=90))  +  theme_classic() +
+#     theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) +  geom_vline(data=tiers, xintercept=as.numeric(tiers$Date), color="dark grey", alpha=0.4) +
+#   annotate("text", x=tiers$Date, y=max(data_2$total_100k, na.rm=TRUE)/2,label=tiers$Label, angle=90, alpha=0.3, size=3)
+# 
+# #p
+# 
+# p2 <- ggplot(data_2, aes(x=appointmentdate, y=total_100k))  + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", se=F, alpha=0.6, size=0.5) + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white",se=F, alpha=0.4, size=0.5) + 
+#   geom_smooth(color="blue", se=F) + # display trend line (not smoothed to see changes)
+#   xlab("Date") + # Labels hereafter
+#   ylab("COVID-19 Tests\n per 100k Population") +
+#   scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="Smoothed Trendline of COVID-19 Tests per 100k Population") + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + theme_classic() + theme(axis.text.x=element_text(angle=90))  +  theme_classic() +
+#     theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+# 
+# plot_grid(p, p2, ncol=1,rel_heights = c(1,0.66))
+
+tests_sub$week <- as.Date(tests_sub$week)
+p <- ggplot(tests_sub, aes(x=week, y=total_100k)) + geom_line(data=tests_averages[tests_averages$RGN11NM=="National",], aes(x=week, y=total_100k), color="black", alpha=0.7, se=F) + geom_line(data=tests_averages[tests_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=week, y=total_100k), color="white", alpha=0.9, se=F) + # display trend line (not smoothed to see changes)
+  geom_line(color="blue", alpha=0.9, se=F) +
+  xlab("Date") + # Labels hereafter
+  ylab("COVID-19 Tests\n per 100k Population") +
+  scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="Weekly COVID-19 Tests ") + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + theme_classic() + theme(axis.text.x=element_text(angle=90))  +  theme_classic() +
+    theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) +  geom_vline(data=tiers, xintercept=as.numeric(tiers$Date), color="dark grey", alpha=0.4) +
+  annotate("text", x=tiers$Date, y=max(tests_sub$total_100k, na.rm=TRUE)/2,label=tiers$Label, angle=90, alpha=0.3, size=3)
+
+p
+```
+
+## COVID-19 Testing Uptake by Sex 
+
+The plot presents weekly sums of COVID-19 tests by Sex per 100k population (the sum of COVID-19 tests divided by total population in the Local Authority, multiplied by 100,000), with Regional comparisons provided in white and National comparisons in black. 
+
+```{r  Tests_100k_Sex , echo=FALSE, fig.width=10, fig.height=4, message=FALSE, warning=FALSE, fig.cap=paste("Figure 3-Weekly COVID-19 Tests by Sex. \n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+# p <- ggplot(data_3, aes(x=appointmentdate, y=total_100k, color=Gender)) + geom_line(data=pos_gender_averages[pos_gender_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", alpha=0.3,  size=0.5) + geom_line(data=pos_gender_averages[pos_gender_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white", alpha=0.8, size=0.5) + 
+#   geom_line() + # display trend line (not smoothed to see changes)
+#   xlab("Date") + # Labels hereafter
+#   ylab("COVID-19 Tests\n per 100k Population") +
+#   scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="COVID-19 Tests by Day") + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + theme_classic() + theme(axis.text.x=element_text(angle=90))  +  theme_classic() +
+#     theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Gender) + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+# #+ geom_smooth(color="blue", se=F,linetype="dashed") + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", linetype="dashed", se=F, alpha=0.5) + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white", se=F, alpha=0.5,linetype="dashed") 
+# 
+# #p
+# p2 <- ggplot(data_3, aes(x=appointmentdate, y=total_100k, color=Gender)) +  geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", se=F, alpha=0.4, size=0.5) + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white",se=F, alpha=0.6, size=0.5) + 
+#   geom_smooth(se=F) + # display trend line (not smoothed to see changes)
+#   xlab("Date") + # Labels hereafter
+#   ylab("COVID-19 Tests\n per 100k Population") +
+#   scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="Smoothed Trendline of COVID-19 Tests by Day") + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + theme_classic() + theme(axis.text.x=element_text(angle=90))  +  theme_classic() +
+#     theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Gender) + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+# 
+# plot_grid(p, p2, ncol=1, rel_heights = c(1,0.7))
+
+tests_sex_sub$week <- as.Date(tests_sex_sub$week)
+p <- ggplot(tests_sex_sub, aes(x=week, y=total_100k, color=Gender)) + geom_line(data=tests_sex_averages[tests_sex_averages$RGN11NM=="National",], aes(x=week, y=total_100k), color="black", alpha=0.3,  size=0.5) + geom_line(data=tests_sex_averages[tests_sex_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=week, y=total_100k), color="white", alpha=0.8, size=0.5) + 
+  geom_line() + # display trend line (not smoothed to see changes)
+  xlab("Date") + # Labels hereafter
+  ylab("COVID-19 Tests\n per 100k Population") +
+  scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="Weekly COVID-19 Tests by Sex") + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + theme_classic() + theme(axis.text.x=element_text(angle=90))  +  theme_classic() +
+    theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Gender) + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+#+ geom_smooth(color="blue", se=F,linetype="dashed") + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", linetype="dashed", se=F, alpha=0.5) + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white", se=F, alpha=0.5,linetype="dashed") 
+
+p
+```
+
+## COVID Testing Uptake by Age 
+
+The plot presents weekly sums of COVID-19 tests by Age per 100k population (the sum of COVID-19 tests divided by total population in the Local Authority, multiplied by 100,000), with Regional comparisons provided in white and National comparisons in black. 
+
+```{r Tests_100k_Age , echo=FALSE, fig.width=10, fig.height=8, message=FALSE, warning=FALSE, fig.cap=paste("Figure 4-Weekly COVID-19 Tests by Age.\n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+# p <- ggplot(data_4, aes(x=appointmentdate, y=total_100k, color=Age)) + geom_line(data=pos_age_averages[pos_age_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", size=0.5, alpha=0.3) + geom_line(data=pos_age_averages[pos_age_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white", alpha=0.8, size=0.8) + 
+#   geom_line() + # display trend line (not smoothed to see changes)
+#   xlab("Date") + # Labels hereafter
+#   ylab("COVID-19 Tests \nper 100k Population") +
+#   scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="COVID-19 Tests by Day") + theme(legend.position="none") + theme(panel.grid.minor = element_blank()) +  theme_classic() + theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Age) + theme(axis.text.x=element_text(angle=90))  + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+# 
+# #p
+# 
+# p2 <- ggplot(data_4, aes(x=appointmentdate, y=total_100k, color=Age)) +  geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", se=F, alpha=0.4, size=0.5) + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white",se=F, alpha=0.6, size=0.5) + 
+#   geom_smooth(se=F) + # display trend line (not smoothed to see changes)
+#   xlab("Date") + # Labels hereafter
+#   ylab("COVID-19 Tests \nper 100k Population") +
+#   scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="Smoothed Trendline of COVID-19 Tests by Day") + theme(legend.position="none") + theme(panel.grid.minor = element_blank()) +  theme_classic() + theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Age)  + theme(axis.text.x=element_text(angle=90)) + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+# 
+# plot_grid(p, p2, ncol=1,rel_heights = c(1,0.66), rel_widths=c(1,1))
+tests_age_sub$Age <- as.factor(tests_age_sub$Age)
+tests_age_sub$Age <- factor(tests_age_sub$Age, levels=c("0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65 to 74", "75 to 84", "85+"), ordered = TRUE)
+
+tests_age_averages$Age <- as.factor(tests_age_averages$Age)
+tests_age_averages$Age <- factor(tests_age_averages$Age, levels=c("0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65 to 74", "75 to 84", "85+"), ordered = TRUE)
+
+tests_age_sub$week <- as.Date(tests_age_sub$week)
+
+p <- ggplot(tests_age_sub, aes(x=week, y=total_100k, color=Age)) + geom_line(data=tests_age_averages[tests_age_averages$RGN11NM=="National",], aes(x=week, y=total_100k), color="black", size=0.5, alpha=0.3) + geom_line(data=tests_age_averages[tests_age_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=week, y=total_100k), color="white", alpha=0.8, size=0.8) + 
+  geom_line() + # display trend line (not smoothed to see changes)
+  xlab("Date") + # Labels hereafter
+  ylab("COVID-19 Tests \nper 100k Population") +
+  scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="Weekly COVID-19 Tests by Age") + theme(legend.position="none") + theme(panel.grid.minor = element_blank()) +  theme_classic() + theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Age) + theme(axis.text.x=element_text(angle=90))  + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+
+p
+
+```
+## COVID Testing Uptake by Sex and Age 
+
+The plot presents weekly sums of COVID-19 tests by Sex and Age per 100k population (the sum of COVID-19 tests divided by total population in the Local Authority, multiplied by 100,000), with Regional comparisons provided in white and National comparisons in black. 
+
+```{r Tests_100k_Sex_Age , echo=FALSE, fig.width=10, fig.height=10, message=FALSE, warning=FALSE, fig.cap=paste("Figure 5-Weekly COVID-19 Cases by Sex and Age.\n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+
+#  p <- ggplot(data_5, aes(x=appointmentdate, y=total_100k, color=Age)) +  geom_line(data=pos_gender_age_averages[pos_gender_age_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", size=0.5, alpha=0.4) + geom_line(data=pos_gender_age_averages[pos_gender_age_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white", size=0.5, alpha=0.8) + 
+# geom_line() + # display trend line (not smoothed to see changes)
+# xlab("Date") + # Labels hereafter
+# ylab("COVID-19 Tests \nper 100k Population") + 
+# scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="COVID-19 Tests by Day")+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) +  theme_classic() + theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Age + Gender) + theme(axis.text.x=element_text(angle=90))  + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+# 
+# #p 
+# 
+# p2 <- ggplot(data_5, aes(x=appointmentdate, y=total_100k, color=Age)) +  geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM=="National",], aes(x=appointmentdate, y=total_100k), color="black", se=F, alpha=0.4, size=0.5) + geom_smooth(data=pos_gender_averages[pos_gender_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=total_100k), color="white",se=F, alpha=0.6, size=0.5) +
+# geom_smooth(se=F) + # display trend line (not smoothed to see changes)
+# xlab("Date") + # Labels hereafter
+# ylab("COVID-19 Tests \nper 100k Population") + 
+# scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="Smoothed Trendline of COVID-19 Tests by Day") + theme(legend.position="none") + theme(panel.grid.minor = element_blank()) +  theme_classic() + theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Age + Gender)  + theme(axis.text.x=element_text(angle=90))  + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+# 
+# plot_grid(p, p2, ncol=1,rel_heights = c(1,0.66))
+tests_sex_age_sub$Age <- as.factor(tests_sex_age_sub$Age)
+tests_sex_age_sub$Age <- factor(tests_sex_age_sub$Age, levels=c("0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65 to 74", "75 to 84", "85+"), ordered = TRUE)
+
+tests_sex_age_averages$Age <- as.factor(tests_sex_age_averages$Age)
+tests_sex_age_averages$Age <- factor(tests_sex_age_averages$Age, levels=c("0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65 to 74", "75 to 84", "85+"), ordered = TRUE)
+
+tests_sex_age_sub$week <- as.Date(tests_sex_age_sub$week)
+p <- ggplot(tests_sex_age_sub, aes(x=week, y=total_100k, color=Age)) +  geom_line(data=tests_sex_age_averages[tests_sex_age_averages$RGN11NM=="National",], aes(x=week, y=total_100k), color="black", size=0.5, alpha=0.4) + geom_line(data=tests_sex_age_averages[tests_sex_age_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=week, y=total_100k), color="white", size=0.5, alpha=0.8) + 
+  geom_line() + # display trend line (not smoothed to see changes)
+  xlab("Date") + # Labels hereafter
+  ylab("COVID-19 Tests \nper 100k Population") +
+  scale_x_date(date_breaks = "months", date_labels = "%b")+ labs(title="Weekly COVID-19 Tests by Sex and Age")+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) +  theme_classic() + theme(panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial")) + facet_wrap(~Age + Gender, ncol=4) + theme(axis.text.x=element_text(angle=90))  + theme(legend.position="none") + scale_color_viridis_d(begin=0, end=0.9)
+
+p
+```
+
+## COVID-19 Positivity Rate
+
+The plot presents 7-Day Rolling Average COVID-19 positivity in blue. Regional comparisons are provided in white, with National comparisons in black. 
+
+```{r Pos_Time, echo=FALSE, fig.width=10, message=FALSE, warning=FALSE, fig.cap=("Figure 6-Weekly COVID-19 Positivity Rate.\n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+data_2$appointmentdate <- as.Date(data_2$appointmentdate)
+# Plot
+p <- ggplot(data_2, aes(x = appointmentdate, y = rolling_pc_positive, group=1)) + # Plot data by week
+  #geom_point() + # Display points
+  geom_line(data=pos_averages[pos_averages$RGN11NM=="National",], aes(x=appointmentdate, y=rolling_pc_positive, text=paste0(appointmentdate, "\n7-Day National Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="black", alpha=0.3, group=1) +  geom_line(data=pos_averages[pos_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=rolling_pc_positive, text=paste0(appointmentdate, "\n7-Day Regional Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="white", alpha=0.9, group=1) +
+  geom_line(aes(text=paste0(data_2$appointmentdate, "\n7-Day Rolling Positivity: ", round(data_2$rolling_pc_positive,2), "%")), color="blue") + # display trend line (not smoothed to see changes)
+  geom_vline(data=tiers, xintercept=as.numeric(tiers$Date), color="dark grey", group=1, alpha=0.4, label=tiers$Label) +
+  annotate("text", x=tiers$Date, y=max(data_2$rolling_pc_positive, na.rm=TRUE)/2, label= tiers$Label, group=1, angle=90, alpha=0.3, size=3) +
+  #geom_smooth(aes(text=paste0("Smoothed Trendline ")), method = "gam", formula = y ~ s(x, bs = "cs"), se=F) + # Smooth data
+  xlab("Date") + # Labels hereafter
+  ylab("7-day Rolling Average of COVID-19 Positivity Rate") +
+  scale_x_date(date_breaks = "months", date_labels = "%b") + labs(title="7-Day Rolling Average COVID-19 Positivity Rate") + theme_bw() + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) +  theme(axis.text.x=element_text(angle=90))  +  theme_classic() +
+    theme(legend.position="bottom", axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+p # comment this out if wishing to output interactive visualisations
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # remove comment if wishing to output interactive visualisations
+```
+
+## COVID-19 Positivity Rate by Sex
+
+The plot presents the 7-day rolling averages of COVID-19 positivity, split by Sex. Regional comparisons are provided in white, with National comparisons in black. 
+
+```{r Pos_Gender_Sep, echo=FALSE, fig.width=10, message=FALSE, warning=FALSE, fig.cap=paste("Figure 7- COVID-19 Positivity Rate by Sex.\n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+# Plot
+p <- ggplot(data_3, aes(x = appointmentdate, y = rolling_pc_positive, color=Gender)) +
+  geom_line(data=pos_gender_averages[pos_gender_averages$RGN11NM=="National",], aes(x=appointmentdate, y=rolling_pc_positive), color="black", alpha=0.1) + 
+  geom_line(data=pos_gender_averages[pos_gender_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=rolling_pc_positive), color="white", alpha=0.9) +
+  geom_line() + 
+  facet_wrap(~Gender, scales="fixed") +
+  #geom_vline(data=tiers, xintercept=tiers$Date, color="dark grey", alpha=0.2, label=tiers$Label) +
+  #annotate("text", x=tiers$Date, y=max(data_3$rolling_pc_positive,na.rm=TRUE)/2, label= tiers$Label, angle=90, alpha=0.3) +
+  xlab("Date") + # Labels hereafter
+  ylab("7-day Rolling Average of COVID-19 Positivity Rate") +
+  scale_x_date(date_breaks = "months", date_labels = "%b") + labs(title="7-Day Rolling COVID-19 Positivity Rate by Sex") + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + scale_color_viridis(discrete=TRUE, begin=0, end=0.9) + theme(axis.text.x=element_text(angle=90)) + scale_fill_viridis(discrete=TRUE, begin=0, end=0.1) +  theme_classic() +
+    theme(legend.position="none", axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+
+p# comment this out if wishing to output interactive visualisations
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # remove comment if wishing to output interactive visualisation
+```
+
+
+## COVID-19 Positivity Rate by Age
+
+The plot presents the 7-day rolling averages of COVID-19 positivity, split by Age. Regional comparisons are provided in white, with National comparisons in black. 
+
+```{r Pos_Age_Sep, echo=FALSE, fig.height=8, fig.width=10, message=FALSE, warning=FALSE, fig.cap=paste("Figure 8-COVID-19 Positivity Rate by Age.\n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+
+# Reorder the Age Variables so 5-14 follows on from 0-4
+data_4$Age <- factor(data_4$Age, levels=c("0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65 to 74", "75 to 84", "85+"))
+pos_age_averages$Age <- factor(pos_age_averages$Age, levels=c("0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65 to 74", "75 to 84", "85+"))
+# Plot
+p <- ggplot(data_4, aes(x = appointmentdate, y = rolling_pc_positive, color=Age, group=1)) + 
+  geom_line(data=pos_age_averages[pos_age_averages$RGN11NM=="National",], aes(x=appointmentdate, y=rolling_pc_positive, text=paste0(appointmentdate, "\n7-Day National Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="black", alpha=0.1, group=1) +  geom_line(data=pos_age_averages[pos_age_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=rolling_pc_positive,text=paste0(appointmentdate, "\n7-Day Regional Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="white", alpha=0.9, group=1) +
+# Plot data by week
+  geom_line(aes(text=paste0(appointmentdate, "\n7-Day Rolling Positivity: ", round(rolling_pc_positive,2), "%"))) + 
+  facet_wrap(~Age, ncol=4, scales="fixed") +
+  xlab("Date") + # Labels hereafter
+  ylab("7-day Rolling Average of COVID-19 Positivity Rate") +
+  scale_x_date(date_breaks = "months", date_labels = "%b") + theme(axis.text.x=element_text(angle=90)) + labs(title="7-Day Rolling Average COVID-19 Positivity Rate by Age") + theme_bw() + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + scale_color_viridis(discrete=TRUE, begin=0, end=0.9) + theme(axis.text.x=element_text(angle=90)) + scale_fill_viridis(discrete=TRUE, begin=0, end=0.9) +  theme_classic() +
+    theme(legend.position="none", axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+
+p  # comment this out if wishing to output interactive visualisations
+
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # remove comment if wishing to output interactive visualisations
+```
+
+## COVID-19 Positivity Rate by Age and Sex
+
+The plot presents the 7-day rolling averages of COVID-19 positivity, split by Age and Sex. Regional comparisons are provided in white, with National comparisons in black. 
+
+```{r Pos_Age_Gender_Sep, echo=FALSE, fig.height=10, fig.width=10, message=FALSE, warning=FALSE, fig.cap=paste("Figure 9-Weekly COVID-19 Positivity Rate by Age and Sex. \n Black line indicates National Average, \nWhite line indicates Regional Average.")}
+#data_5 <- as.data.frame(aggregated_data[[i]][5]) # call in the right data set, plot 5 from LA of i.
+data_5$appointmentdate <- as.Date(data_5$appointmentdate)
+# Plot
+# Reorder age variable 
+data_5$Age <- as.factor(data_5$Age)
+data_5$Age <- factor(data_5$Age, levels=c("0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65 to 74", "75 to 84", "85+"))
+pos_gender_age_averages$Age <- factor(pos_gender_age_averages$Age, levels=c("0 to 4", "5 to 14", "15 to 24", "25 to 34", "35 to 44", "45 to 54", "55 to 64", "65 to 74", "75 to 84", "85+"))
+p <- ggplot(data_5, aes(x = appointmentdate, y = rolling_pc_positive, color=Age, group=1)) + # Plot data by week
+  geom_line(data=pos_gender_age_averages[pos_gender_age_averages$RGN11NM=="National",], aes(x=appointmentdate, y=rolling_pc_positive, text=paste0(appointmentdate, "\n7-Day National Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="black", alpha=0.1, group=1) +  geom_line(data=pos_gender_age_averages[pos_gender_age_averages$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=rolling_pc_positive,text=paste0(appointmentdate, "\n7-Day Regional Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="white", alpha=0.9, group=1) +
+  # geom_point() + # Display points
+  #geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs"), se=F, color="dark grey", alpha=0.5) + # Smooth data
+  geom_line(aes(text=paste0(appointmentdate, "\n7-Day Rolling Positivity: ", round(rolling_pc_positive,2), "%"))) + # display trend line (not smoothed to see changes)
+  facet_wrap(~Age+ ~Gender,ncol=4, scales="fixed") +
+  #geom_vline(data=tiers, xintercept=tiers$Date, linetype="dashed", color="dark grey", alpha=0.8, label=tiers$Label) +
+  #annotate("text", x=tiers$Date, y=10, label= tiers$Label, angle=90, alpha=0.3) +
+  xlab("Date") + # Labels hereafter
+  ylab("7-day Rolling Average of COVID-19 Positivity Rate") +
+  scale_x_date(date_breaks = "months", date_labels = "%b") + theme(axis.text.x=element_text(angle=90)) + labs(title="7-Day Rolling Average COVID-19 Positivity Rate by Age and Sex") + theme_bw() + theme(axis.text.x=element_text(angle=90))+ theme(legend.position="none") + theme(panel.grid.minor = element_blank()) + scale_color_viridis(discrete=TRUE, begin=0, end=0.9) +  theme_classic() +
+    theme(legend.position="none", axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))  
+
+p # comment this out if wishing to output interactive visualisations
+
+#ggplotly(p, tooltip="text") # remove comment if wishing to output interactive visualisations
+```
+
+```{r Tidy, echo=FALSE, message=FALSE, warning=FALSE}
+# Removing created variables and data frames for tidiness
+rm(data, data_1, data_2, data_3, data_4, data_5, missing, pillar2, p)
+```
+
+## Research Team
+
+This work was funded by the [ESRC's (UKRI) Local Data Spaces Project](https://www.adruk.org/our-work/browse-all-projects/local-data-spaces-helping-local-authorities-tackle-the-covid-19-pandemic-362/), which is novel collaboration between the ONS, JBC and ESRC designed to open up secure data to Local Authorities to support responses to COVID-19. If you would like to contact the team about any of the data presented in this report or discuss further opportunities within the Local Data Spaces project, please contact one of the following: 
+  
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk 
+* Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: jacob.macdonald@liverpool.ac.uk
+* Maurizio Gibin, Administrative Data Research UK and University College London, email: maurizio.gibin@ucl.ac.uk
+
+## Partners
+
+```{r, echo=FALSE,out.width="70%", out.height="30%",fig.cap="",fig.show='hold',fig.align='center'}
+knitr::include_graphics("C:\\Users\\medsleea\\University of Leeds\\MacDonald, Jacob - Local Profiles\\Data\\reportlogos.png")
+``` 

@@ -1,0 +1,266 @@
+---
+title: "Ethnic Inequalities in COVID-19 Risk: `r pillar2_info_sub$LA_NAME[1]` (`r pillar2_info_sub$RGN_NM[1]`)"
+author: "Local Data Spaces ADR UK Research Team"
+output: html_document
+theme: cosmo
+fig_captions: true # uncomment if using interactive visualisations (ggplotly)
+---
+ <style> 
+ h1, h2, h3 {
+ font-family: Times;   
+ font-size: 16pt;   
+ text-align: left;   
+ margin-top: 50px }
+ body { 
+ font-family: Arial;  
+ font-size: 12pt; 
+ text-align: justify }
+ .caption {     
+ font-size: 10pt; 
+ font-style: italic;
+ text-align: left}
+ </style>
+ 
+ 
+## **Introduction**
+
+This reports highlights Ethnic Inequalities in COVID-19 Transmission and Testing Uptake in the Local Authority of __`r pillar2_info_sub$LA_NAME[1]` (LAD: `r i`) __. This report is best read alongside the __Demographic Inequalities in COVID-19__ and __Geospatial Inequalities in COVID 19__ reports, to highlight spatial, temporal and demographics differences. Principally, Testing Uptake per 100k population by Ethnic Group and 7-day rolling average COVID-19 positivity rates will be used to inform differences, and data will be compared to regional __(`r pillar2_info_sub$RGN_NM[1]` - `r pillar2_info_sub$RGN_CD`)__ and National values. 
+
+## **Data and Sources**
+
+This report uses the [NHS Test and Trace Dataset (National Pathology Exchange Pillar 2 Data)](https://www.gov.uk/government/publications/nhs-test-and-trace-statistics-england-methodology/nhs-test-and-trace-statistics-england-methodology).
+The NHS Test and Trace System was launched on 28th May 2020 to help track the spread of COVID-19 in the UK. It contains both symptomatic and asymptomatic testing data from the National Pathology Exchange Pillar 2 database. This data has been made available via ONS Secure Research Service to identify flare ups of COVID-19 across the UK, and provide support to decision makers at local levels. __The NHS Test and Trace dataset contains `r pillar2_info_sub$total[1]` records from `r pillar2_info_sub$LA_NAME[1]`, spanning the time period of `r format(pillar2_info_sub$min_date[1],  "%B %d %Y")` to `r format(pillar2_info_sub$max_date[1],  "%B %d %Y")`.__
+
+This report also uses the [2019 Population Denominators by Broad Ethnic Group by Local Authority](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/adhocs/008781populationdenominatorsbybroadethnicgroupandforwhitebritishlocalauthoritiesinenglandandwales2011to2017), to provide estimates of the uptake of testing by Ethnic Group per 100k population.
+
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates. Please note, that where categories are not presented this is because their values have been redacted to prevent data disclosure issues (i.e., counts < 10).
+
+```{r Libraries, echo=FALSE, message=FALSE, warning=FALSE}
+# Set library folder
+#lib_base="P:\\Working\\Libraries"
+#assign(".lib.loc", lib_base, envir = environment(.libPaths))
+#rm(lib_base)
+
+# Libraries
+library(data.table)
+library(ggplot2)
+library(tidyr)
+library(knitr)
+library(dplyr)
+library(cowplot)
+library(viridis)
+library(stringr)
+```
+
+```{r Read_In, echo=FALSE, message=TRUE, warning=FALSE}
+data_1$week <- as.Date(data_1$week)
+data_2$week <- as.Date(data_2$week)
+data_3$appointmentdate <- as.Date(data_3$appointmentdate, "%d/%m/%Y")
+data_4$appointmentdate <- as.Date(data_4$appointmentdate, "%d/%m/%Y")
+data_5$appointmentdate <- as.Date(data_5$appointmentdate, "%d/%m/%Y")
+```
+
+## **Population Distribution**
+
+The plot below provides a local context to this report, showing the population distribution for the Local Authority, by Sex and Ethnic Group. 
+```{r Pop_Pyramid, echo=FALSE, warning=FALSE, message=FALSE, fig.cap=paste("Figure 1- Population Distribution by Ethnic Group and Sex.")}
+
+# Population Pyramid for the Area
+pop_2019_sub$Ethnicity <- factor(pop_2019_sub$Ethnicity, levels=c("White","Other Ethnic Group","Mixed/Multiple Ethnic Group", "Black/African/Caribbean/Black British","Asian/Asian British"))
+p <- ggplot(pop_2019_sub, aes(x = Age, y = ifelse(Sex=="1",perc_Pop, -perc_Pop), fill = Ethnicity)) +
+  geom_bar(data=pop_2019_sub[pop_2019_sub$Sex == "1"], stat = "identity") +
+  geom_bar(data = pop_2019_sub[pop_2019_sub$Sex == "2"], stat = "identity") +
+  scale_fill_viridis_d(begin=0, end=0.9) +
+  coord_flip()  +
+  theme_classic() + labs(title="Local Population Distribution by Ethnic Group and Sex", caption= "Source: ONS 2019 Population Denominators by Broad Ethnic Group.") + ylab("Population") +
+  theme(legend.position="bottom", legend.box = "horizontal", legend.title = element_blank(), plot.caption = element_text(face = "italic"),
+        plot.subtitle = element_text(face = "italic"),
+        panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3")) + scale_x_continuous(expand = c(0,0), breaks = c(0, 10, 20, 30, 40, 50, 60, 70, 80, 90),
+                     labels = c("0", "10", "20", "30", "40", "50", "60", "70", "80", "90+")) + scale_y_continuous(labels = function(x) paste0(round(abs(x), 3), "%")) +
+  geom_vline(xintercept = seq(from=10, to=90, by=10), linetype="dotted", alpha=0.3) + annotate("text", x=85, y=max(pop_2019_sub$perc_Pop)-mean(pop_2019_sub$perc_Pop), label="Male Population", colour="black", size=3, alpha=0.6) + 
+  annotate("text", x=85, y=-(max(pop_2019_sub$perc_Pop)-mean(pop_2019_sub$perc_Pop)), label="Female Population", colour="black", size=3, alpha=0.6) +guides(fill=guide_legend(nrow=2))
+
+p
+
+```
+
+## **Test uptake by Ethnicity**
+
+The plot presents weekly COVID-19 tests per 100k population by Ethnic Group (the sum of COVID-19 tests divided by total population per Ethnic Group in the Local Authority, multiplied by 100,000).
+
+```{r Tests_100k, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=10, fig.cap=paste("Figure 2- Total Tests by Week per 100k population by Ethnic Group.")} 
+
+test_sub$Ethnicity <- factor(test_sub$Ethnicity, levels=c("White","Other Ethnic Group","Mixed/Multiple Ethnic Group", "Black/African /Caribbean /Black British","Asian /Asian British"))
+
+# Plot
+p <- ggplot(data=test_sub, aes(x=as.Date(week), y=(Tests/Population)*100000, fill=str_wrap(Ethnicity,15), color=Ethnicity)) +
+  geom_line() +
+  geom_line(data=tests_data_national, aes(x=as.Date(week), y=(Tests/Pop)*100000), color="black", alpha=0.3) +
+  geom_line(data=tests_data_regional[tests_data_regional$RGN_NM==pillar2_info_sub$RGN_NM,],aes(x=as.Date(week), y=(Tests/Pop)*100000), color="white", alpha=0.8) + 
+  facet_wrap(~Ethnicity) + 
+  labs(title="Weekly Tests by Ethnic Group", fill="", subtitle="Comparison with England (Black) and Region (White).", caption="Source: NHS Test and Trace Pillar 2, ONS 2019 Populaton Denominators by Broad Ethnic Group.") + ylab("Tests per 100k Population") + xlab("Date") + scale_x_date(date_breaks = "months", date_labels = "%b") + theme_classic() + theme(axis.text.x=element_text(angle=90)) + scale_color_viridis(discrete=TRUE, begin=0, end=0.9) +  theme_classic() +
+    theme(legend.position="none", axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic"),plot.subtitle = element_text(face = "italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+ 
+p # comment out if using interactive visualisations
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # uncomment if using interactive visualisations
+```
+
+## **Proportion of Weekly Tests by Ethnicity**
+
+The plot below provides proportion of weekly tests per 100,000 population in each Ethnic Group, allowing shifting patterns of testing uptake to be uncovered. 
+
+```{r,test_prop, echo=FALSE, fig.height=7, fig.width=8, message=FALSE, warning=FALSE,fig.cap=paste("Figure 3-Per 100k COVID-19 Tests \nWeekly by Ethnicity, as a proportion of total tests weekly.")}
+
+data_1$Ethnicity <- factor(data_1$Ethnicity, levels=c("White","Other Ethnic Group","Mixed/Multiple Ethnic Group", "Black/African /Caribbean /Black British","Asian /Asian British"))
+
+# Plot
+p <- ggplot(data=data_1, aes(x=week, y=(Tests/Population)*100000, fill=str_wrap(Ethnicity,15))) +
+  geom_col(position="fill") +
+  labs(title="Proportion of Weekly Tests by Ethnic Group", fill="", caption="Source: NHS Test and Trace Pillar 2.") + ylab("Proportion of Tests per Week by Ethnicity") + xlab("Date") + scale_x_date(date_breaks = "months", date_labels = "%b") + theme_classic() + theme(axis.text.x=element_text(angle=90)) + scale_fill_viridis(discrete=TRUE, begin=0, end=0.9, direction=-1) +  theme_classic() +
+    theme(legend.position="bottom", axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic"),plot.subtitle = element_text(face = "italic")) +
+  scale_y_continuous(labels = scales::percent) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+ 
+p # comment out if using interactive visualisations
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # uncomment if using interactive visualisations
+```
+
+## **Proportion of Single and Repeated Test Uptake by Ethnicity**
+
+The plot belows the Single and Repeated Testing Uptake by Week by Ethnic Group. 
+Single Testing Uptake is defined as those with non-duplicated pseudo IDs, with Repeated Testing Uptake defined as those with duplicated pseudo IDs (indicating they have had more than one test). We might expect these graphs to show a generally declining number of new Single Test Uptakes and increasing Repeated Uptake, with a peak in new Single Test Uptake (new people being tested) in December during the peak of the Second Wave.
+
+```{r,uptake_prop, echo=FALSE, fig.height=6, fig.width=8, message=FALSE, warning=FALSE, fig.cap=paste("Figure 4- Proportion of Single and Repeated COVID-19 Test Uptake by Week by Ethnicity.")}
+
+uptake_sub$value[is.na(uptake_sub$value)]<-0
+uptake_sub$prop <- (uptake_sub$value/uptake_sub$Population.y)*100000
+uptake_sub <- uptake_sub %>% group_by(week, LA_CODE, Ethnicity) %>% mutate("prop_tests"=prop/sum(prop, na.rm=TRUE))
+
+# Plot
+p <- ggplot(data=uptake_sub, aes(x=week, y=prop)) + 
+  geom_col(position="fill", aes(fill=Uptake)) +
+  geom_line(data=uptake_graphs_agg[uptake_graphs_agg$RGN11NM=="National",], position="fill", mapping=aes(x=week, y=prop, fill=Uptake), color="black",alpha=0.4) +
+  geom_line(data=uptake_graphs_agg[uptake_graphs_agg$RGN11NM==pillar2_info_sub$RGN_NM,], position="fill", mapping=aes(x=week, y=prop, fill=Uptake), color="white", alpha=0.6) +
+  facet_wrap(~Ethnicity, labeller = label_wrap_gen()) +
+  scale_y_continuous(labels=scales::percent) +
+  labs(title="Proportion of COVID-19 Test Uptake", subtitle="Comparison with England (Black) and Region (White).", caption="Source: NHS Test and Trace Pillar 2.") + ylab("Proportion of Tests per Week by Ethnicity") + xlab("Date") + scale_x_date(date_breaks = "months", date_labels = "%b") + theme_classic() + theme(axis.text.x=element_text(angle=90)) + scale_fill_viridis(discrete=TRUE, begin=0.2, end=0.7) +  theme_classic() +
+    theme(legend.position="bottom", axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic"),plot.subtitle = element_text(face = "italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+
+p # comment out if using interactive visualisations
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # uncomment if using interactive visualisations
+```
+
+## **COVID-19 Positivity Rate by Ethnicity**
+
+The plot presents 7-day rolling average COVID-19 positivity, split by Ethnicity.
+
+```{r Pos_Ethnicity_Sep, echo=FALSE, fig.height=6.5, fig.width=10, message=FALSE, warning=FALSE, fig.cap=paste("Figure 5-COVID-19 Positivity Rate with a separate plot for each Ethnicity.")}
+data_3$Ethnicity <- factor(data_3$Ethnicity, levels=c("White","Prefer not to say", "Other Ethnic Group","Mixed/Multiple Ethnic Group", "Black/African /Caribbean /Black British","Asian /Asian British"))
+
+# Plot
+p <- ggplot(data_3, aes(x=appointmentdate, y=rolling_pc_positive, color=Ethnicity, group=1)) +
+  facet_wrap(~Ethnicity, scales="fixed", labeller = label_wrap_gen()) +
+  geom_line(data=pos_ethnicity_agg[pos_ethnicity_agg$RGN11NM=="National",], aes(x=appointmentdate, y=rolling_pc_positive,color=Ethnicity, text=paste0(appointmentdate, " National Average \n7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="black", alpha=0.1) + geom_line(data=pos_ethnicity_agg[pos_ethnicity_agg$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=rolling_pc_positive,text=paste0(appointmentdate, " Regional Average \n7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="white", alpha=0.8, group=1) +
+geom_line(size=0.4, aes(x=appointmentdate, y=rolling_pc_positive, text=paste0(appointmentdate, " 7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%"))) +
+  xlab("Date") + 
+  ylab("7-day Rolling Average of COVID-19 Positivity") +
+  scale_x_date(date_breaks = "months", date_labels = "%b") +labs(title="COVID-19 Positivity Rate by Ethnicity", subtitle="Comparison with England (Black) and Region (White).", caption="Source: NHS Test and Trace Pillar 2.") + theme(panel.grid.minor = element_blank()) + scale_color_viridis(discrete=TRUE, begin=0, end=0.9) + theme_classic() +
+    theme(legend.position="none", axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic"),plot.subtitle = element_text(face = "italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+p # comment out if using interactive visualisations
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # uncomment if using interactive visualisations
+```
+
+## **COVID-19 Positivity Rate by Ethnicity and Sex**
+
+The plot presents 7-day rolling average COVID-19 positivity, split by Ethnicity and Sex.
+
+```{r Pos_Ethnicity_Gender_Sep, echo=FALSE, fig.height=8.5, fig.width=10, message=FALSE, warning=FALSE, fig.cap=paste("Figure 6-COVID-19 Positivity Rate with a separate plot for Ethnicity and Sex.")}
+
+data_4$Gender[data_4$Gender=="M"]<-"Male"
+data_4$Gender[data_4$Gender=="F"]<-"Female"
+pos_ethnicity_gender_agg$Gender[pos_ethnicity_gender_agg$Gender=="M"]<-"Male"
+pos_ethnicity_gender_agg$Gender[pos_ethnicity_gender_agg$Gender=="F"]<-"Female"
+
+
+data_4$Ethnicity <- factor(data_4$Ethnicity, levels=c("White","Prefer not to say", "Other Ethnic Group","Mixed/Multiple Ethnic Group", "Black/African /Caribbean /Black British","Asian /Asian British"))
+
+# Plot
+p <- ggplot(data_4, aes(x = appointmentdate, y = rolling_pc_positive, group=Ethnicity, color=Ethnicity)) +
+  facet_wrap(~Ethnicity + Gender, scales="fixed", labeller = label_wrap_gen()) +
+  geom_line(data=pos_ethnicity_gender_agg[pos_ethnicity_gender_agg$RGN11NM=="National",], aes(x=appointmentdate, y=rolling_pc_positive,color=Ethnicity,text=paste0(appointmentdate, " National Average \n7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="black",alpha=0.1) + geom_line(data=pos_ethnicity_gender_agg[pos_ethnicity_gender_agg$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=rolling_pc_positive, text=paste0(appointmentdate, " Regional Average \n7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="white", alpha=0.8, group=1) + 
+geom_line(aes(text=paste0(appointmentdate, " 7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%"))) +
+  xlab("Date") + 
+  ylab("7-day Rolling Average of COVID-19 Positivity") +
+  scale_x_date(date_breaks = "months", date_labels = "%b") + labs(title="COVID-19 Positivity Rate by Ethnicity and Sex", subtitle="Comparison with England (Black) and Region (White).", caption="Source: NHS Test and Trace Pillar 2.") + theme(panel.grid.minor = element_blank()) + scale_color_viridis(discrete=TRUE, begin=0, end=0.9) + theme_classic() +
+    theme(legend.position="none",axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic"),plot.subtitle = element_text(face = "italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+p # comment out if using interactive visualisations
+
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # uncomment if using interactive visualisations
+```
+
+
+## **COVID-19 Positivity Rate by Ethnicity and Age** 
+
+The plot presents 7-day rolling average COVID-19 positivity, split by Ethnicity and Age.
+
+```{r Pos_Ethnicity_Age_Sep, echo=FALSE, fig.height=7.5, fig.width=10, message=FALSE, warning=FALSE, , fig.cap=paste("Figure 7-COVID-19 Positivity Rate with a separate plot for each Ethnicity and Age.")}
+data_5$Ethnicity <- factor(data_5$Ethnicity, levels=c("White","Prefer not to say", "Other Ethnic Group","Mixed/Multiple Ethnic Group", "Black/African /Caribbean /Black British","Asian /Asian British"))
+
+# Plot
+p <- ggplot(data_5, aes(x = appointmentdate, y = rolling_pc_positive, group=Ethnicity, color=Ethnicity)) + 
+  facet_grid(rows=vars(Age),cols=vars(Ethnicity),scales="fixed", labeller = label_wrap_gen()) +
+  geom_line(data=pos_ethnicity_age_agg[pos_ethnicity_age_agg$RGN11NM=="National",], aes(x=appointmentdate, y=rolling_pc_positive,color=Ethnicity, text=paste0(appointmentdate, " National Average \n7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="black", alpha=0.1) + geom_line(data=pos_ethnicity_age_agg[pos_ethnicity_age_agg$RGN11NM==pillar2_info_sub$RGN_NM,], aes(x=appointmentdate, y=rolling_pc_positive, text=paste0(appointmentdate, " Regional Average \n7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%")), color="white", alpha=0.8, group=1) +
+  geom_line(aes(text=paste0(appointmentdate, " 7-day Rolling Positivity: ", round(rolling_pc_positive,2), "%"))) +
+  xlab("Date") +
+  ylab("7-day Rolling Average of COVID-19 Positivity") +
+  scale_x_date(date_breaks = "months", date_labels = "%b") + labs(title="COVID-19 Positivity Rate by Ethnicity and Age", subtitle="Comparison with England (Black) and Region (White).", caption="Source: NHS Test and Trace Pillar 2.") + theme(panel.grid.minor = element_blank()) + scale_color_viridis(discrete=TRUE, begin=0, end=0.9) + theme_classic() +
+    theme(legend.position="none",axis.text.x=element_text(angle=90),
+          panel.background = element_rect(fill="#E5E5E3", colour="#E5E5E3"), plot.caption=element_text(face="italic"),plot.subtitle = element_text(face = "italic")) + theme(title=element_text(family="Arial"), text=element_text(family="Arial"), axis.text=element_text(family="Arial"))
+
+p # comment out if using interactive visualisations
+#ggplotly(p, tooltip="text") %>% layout(hovermode="x") # uncomment if using interactive visualisations
+```
+
+```{r Tidy, echo=FALSE, message=FALSE, warning=FALSE}
+# Removing created variables and data frames for tidiness
+rm(data_1, data_2, data_3, data_4, data_5, uptake_sub, pillar2_info_sub, p, p2,plot, ethnicity_sub)
+```
+
+## **Research Team**
+
+The [Local Data Spaces Project (LDS)](https://www.adruk.org/our-work/browse-all-projects/local-data-spaces-helping-local-authorities-tackle-the-covid-19-pandemic-362/) and series of local profiles were funded by the [ESRC (UKRI)](https://esrc.ukri.org/). The project is a novel collaboration between the [Office for National Statistics (ONS)](https://www.ons.gov.uk/), [Joint Biosecurity Centre (JBC)](https://www.gov.uk/government/groups/joint-biosecurity-centre) and [Administrative Data Research (ADR) UK](https://www.adruk.org/) designed to leverage secure data held within the [ONS Secure Research Service (SRS)](https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme) to support data-driven Local Authority responses to COVID-19.
+
+The LDS local profiles were designed and developed by the ADR UK research team. Please get in contact with any of the following for questions or technical points related to any of the data or outputs presented in this report.
+  
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk 
+* Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: jacob.macdonald@liverpool.ac.uk
+* Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk
+
+Code, data and project workflow to replicate or expand the analysis for each local area are available by request internally within the ONS Secure Research Services (SRS) environment. Local analysts will be able to request and work with the series of code developed to clean, organize and generate local profiles after setting up their initial SRS project space.
+
+Coding products for replication of visuals (without any underlying SRS-based data and appropriately disclosed) are available online at the following Github repository: [https://github.com/ESRC-CDRC/LocalDataSpaces](https://github.com/ESRC-CDRC/LocalDataSpaces)
+
+For [SRS access](https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme), support and to request the project files, please contact: 
+
+* srs.customer.support@ons.gov.uk
+
+For broader details on the LDS project or to discuss further opportunities, please contact:
+
+* Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk
+
+
+## **Partners**
+
+```{r patnerlogos, echo=TRUE, out.width="50%", out.height="50%", fig.show='hold', fig.align="center",echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics(c("C:\\Users\\medsleea\\University of Leeds\\MacDonald, Jacob - Local Profiles\\Data\\reportlogos.png"))
+
+```
