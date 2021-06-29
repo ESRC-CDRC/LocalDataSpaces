@@ -1,0 +1,196 @@
+---
+author: "Local Data Spaces ADR UK Research Team"
+date: "`r format(Sys.Date(), format = '%B %d, %Y')`"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+  word_document: default
+  pdf_document:
+    extra_dependencies: subfig
+    keep_tex: yes
+---
+
+<!-- <style> -->
+<!-- .author,.title,.date{ -->
+<!--     display: none; -->
+<!-- } -->
+<style>
+h1, h2, h3 {
+  font-family: Times;
+  font-size: 16pt;
+  text-align: left;
+  margin-top: 50px
+  }
+body {
+  font-family: Arial;
+  font-size: 12pt;
+  text-align: justify
+  }
+.caption {
+    font-size: x-small}
+</style>
+
+```{r Generate Folder Lookup, echo=F, message=F, warning=F}
+if(!file.exists(paste0(wd, "/Outputs/", gsub(" ", "_", locality$RGN_NM), "/LAD/0_LAD_Lookup.txt"))){
+  lu <- unique(geographic.lookup[geographic.lookup$RGN_CD==locality$RGN_CD,c("LAD_CD", "LAD_NM")])[order(unique(geographic.lookup[geographic.lookup$RGN_CD==locality$RGN_CD,c("LAD_CD", "LAD_NM")])$LAD_NM)]
+  names(lu) <- c("LAD_Code", "LAD_Name")
+  fwrite(lu, file=paste0(wd, "/Outputs/", gsub(" ", "_", locality$RGN_NM), "/LAD/0_LAD_Lookup.txt"))
+  rm(lu) }
+```
+
+---
+title: "Social Economy and Workforce (Retail & Accomodation): `r paste0(locality$LAD_NM, " (", locality$RGN_NM, ")")`"
+---
+
+## **Introduction**
+
+This report focuses on the local *social economy*, including the retail and accomodation sectors, for the Local Authority of `r paste0("<b>", locality$LAD_NM, " (LAD: ", locality$LAD_CD, ")</b>")`. Local spatial and density patterns of the retail workforce and businesses are complemented by national and regional fast-paced indicators on the value and volume of trade over the course of the varying lockdowns and openings across the nation.
+
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates.
+
+All counts from secured datasets less than 10 have been suppressed for security and data aggregated to the appropriate spatial or temporal dimension to ensure non-disclosivity.
+
+
+## **Data and Sources**
+
+This profile draws on various datasets with a focus on different characteristics of the *social economy* and from different sources.
+
+* The Business Structure Dataset (BSD): [doi.org/10.5255/UKDA-SN-6697-10](http://doi.org/10.5255/UKDA-SN-6697-10)
+* Business Registry and Employment Survey (BRES): [10.5255/UKDA-SN-7463-9](10.5255/UKDA-SN-7463-9)
+* Retail Sales Index
+* Clearing House Automated Payment System (CHAPS) (ONS Fast Indicators - Card Spend Data)
+* CDRC Retail Centre Delineations
+
+This involves combining a series of local-focused concentrations and densities of these industries paired with nationally or regionally aggregate fast-paced indices primarily through the openly available [ONS Faster Indicators](https://www.ons.gov.uk/economy/economicoutputandproductivity/output/methodologies/weeklyindicatorsofcompanycreationsandclosuresfromcompanieshousemethodologyaugust2020) release.
+
+Business units and employment are coded according to the [UK Standard Industrial Classification (SIC) Hierarchy](https://onsdigital.github.io/dp-classification-tools/standard-industrial-classification/ONS_SIC_hierarchy_view.html). Broad Industry Groups (BIG) of SIC codes are used to define the highest level of sector aggregation throughout the series of reports. We also make use of the two-digit SIC Division for more detailed tracking of the specific industry sectors where issues of disclosure are not of concern.
+
+From the Office for National Statistics (ONS) Secure Research Service (SRS) environment, the BSD and BRES surveys provide detailed local data for Broad SIC groupings specific for Retail and Accommodation.
+
+```{r SIC Colour Guide, echo=F, message=F, warning=F}
+palette.lookup
+```
+
+
+
+
+## **Local Social Sector Concentration**
+
+From the registries of employment and business across England, we can breakdown the relative concentrations of the social economy workforce within the LAD of `r paste0(locality$LAD_NM)`. 
+
+```{r Figure 1A1: Social Employment Proportions, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+cowplot::plot_grid(fig.1A_BUS[[S]], fig.1B_BUS[[S]], align = "v", axis ="l", ncol=1)
+
+# ggsave(plot=cowplot::plot_grid(fig.1A_BUS[[S]], fig.1B_BUS[[S]], align = "v", axis ="l", ncol=1),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/SOCL_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+```{r Figure 1B2: Social Business Proportions, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+cowplot::plot_grid(fig.1A_BUS[[S]], fig.1B_BUS[[S]], align = "v", axis ="l", ncol=1)
+
+# ggsave(plot=cowplot::plot_grid(fig.1A_BUS[[S]], fig.1B_BUS[[S]], align = "v", axis ="l", ncol=1),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/SOCL_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+
+## **Local Spatial Distribution of Social Sector**
+
+
+```{r Figure 1B3: Local Workforce Density, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+cowplot::plot_grid(fig.3A[[S]], fig.3B[[S]], fig.3C[[S]], align = "v", axis ="l", ncol=3)
+
+# ggsave(plot=cowplot::plot_grid(fig.3A[[S]], fig.3B[[S]], fig.3C[[S]], align = "v", axis ="l", ncol=3),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/SOCL_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+```{r Figure 1B4: Local Workforce Density, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+cowplot::plot_grid(fig.4A[[S]], fig.4B[[S]], align = "h", axis ="l", ncol=2)
+
+# ggsave(plot=cowplot::plot_grid(fig.4A[[S]], fig.4B[[S]], align = "h", axis ="l", ncol=2),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/SOCL_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+```{r Figure 1B5: Local Workforce Density, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+cowplot::plot_grid(fig.5A[[S]], fig.5B[[S]], align = "h", axis ="l", ncol=2)
+
+# ggsave(plot=cowplot::plot_grid(fig.5A[[S]], fig.5B[[S]], align = "h", axis ="l", ncol=2),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/SOCL_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+```{r Figure 1B7: Local Workforce Density, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+fig.RC[[S]]
+
+# ggsave(plot=cowplot::plot_grid(fig.5A[[S]], fig.5B[[S]], align = "h", axis ="l", ncol=2),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/SOCL_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+
+## **Retail Sales Index**
+
+```{r Figure 16: Population Pyramid, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 10, out.width = "100%"}
+card.spend
+
+# ggsave(plot=fig.1[[S]],
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/HOUS_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+```{r Figure 17: Population Pyramid, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 10, out.width = "100%"}
+RSI.plot
+
+# ggsave(plot=fig.1[[S]],
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/HOUS_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+
+
+
+
+## **Research Team**
+
+The report was compiled by the Local Data Spaces team, which includes:
+
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk
+* Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: Jacob.Macdonald@liverpool.ac.uk
+* Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk
+
+
+## **Contact**
+
+This work was funded by the ESRC's (UKRI) Local Data Spaces Project - a collaboration between the ONS, JBC and ESRC designed to open up secure data to Local Authorities to support responses to COVID-19. If you would like to contact the team about any of the data presenting in this report or discuss further opportunities within the Local Data Spaces project, please contact one of the following:
+
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk
+
+Code, data and project workflow to replicate or expand the analysis for each local area are available by request internally within the ONS Secure Research Services (SRS) environment. Resources are available through *SRS Project 2001021*.
+
+
+## **Note**
+
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates.
+
+All counts from secured datasets less than 10 have been suppressed for security and data aggregated to the appropriate spatial or temporal dimension to ensure non-disclosivity.
+
+
+## **Partners**
+
+```{r patnerlogos, echo=FALSE, out.width="50%", out.height="50%", fig.show='hold', fig.align="center"}
+knitr::include_graphics(paste0(wd.data, "/reportlogos.png"))
+```

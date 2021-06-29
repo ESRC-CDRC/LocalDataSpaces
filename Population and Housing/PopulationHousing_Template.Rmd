@@ -1,0 +1,235 @@
+---
+author: "Local Data Spaces ADR UK Research Team"
+date: "`r format(Sys.Date(), format = '%B %d, %Y')`"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+  word_document: default
+  pdf_document:
+    extra_dependencies: subfig
+    keep_tex: yes
+---
+
+<!-- <style> -->
+<!-- .author,.title,.date{ -->
+<!--     display: none; -->
+<!-- } -->
+<style>
+h1, h2, h3 {
+  font-family: Times;
+  font-size: 16pt;
+  text-align: left;
+  margin-top: 50px
+  }
+body {
+  font-family: Arial;
+  font-size: 12pt;
+  text-align: justify
+  }
+.caption {
+    font-size: x-small}
+</style>
+
+```{r Generate Folder Lookup, echo=F, message=F, warning=F}
+if(!file.exists(paste0(wd, "/Outputs/", gsub(" ", "_", locality$RGN_NM), "/LAD/0_LAD_Lookup.txt"))){
+  lu <- unique(geographic.lookup[geographic.lookup$RGN_CD==locality$RGN_CD,c("LAD_CD", "LAD_NM")])[order(unique(geographic.lookup[geographic.lookup$RGN_CD==locality$RGN_CD,c("LAD_CD", "LAD_NM")])$LAD_NM)]
+  names(lu) <- c("LAD_Code", "LAD_Name")
+  fwrite(lu, file=paste0(wd, "/Outputs/", gsub(" ", "_", locality$RGN_NM), "/LAD/0_LAD_Lookup.txt"))
+  rm(lu) }
+```
+
+---
+title: "Population and Housing: `r paste0(locality$LAD_NM, " (", locality$RGN_NM, ")")`"
+---
+
+## **Introduction**
+
+This report highlights benchmarks patterns of population and housing dynamics for the Local Authority of `r paste0("<b>", locality$LAD_NM, " (LAD: ", locality$LAD_CD, ")</b>")`. The profile breaks down local trends as they compare to regional `r paste0("<b>(", locality$RGN_NM, " - ", locality$RGN_CD, ")</b>")` and national averages. Of particular focus is the spatial dimension with emphasis on local density patterns and geographic distributions.
+
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates.
+
+All counts from secured datasets less than 10 have been suppressed for security and data aggregated to the appropriate spatial or temporal dimension to ensure non-disclosivity.
+
+
+## **Data and Sources**
+
+This data profile is based primarily on two datasets which are openly available:
+
+* [Mid-Year Population Estimates (MYPE)](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2019estimates)
+* HM Land Registry (HMLR): [Price Paid Data](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads)
+
+
+Mid-Year Population Estimates for 2019 provide small area (LSOA level) distributions of resident population by age and gender, and used to provide the benchmark population and density distribution across the local area. 
+
+The HM Land Registry is a monthly registry of for-sale property transactions across the UK. With some period of lag, this provides timely snapshots of local property prices and market activity. The registry includes the most common for-sale transactions, but is not exhaustive in that it does not capture the value of dwellings from non-valued sales, transfers, or for example through discount (right to buy) or court orders (see the [Methodology](https://www.gov.uk/guidance/about-the-price-paid-data) document for details).
+
+Additionally, annual indices of housing affordability - measured through local income and housing prices - is provided through the ONS. 
+
+* [Housing Affordability in England](https://www.ons.gov.uk/peoplepopulationandcommunity/housing/bulletins/housingaffordabilityinenglandandwales/2020)
+
+
+## **Population Distributions**
+
+```{r Table 1: Population Totals Calc, echo=F, message=F, warning=F}
+table.1 <- data.table(cbind(Area=c(locality$LAD_NM, locality$RGN_NM, "England"),
+  Female=c(MYPE.F[MYPE.F$LAD_CD==locality$LAD_CD,.(population=sum(population, na.rm=T)), by=.(LAD_CD)]$population,
+    MYPE.F[MYPE.F$RGN_CD==locality$RGN_CD,.(population=sum(population, na.rm=T)), by=.(RGN_CD)]$population,
+    MYPE.F[,.(population=sum(population, na.rm=T)),]$population),
+  Male=c(MYPE.M[MYPE.M$LAD_CD==locality$LAD_CD,.(population=sum(population, na.rm=T)), by=.(LAD_CD)]$population,
+    MYPE.M[MYPE.M$RGN_CD==locality$RGN_CD,.(population=sum(population, na.rm=T)), by=.(RGN_CD)]$population,
+    MYPE.M[,.(population=sum(population, na.rm=T)),]$population)))
+table.1$Female <- as.numeric(as.character(table.1$Female))
+table.1$Male <- as.numeric(as.character(table.1$Male))
+table.1$Total <- table.1$Female + table.1$Male
+table.1$FemalePC <- table.1$Female/table.1$Total
+table.1$MalePC <- table.1$Male/table.1$Total
+table.1 <- table.1[,c("Area", "Total", "Female", "FemalePC", "Male", "MalePC")]
+```
+
+
+From the 2019 Mid-Year Population Estimates there were `r format(table.1[1,]$Total, big.mark = ",")` total residents in `r paste0(locality$LAD_NM)`, which represent approximately `r paste0(round(100*(table.1[1,]$Total/table.1[2,]$Total), digits=2), "%")` of the regional population of `r paste0(locality$RGN_NM)`, and `r paste0(round(100*(table.1[1,]$Total/table.1[3,]$Total), digits=2), "%")` of the total for England.
+
+
+```{r Table 1: Population Totals, echo=F, message=F, warning=F}
+# data.frame(table.1) %>%
+#   kable(caption = "Total Populations") %>%
+#   kable_styling(bootstrap_options = c("striped", "hover")) %>%
+#   add_header_above(c(" ", "Total" = 1, "Female" = 2, "Male" = 2)) %>%
+#   kable_minimal(full_width = F, html_font = "Helvetica")
+
+table.1
+```
+
+
+The local population pyramid below highlights how the LAD population breakdown of `r paste0(locality$LAD_NM)` compares to that of the `r paste0(locality$RGN_NM)` region and national averages - both across age and gender. 
+
+
+```{r Figure 1: Population Pyramid, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 10, out.width = "100%"}
+fig.1[[S]]
+
+# ggsave(plot=fig.1[[S]],
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/HOUS_Fig1.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+This demographic benchmark for the LAD provides context towards both local measures of COVID-19 prevalence or economic activity. 
+
+
+## **Mapping Population Densities**
+
+Using the geographic aspect of the data, density and clustering patterns of local resident population across the LAD can be compared. The following figure demonstrates the estimated trend fit to the distribution of (log) population density patterns over space. Namely, we are looking at the different frequency of neighbourhood densities (at the Lower Super Output Area geography) as measured by resident population per hectare. 
+
+If we see higher rankings, and thus a higher population density, then the local area has relatively more individuals per hectare than other areas across the country. These density patterns and rankings can be important considerations when benchmarking local indicators and measures of economic activity.
+
+
+```{r Figure 2: Population Density Distribution, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+cowplot::plot_grid(fig.2[[S]], fig.2A[[S]], fig.2B[[S]], align = "v", axis ="l", ncol=3, rel_widths = c(3, 1, 1))
+
+# ggsave(plot=cowplot::plot_grid(fig.2[[S]], fig.2A[[S]], fig.2B[[S]], align = "v", axis ="l", ncol=3, rel_widths = c(3, 1, 1)),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/HOUS_Fig2.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+We can further map these local patterns as they relate both to the LAD of `r paste0(locality$LAD_NM)`, but further the broader nesting of the LAD within the larger Local Enterprise Partnership (LEP) of `r paste0(locality$LEP_NM1)`.
+
+```{r Figure 3A: Population Density Maps (LEP), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+fig.3B[[S]]
+
+```
+
+```{r Figure 3B: Population Density Maps (LAD), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+fig.3A[[S]]
+
+# ggsave(plot=cowplot::plot_grid(fig.3A[[S]], fig.3B[[S]], align = "h", axis ="l", ncol=2),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/HOUS_Fig3.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+## **Housing Price Evolution**
+
+The following figure tracks the growth of monthly local median overall housing prices for `r paste0(locality$LAD_NM)` over the previous five years from 2015, highlighting the period of initial lockdown in 2020. Comparable median values for the local (`r paste0(locality$LAD_NM)`), regional (`r paste0(locality$RGN_NM)`) and national real estate markets.
+
+
+```{r Figure 4: Median Price Transactions, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+cowplot::plot_grid(fig.4A[[S]], fig.4B[[S]], align = "v", axis ="l", ncol=1)
+
+# ggsave(plot=cowplot::plot_grid(fig.4A[[S]], fig.4B[[S]], align = "v", axis ="l", ncol=1),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/HOUS_Fig4.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+The lower panel above shows the local transactions as a proportional of regional transactions. Providing some context, total transactions for `r paste0(locality$LAD_NM)` in 2019 were `r format(sum(local.authority[local.authority$LAD_CD==locality$LAD_CD & local.authority$type=="total" & substr(as.character(local.authority$month), 1, 4)=="2019" ,]$N, na.rm=T), big.mark = ",")`, while for the region `r paste0(locality$LAD_NM)` this was `r format(sum(local.authority[local.authority$RGN_CD==locality$RGN_CD & local.authority$type=="total" & substr(as.character(local.authority$month), 1, 4)=="2019" ,]$N, na.rm=T), big.mark = ",")` in 2019 - representing an aggregate proportion of `r paste0(round(sum(local.authority[local.authority$LAD_CD==locality$LAD_CD & local.authority$type=="total" & substr(as.character(local.authority$month), 1, 4)=="2019" ,]$N, na.rm=T)/sum(local.authority[local.authority$RGN_CD==locality$RGN_CD & local.authority$type=="total" & substr(as.character(local.authority$month), 1, 4)=="2019" ,]$N, na.rm=T)*100, digits=2),"%")`.
+
+
+## **Housing Affordability**
+
+The following present the evolution of housing affordability in the local area over the previous two decades. Housing affordability is broadly measured as the ratio of a local areas measure of income to the areas measure of housing price - traditionally using aggregate median values. We plot the yearly evolution of the affordability index as tracked from the most recent ONS [Housing and Affordability](https://www.ons.gov.uk/peoplepopulationandcommunity/housing/bulletins/housingaffordabilityinenglandandwales/2020) release up to 2020.
+
+```{r Figure 7A: Housing Affordability (+ Income, Prices) Comparisons - 50th, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+
+fig.7A[[S]]
+
+```
+
+The affordability index for the local area, plotted below, is the ratio of income earnings evolution over time to housing prices. 
+
+```{r Figure 7B: Housing Affordability (+ Income, Prices) Comparisons - 25th, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+
+fig.7B[[S]]
+
+```
+
+
+
+## **Housing Typology**
+
+Through the LR data, we can break down transactions according to their typology - including detached, semi-detached, terraced, and flats. With housing transactions re-starting following the lull over the periods of the lockdowns, we may expect that certain typologies of dwellings may become higher in demand and price (of course with the complex underlying drivers that location and context within the LAD have).
+
+
+```{r Figure 6: Housing Typology, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+
+fig.6[[S]]
+
+```
+
+
+The price evolution of these typologies can be seen pre-, during, and in the limited time post-lockdowns - where there are sufficient transactions to support median price estimates (N > 5). These can be compared to the total overall price indicator for the local area. As is being commonly seen across the country, most groups of dwelling typologies have seen general increases in their selling prices - in line with national overall prices and transactions going into 2021.
+
+
+```{r Figure 5: Housing Prices by Typology, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+
+fig.5[[S]]
+
+```
+
+
+
+
+## **Research Team**
+
+The report was compiled by the Local Data Spaces team, which includes:
+
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk
+* Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: Jacob.Macdonald@liverpool.ac.uk
+* Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk
+
+
+## **Contact**
+
+This work was funded by the ESRC's (UKRI) Local Data Spaces Project - a collaboration between the ONS, JBC and ESRC designed to open up secure data to Local Authorities to support responses to COVID-19. If you would like to contact the team about any of the data presenting in this report or discuss further opportunities within the Local Data Spaces project, please contact one of the following:
+
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk
+
+Code, data and project workflow to replicate or expand the analysis for each local area are available by request internally within the ONS Secure Research Services (SRS) environment. Resources are available through *SRS Project 2001021*. Coding products for replication of visuals (although without the underlying SRS-based data and appropriately disclosed) is available at the following Github repository: [https://github.com/ESRC-CDRC/LocalDataSpaces](https://github.com/ESRC-CDRC/LocalDataSpaces)
+
+
+## **Partners**
+
+```{r patnerlogos, echo=FALSE, out.width="50%", out.height="50%", fig.show='hold', fig.align="center"}
+knitr::include_graphics(paste0(wd.data, "/reportlogos.png"))
+```

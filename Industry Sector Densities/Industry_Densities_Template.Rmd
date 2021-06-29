@@ -1,0 +1,236 @@
+---
+author: "Local Data Spaces ADR UK Research Team"
+date: "`r format(Sys.Date(), format = '%B %d, %Y')`"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+  word_document: default
+  pdf_document:
+    extra_dependencies: subfig
+    keep_tex: yes
+---
+
+<!-- <style> -->
+<!-- .author,.title,.date{ -->
+<!--     display: none; -->
+<!-- } -->
+<style>
+h1, h2, h3 {
+  font-family: Times;
+  font-size: 16pt;
+  text-align: left;
+  margin-top: 50px
+  }
+body {
+  font-family: Arial;
+  font-size: 12pt;
+  text-align: justify
+  }
+.caption {
+    font-size: x-small}
+</style>
+
+```{r Generate Folder Lookup, echo=F, message=F, warning=F}
+if(!file.exists(paste0(wd, "/Outputs/", gsub(" ", "_", locality$RGN_NM), "/LAD/0_LAD_Lookup.txt"))){
+  lu <- unique(geographic.lookup[geographic.lookup$RGN_CD==locality$RGN_CD,c("LAD_CD", "LAD_NM")])[order(unique(geographic.lookup[geographic.lookup$RGN_CD==locality$RGN_CD,c("LAD_CD", "LAD_NM")])$LAD_NM)]
+  names(lu) <- c("LAD_Code", "LAD_Name")
+  fwrite(lu, file=paste0(wd, "/Outputs/", gsub(" ", "_", locality$RGN_NM), "/LAD/0_LAD_Lookup.txt"))
+  rm(lu) }
+```
+
+---
+title: "Sector-Based Densities and Distributions: `r paste0(locality$LAD_NM, " (", locality$RGN_NM, ")")`"
+---
+
+## **Introduction**
+
+This report highlights benchmarks patterns of distribution and density for local business sectors and workforces in the Local Authority of `r paste0("<b>", locality$LAD_NM, " (LAD: ", locality$LAD_CD, ")</b>")`. Making use of the most recent comprehensive national surveys and registries with a sector-based focus, this profile breaks down the concentration and relative comparison of different industry sectors as compared to regional `r paste0("<b>(", locality$RGN_NM, " - ", locality$RGN_CD, ")</b>")` and national averages.
+
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates.
+
+All counts from secured datasets less than 10 have been suppressed for security and data aggregated to the appropriate spatial or temporal dimension to ensure non-disclosivity.
+
+
+## **Data and Sources**
+
+Local profiling is based primarily on two datasets available through the Office for National Statistics (ONS) Secure Research Service (SRS) catalogue:
+
+* The Business Structure Dataset (BSD): [doi.org/10.5255/UKDA-SN-6697-10](http://doi.org/10.5255/UKDA-SN-6697-10)
+* Business Registry and Employment Survey (BRES): [10.5255/UKDA-SN-7463-9](10.5255/UKDA-SN-7463-9)
+
+These datasets provide location based information on the registration of individual local units of business, along with their workforce. Importantly, we can leverage two main angles to explore - profiling the breakdown and distribution of businesses and workforces by industry sectors, and forming comparative measures of spatial density and clustering of key workforce sectors within and across geographic areas. Where broad sectors are traditionally thought of as having some spatial aspect of their workforce - such as retail or service industries often clustered in high streets and city centres - we provide measures of rankings and distributions of these workforces and their relevant and most comparable COVID-19 prevalence.
+
+Where relevant, additional openly available data sources are included in this report (potentially at higher spatial aggregations). The [CDRC Business Census](https://data.cdrc.ac.uk/dataset/business-census) dataset which provides yearly snapshots of registered businesses and industry typologies across England - with granular location information. This is sourced from the Companies House data products for which some higher level ONS fast-paced indicators on business activity are also available.
+
+* CDRC Business Census: [https://data.cdrc.ac.uk/dataset/business-census](https://data.cdrc.ac.uk/dataset/business-census)
+* ONS Faster Indicators: [Company Incorporations and Voluntary Dissolutions](https://www.ons.gov.uk/economy/economicoutputandproductivity/output/datasets/companyincorporationsandvoluntarydissolutions)
+
+Business units and employment are coded according to the [UK Standard Industrial Classification (SIC) Hierarchy](https://onsdigital.github.io/dp-classification-tools/standard-industrial-classification/ONS_SIC_hierarchy_view.html). Broad Industry Groups (BIG) of SIC codes are used to define the highest level of sector aggregation throughout the series of reports. We also make use of the two-digit SIC Division for more detailed tracking of the specific industry sectors where issues of disclosure are not of concern.
+
+
+```{r SIC Colour Guide, echo=F, message=F, warning=F}
+palette.lookup
+```
+
+
+
+## **Broad Picture of Business Activity**
+
+At a national level, we track the week-on-week incorporations and dissolutions of businesses pre-pandemic (2019), during the pandemic (2020), and for the opening of 2021. The data are part of the openly available [ONS Faster Indicators release](https://www.ons.gov.uk/economy/economicoutputandproductivity/output/methodologies/weeklyindicatorsofcompanycreationsandclosuresfromcompanieshousemethodologyaugust2020) and represent the opening and voluntary dissolution of companies in the UK. 
+
+The Companies House register differs from other registries (such as the Inter-Departmental Business Register from which the BSD is sourced) and only includes Private Limited, Private Unlimited and Public Limited Companies that have incorporated with Companies House (see the [Methodology](https://www.ons.gov.uk/economy/economicoutputandproductivity/output/methodologies/weeklyindicatorsofcompanycreationsandclosuresfromcompanieshousemethodologyaugust2020) document for details).
+
+While this presents a national picture across the UK, these broad patterns are important to consider in tandem with the concentration and density of local businesses and activity.
+
+```{r Figure 1: National Openings and Closings, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 9, out.width = "100%"}
+# Next Release Date April 15, 2021 (Not yet updated)
+
+fig.businessD
+```
+
+```{r Figure 1: National Openings and Closings (int), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%", include=F}
+ggplotly(fig.businessD)
+```
+
+
+From the 2020 [CDRC Business Census](https://data.cdrc.ac.uk/dataset/business-census), built from the same Companies House registry, broad patterns on the location of registered businesses can be mapped. In interpreting these patterns of business density over space, it is important to consider the types and functions of businesses included in the registry and understand any potential limitation in using the data to represent local business density patterns.
+
+From the 2020 Business Census snapshot (conducted on the 31 March 2020) there are `r format(sum(fig.6$N, na.rm=T), big.mark = ",")` active companies of which `r format(sum(fig.6[fig.6$LAD_CD==locality$LAD_CD,]$N, na.rm=T), big.mark = ",")` (or `r signif(sum(fig.6[fig.6$LAD_CD==locality$LAD_CD,]$N, na.rm=T) /sum(fig.6$N, na.rm=T)*100, digits = 3)`%) are located within the LAD of `r paste0(locality$LAD_NM)`.
+
+The following maps the density deciles (ranking from 1 to 10) of businesses within the local authority (LAD of `r paste0(locality$LAD_NM)` highlighted) as nested in the larger Local Enterprise Partnership (LEP) zone for a *semi-regional* comparison and context of local density. The intensity of the deciles represent the small area locations around the LAD/LEP where there are more businesses per hectare registered. The location of registered businesses are geocoded using the [National Statistics Postcode Lookup](https://geoportal.statistics.gov.uk/datasets/1951e70c3cc3483c9e643902d858355b) and aggregated to the [Workplace Zone](https://data.gov.uk/dataset/6620567e-f237-4c6b-b561-64a2bc218783/workplace-zones-a-new-geography-for-workplace-statistics) spatial unit - geographies purposefully built around better representing business and workplace zones as opposed to more population and residential-focused zones. 
+
+
+```{r Figure 2: Business Density, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+# Next Release Date May 1, 2021 (Not yet updated)
+
+fig.6plot[[S]]
+```
+
+
+
+## **Sector-Based Businesses and Workforce Distribution**
+
+The following breakdown of local industries is taken from the Business Structure Dataset 2020. This first pane represents the distribution of business units within `r paste0(locality$LAD_NM)` broken down according to industry sectors. Comparable proportionate rankings are provided for the national and regional levels of businesses and indicates either a below or above average ranking of a certain sector. A more detailed distribution of the most common two-digit SIC divisions (nested within the BIG groupings) is provided and gives a more detailed breakdown of the most prevalent business types in the area.
+
+
+```{r Figure 1: Business Distributions (BSD), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+cowplot::plot_grid(fig.1A_BUS[[S]], fig.1B_BUS[[S]], align = "v", axis ="l", ncol=1)
+
+# ggsave(plot=cowplot::plot_grid(fig.1A_BUS[[S]], fig.1B_BUS[[S]], align = "v", axis ="l", ncol=1),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/INDS_Fig1A.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+```{r Figure 1: Business Distributions (BSD) (int1), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%", include=F}
+ggplotly(fig.1A_BUS[[S]])
+```
+
+```{r Figure 1: Business Distributions (BSD) (int2), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%", include=F}
+ggplotly(fig.1B_BUS[[S]])
+```
+
+
+Comparably, the following set of plots show a similar breakdown of total employment in the area. We again break down employment according to the most prevalent BIG and two-digit SIC codes, and rank these sector proportions against their national and regional averages to show below or above average densities.
+
+
+```{r Figure 1: Employment Distributions (BSD), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+cowplot::plot_grid(fig.1A_EMP[[S]], fig.1B_EMP[[S]], align = "v", axis ="l", ncol=1)
+
+# ggsave(plot=cowplot::plot_grid(fig.1A_EMP[[S]], fig.1B_EMP[[S]], align = "v", axis ="l", ncol=1),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/INDS_Fig1A.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+```{r Figure 1: Employment Distributions (BSD) (int1), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%", include=F}
+ggplotly(fig.1A_EMP[[S]])
+```
+
+```{r Figure 1: Employment Distributions (BSD) (int2), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%", include=F}
+ggplotly(fig.1B_EMP[[S]])
+```
+
+
+## **Five-Year Total Growth Rates**
+
+The following figure tracks the growth of total business and total employment for `r paste0(locality$LAD_NM)` over the previous five years. The yearly totals for the region are provide, along with comparable growth rates from 2014 for England as a whole (in black) and the regional growth for all business and employment in `r paste0(locality$RGN_NM)` (in white). 
+
+For the local totals, a breakdown of the respective industry sectors are given with the corresponding colours from the above figures and SIC lookup.
+
+```{r Figure 3: Business and Employment Growth (BSD), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+cowplot::plot_grid(fig.3A[[S]], fig.3B[[S]], align = "v", axis ="l", ncol=2)
+
+# ggsave(plot=cowplot::plot_grid(fig.3A[[S]], fig.3B[[S]], align = "v", axis ="l", ncol=2),
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/INDS_Fig3.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+```{r Figure 3: Business and Employment Growth (BSD) (int1), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%", include=F}
+ggplotly(fig.3A[[S]])
+```
+
+```{r Figure 3: Business and Employment Growth (BSD) (int2), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%", include=F}
+ggplotly(fig.3B[[S]])
+```
+
+
+## **Business Breakdown by Sectors**
+
+Using the BRES survey results, relative local proportions for different sub-groups of businesses, and employment, can be compared. Following through with the sector-based decomposition, relative proportions of small businesses, private businesses and respective workforces are estimated.
+
+
+```{r Figure 2: Sector Based Proportions (BRES), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 11, out.width = "100%"}
+fig.2[[S]]
+
+# ggsave(plot=fig.2[[S]],
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/INDS_Fig3.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+```{r Figure 2: Sector Based Proportions (BRES) (int), echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%", include=F}
+ggplotly(fig.2[[S]])
+```
+
+
+## **Employment Density Profiles and Ranking**
+
+Leveraging the geographic aspect of the data, density and clustering patterns of local workforces across the LAD can be compared. The following figure demonstrates the estimated trend fit to the distribution of (log) workforce patterns over space. Namely, we are looking at the frequency of how many neighbourhoods (Output Area geographies) have a certain levels of jobs per hectare. 
+
+If we see higher rankings, and thus a higher peak job density, then the local area has relatively more workers per hectare than other areas across the country. These density patterns and rankings can be important considerations when tracking local workplace-based COVID-19 outbreaks or impacts.
+
+
+```{r Figure 5: Employment Densities and Ranks, echo=F, message=F, warning=F, fig.asp = 0.8, fig.width = 13, out.width = "100%"}
+cowplot::plot_grid(fig.5[[S]], fig.5A[[S]], fig.5B[[S]], align = "v", axis ="l", ncol=3, rel_widths = c(3, 1, 1))
+
+# ggsave(plot=fig.2[[S]],
+#   filename=paste0(wd, "Outputs/", unique(geographic.lookup[geographic.lookup$LAD_CD==S,]$RGN_CD), "/LAD/", S, "/Figures/INDS_Fig3.png"),
+#   width=297, height=210, unit="mm", dpi=300)
+```
+
+
+
+## **Research Team**
+
+The report was compiled by the Local Data Spaces team, which includes:
+
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk
+* Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: jacob.macdonald@liverpool.ac.uk
+* Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk
+
+
+## **Contact**
+
+This work was funded by the ESRC's (UKRI) Local Data Spaces Project - a collaboration between the ONS, JBC and ESRC designed to open up secure data to Local Authorities to support responses to COVID-19. If you would like to contact the team about any of the data presenting in this report or discuss further opportunities within the Local Data Spaces project, please contact one of the following:
+
+* Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk
+* Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk
+
+Code, data and project workflow to replicate or expand the analysis for each local area are available by request internally within the ONS Secure Research Services (SRS) environment. Resources are available through *SRS Project 2001021*. Coding products for replication of visuals (although without the underlying SRS-based data and appropriately disclosed) is available at the following Github repository: [https://github.com/ESRC-CDRC/LocalDataSpaces](https://github.com/ESRC-CDRC/LocalDataSpaces)
+
+
+## **Partners**
+
+```{r patnerlogos, echo=FALSE, out.width="50%", out.height="50%", fig.show='hold', fig.align="center"}
+knitr::include_graphics(paste0(wd.data, "/reportlogos.png"))
+```
