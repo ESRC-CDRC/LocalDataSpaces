@@ -1,6 +1,0 @@
-LocationName,Id,Date,SiteName,LocationGroup,WeekDay,BRCYear,BRCQuarter,BRCMonth,BRCWeek,InCount,OutCount,TotalCount,BusinessInCount,BusinessOutCount,BusinessTotalCount,FactoredInCount,FactoredOutCount,FactoredTotalCount,X,Y,OBJECTID
-Church Street,242475,21/03/2014 00:00:00,York,,Friday,2014,,March,12,7,8,15,,,,,,,-1.08046297592486,53.9604292999891,3
-Coney Street,155258,30/03/2009 00:00:00,York,,Monday,2009,,March,13,213,,213,,,,,,,-1.08397667144165,53.9586674430194,2
-Micklegate,242476,21/03/2014 00:00:00,York,,Friday,2014,,March,12,4,32,36,,,,,,,-1.08876442231041,53.9571669149982,4
-Parliament Street,155257,30/03/2009 00:00:00,York,,Monday,2009,,March,13,14,,14,,,,,,,-1.08079977113872,53.9589757477743,1
-Stonegate,243913,05/04/2014 00:00:00,York,,Saturday,2014,,March,14,143,108,251,,,,,,,-1.08368523748903,53.9608403650247,5
