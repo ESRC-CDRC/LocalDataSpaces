@@ -1,0 +1,172 @@
+---
+author: "Maurizio Gibin"
+date: "15/03/2021"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+  word_document: default
+  pdf_document:
+    extra_dependencies: subfig
+    keep_tex: yes
+---
+
+<!-- <style> -->
+<!-- .author,.title,.date{ -->
+<!--     display: none; -->
+<!-- } -->
+<style>
+h1, h2, h3 {
+  font-family: Times;
+  font-size: 16pt;
+  text-align: left
+  }
+body {
+  font-family: Times;
+  font-size: 12pt;
+  text-align: justify
+  }
+.caption {
+    font-size: x-small}
+</style>
+
+```{r setup, include=FALSE}
+library(data.table)
+library(png)
+#library(rstudioapi)
+knitr::opts_chunk$set(echo = FALSE,eval = T,fig.align="center")
+knitr::opts_knit$set(root.dir ='.') #dirname(rstudioapi::getActiveDocumentContext()$path))
+knitr::opts_chunk$set(fig.path = "./img/", dev='png')
+```
+
+```{r ladatareport, echo=FALSE}
+#current_working_dir <- #dirname(rstudioapi::getActiveDocumentContext()$path)
+#setwd(current_working_dir)
+dir <- "."
+allFiles <- list.files(dir)
+rDir <- normalizePath(dirname(allFiles[1])) 
+setwd(rDir)
+ladatareport <- fread('./data/gmr.lad.lut.csv')
+coviddates <- fread('data/covid.better.dates.csv')
+```
+
+---
+title: "Google mobility report for `r ladatareport$lad19nm`"
+---
+## Introduction
+This report shows trends and changes in human mobility patterns for `r ladatareport$lad19nm`
+during the COVID-19 pandemic in UK. Mobility patterns data is obtained from the [Google Mobility Reports](https://www.google.com/covid19/mobility/) published by Google since April 2020 in an effort
+to support researchers during the pandemic.
+
+## How to read the data
+The Google Mobility reports contains data on people's movements collected by Google. The data is divided in six categories and reports the relative changes in mobility patterns during the COVID-19 restrictions period compared to the **baselines** for each category in a period of time considered to be the *normal* before the COVID-19 pandemic. The **baselines** are calculated as the median value for each category and day of the week from January 3rd 2020 to February 6th 2020. Since the data reported is normalized to a baseline, it is not possible to directly compare day to day to changes.
+In addition, during weekends people do not work and tend to engage in recreational activities like going to a park or shopping, resulting in a change of the mobility patterns during the weekend, that are not caused by the tightening of restrictions. When interpreting the figures it is important to consider that variations are also be affected by like local conditions, by public holidays and even by the weather. For that, it is better to compare towns and regions that have similar characteristics (i.e. rural areas together) and to have local knowledge of the area considered.
+Mobility data are collected from those users who turned the location history on -off by default- on their Google account.
+The precision of the data depends on the user's phone settings and on connectivity. When the number of users in a category is not enough to maintain the user's privacy the report omits to include the change for the day for that category, leaving gaps in the data.
+For additional information on the methodology, please visit the [Google Mobility Reports](https://support.google.com/covid19-mobility/answer/9824897?hl=en&ref_topic=9822927) help page.
+Google mobility data is disseminated at national level and in the case of UK using a geography that can be mapped (with some exceptions) to the 2019 Local Authority Districts. The geography used in the report is based on previous work from [ONS](https://github.com/datasciencecampus/google-mobility-reports-data/tree/master/geography) and might not reflect the current administrative geography.
+
+
+
+## Mobility categories
+The mobility data published by Google are divided in six categories, in an effort to capture the main domains of human activities affected by the restrictions imposed during the pandemic. A user in proximity of one of the places contained the mobility category will be allocated to it. The numerical value reported in the data is the change in visitors from the baseline January 5th to 6th of February 2020 for all *except* the residential category where it is the change in duration of stay at home.
+
+### Retail and recreation
+In this category are included places like restaurants, cafés, shopping centres, theme parks, museums, libraries and
+cinemas. Relative changes in this category are negatively correlated with the restriction on movements imposed during the national lockdowns.
+The line chart below show the trends in retail and recreation patterns for `r ladatareport$lad19nm`, while the area chart is the trend for UK. The vertical lines delimit the relevant periods of the COVID-19 government regulations.
+```{r retrecr,echo=FALSE,fig.cap="Mobility trend for the retail and recreation category",out.width='100%',fig.show='hold'}
+knitr::include_graphics("img/Retail and Recreation_line_area_uk.png")
+```
+### Grocery and pharmacy
+The grocery and pharmacy category includes supermarkets, food warehouses, farmers markets, specialty food
+shops and pharmacies. In the chart, the shaded area shows the national trend for the same category.
+```{r grocpharm,echo=FALSE,fig.cap="Mobility trend for the groceries and pharmacies  category",out.width='100%',fig.show='hold'}
+knitr::include_graphics("img/Grocery and Pharmacy_line_area_uk.png")
+```
+### Parks
+Includes national parks, public beaches, marinas, dog parks, plazas, public gardens, national forests, castles, camp grounds and observation decks. In the chart, the shaded area shows the national trend for the same category. When looking at this category changes in value as a response to the pandemic's restrictions, it is important to consider that usually the number of visitors in a park is lower during a rainy day compared to a sunny one and, the baseline for the category is calculated in a cold period of the year.
+In the chart, the shaded area shows the national trend for the same category.
+```{r parks,echo=FALSE,fig.cap="Mobility trend for the parks  category",out.width='100%',fig.show='hold'}
+knitr::include_graphics("img/Parks_line_area_uk.png")
+```
+### Transit stations  
+In this category are reported movements around subway, bus, and train stations and other modes of transportation like	taxi stands, highway rest stops, car rental agencies and sea ports. In the chart, the shaded area shows the national trend for the same category.
+```{r transitstations,echo=FALSE,fig.cap="Mobility trend for the transit stations  category",out.width='100%',fig.show='hold'}
+knitr::include_graphics("img/Transit Stations_line_area_uk.png")
+```
+### Residential
+This category includes, according to Google, places of residence. During the pandemic, people were advised to stay at home, work from home and limit their movements to the essential. While all the other categories show change in the number of visitor, the residential category value reports the change in duration at the place of residence. The range of the change in duration is limited because people spend already most of the day at home. In the chart, the shaded area shows the national trend. 
+```{r residential,echo=FALSE,fig.cap="Mobility trend for the residential  category",out.width='100%',fig.show='hold'}
+knitr::include_graphics("img/Residential_line_area_uk.png")
+```
+### Workplaces
+The pandemic and the lock down restrictions affected many businesses to the extent that the government had to intervene providing financial support to the furlough scheme and Universal credit. Mobility patterns in places of work generally decrease over all pandemic with negative peaks during the national lockdowns. In the chart, the shaded area shows the national trend for the same category.
+```{r workplaces,echo=FALSE,fig.cap="Mobility trend for the workplaces  category",out.width='100%',fig.show='hold'}
+knitr::include_graphics("img/Workplaces_line_area_uk.png")
+```
+## The third national lockdown
+The following map display the evolution of activity restrictions for `r ladatareport$lad19nm` during the reintroduction of the Tier system in December 2020 leading to the third national lockdown announced on the 6th of January 2020.
+<br><br>
+```{r tiermap,echo=FALSE,fig.cap="Tier evolution leading to the third national lockdown",out.width='100%',fig.show='hold'}
+knitr::include_graphics(paste0('img/',gsub(' ','',ladatareport$lad19nm),'_tier_evolution','.png'))
+```
+## The impact of the restrictions on mobility in `r ladatareport$lad19nm`
+During the pandemic the UK Government provided advice and implemented a series of regulations to limit the spread of COVID-19 among the population. The general advice was to stay at home and limit movements to the essential. On the 23rd of March, the first national lockdown came into place imposing severe limitations to human activities and businesses.
+<br>
+<br>
+```{r covidchart,echo=FALSE,fig.cap="COVID-19 restrictions timeline",fig.show='hold'}
+knitr::include_graphics("img/covid19importantdates.png")
+```
+<br>
+Following the first national lockdown, the restrictions were eased and the government promoted incentives to support businesses, like the *Eat out to Help out* scheme that started on the 3rd and ended on the 31st of August 2020. In December 2020 the tier system came in place for a the second time with the additional Tier 4, delimiting those local authorities with the tighter restrictions. The following charts show the median change from the baseline for each mobility category during the restriction period. The charts are in chronological order and
+include the median values for the regional geography and for UK. The first chart reports values for the period 15th of February to 23rd of March 2020 when the first national lockdown came into place and it can be used in conjunction with the baseline to help better understanding the median values for `r ladatareport$lad19nm`.
+
+```{r beforeandfirst, echo=FALSE, out.width="50%", out.height="50%", fig.cap=paste0("Median mobility for the ",coviddates[1,event]," period from ",format(coviddates[1,start_date],"%B %d")," to ",  format(coviddates[1,end_date],"%B %d %Y")," and for the ", coviddates[2,event]," period from ",format(coviddates[2,start_date],"%B %d")," to ",  format(coviddates[2,end_date],"%B %d %Y")), fig.subcap=c('a', 'b'),fig.show='hold'}
+knitr::include_graphics(c("img/1_Before_First_National_Lockdown.png","img/2_First_National_Lockdown.png"))
+```
+<br>
+```{r outsix, echo=FALSE,out.width="50%", out.height="50%",fig.cap=paste0("Median mobility for the ",coviddates[3,event]," period from ",format(coviddates[3,start_date],"%B %d")," to ",  format(coviddates[3,end_date],"%B %d %Y")," and for the ", coviddates[4,event]," period from ",format(coviddates[4,start_date],"%B %d")," to ",  format(coviddates[4,end_date],"%B %d %Y")), fig.subcap=c('a', 'b'),fig.show='hold'}
+knitr::include_graphics(c("img/3_Outdoor_recreation_permitted.png","img/4_Rule_of_six.png"))
+```
+<br>
+```{r hospopeatout, echo=FALSE,out.width="50%", out.height="50%",fig.cap=paste0("Median mobility for the ",coviddates[5,event]," period from ",format(coviddates[5,start_date],"%B %d")," to ",  format(coviddates[5,end_date],"%B %d %Y")," and for the ", coviddates[6,event]," period from ",format(coviddates[6,start_date],"%B %d")," to ",  format(coviddates[6,end_date],"%B %d %Y")), fig.subcap=c('a', 'b'),fig.show='hold'}
+knitr::include_graphics(c("img/5_Hospitality_reopen._Gatherings_up_to_thirty_people.png","img/6_Eat_out_to_help_out.png"))
+```
+<br>
+```{r newrule6hospclosed, echo=FALSE,out.width="50%", out.height="50%",fig.cap=paste0("Median mobility for the ",coviddates[7,event]," period from ",format(coviddates[7,start_date],"%B %d")," to ",  format(coviddates[7,end_date],"%B %d %Y")," and for the ", coviddates[8,event]," period from ",format(coviddates[8,start_date],"%B %d")," to ",  format(coviddates[8,end_date],"%B %d %Y")), fig.subcap=c('a', 'b'),fig.show='hold'}
+knitr::include_graphics(c("img/7_The_new_rule_of_six_both_indoor_and_outdoor.png","img/8_Hospitality_had_to_shut_between_10pm_and_6am.png"))
+```
+<br>
+```{r firstout, echo=FALSE,out.width="50%", out.height="50%",fig.cap=paste0("Median mobility for the ",coviddates[9,event]," period from ",format(coviddates[9,start_date],"%B %d")," to ",  format(coviddates[9,end_date],"%B %d %Y")," and for the ", coviddates[10,event]," period from ",format(coviddates[10,start_date],"%B %d")," to ",  format(coviddates[10,end_date],"%B %d %Y")), fig.subcap=c('a', 'b'),fig.show='hold'}
+knitr::include_graphics(c("img/9_First_three_tier_system.png","img/10_Second_National_Lockdown._Meet_one_person_outside.png"))
+```
+<br>
+```{r tiersystemand4, echo=FALSE,out.width="50%", out.height="50%",fig.cap=paste0("Median mobility for the ",coviddates[11,event]," period from ",format(coviddates[11,start_date],"%B %d")," to ",  format(coviddates[11,end_date],"%B %d %Y")," and for the ", coviddates[12,event]," period from ",format(coviddates[12,start_date],"%B %d")," to ",  format(coviddates[12,end_date],"%B %d %Y")), fig.subcap=c('a', 'b'),fig.show='hold'}
+knitr::include_graphics(c("img/11_Tier_system_was_reintroduced.png","img/12_Tier_4_introduced.png"))
+```
+<br>
+```{r thirdnatlockschoolreopen, echo=FALSE,out.width="50%", out.height="50%",fig.cap=paste0("Median mobility for the ",coviddates[13,event]," period from ",format(coviddates[13,start_date],"%B %d")," to ",  format(coviddates[13,end_date],"%B %d %Y")," and for the ", coviddates[14,event]," period from ",format(coviddates[14,start_date],"%B %d")," to ",  format(coviddates[14,end_date],"%B %d %Y")), fig.subcap=c('a', 'b'),fig.show='hold'}
+knitr::include_graphics(c("img/13_Third_National_Lockdown.png","img/14_Schools_and_care_homes_reopen.png"))
+```
+
+## Research Team
+The report was compiled by the Local Data Spaces team, which includes:
+
+Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk<br>
+Simon Leech, Administrative Data Research UK and University of Leeds, email: s.leech@leeds.ac.uk<br>
+Jacob Macdonald, Administrative Data Research UK and University of Liverpool, email: jacob.macdonald@liverpool.ac.uk<br>
+Maurizio Gibin, Administrative Data Research UK and University College London, email: m.gibin@ucl.ac.uk<br>
+
+## Contact
+The piece of work was funded by the ESRC’s (UKRI) Local Data Spaces Project, which is novel collaboration between the ONS, JBC and ESRC designed to open up secure data to Local Authorities to support responses to COVID-19. If you would like to contact the team about any of the data presenting in this report or discuss further opportunities within the Local Data Spaces project, please contact one of the following:<br>
+Mark Green, Administrative Data Research UK and University of Liverpool, email: mark.green@liverpool.ac.uk<br>
+Victoria Chenery, Office for National Statistics, email: victoria.chenery@ons.gov.uk<br>
+
+## Note
+This work was produced using statistical data from ONS. The use of the ONS statistical data in this work does not imply the endorsement of the ONS in relation to the interpretation or analysis of the statistical data. This work uses research datasets which may not exactly reproduce National Statistics aggregates.
+
+## Partners
+```{r patnerlogos,echo=FALSE,out.width="50%", out.height="50%", fig.cap="Local Data Spaces partners",fig.show='hold'}
+knitr::include_graphics("img/reportlogos.png")
+```
