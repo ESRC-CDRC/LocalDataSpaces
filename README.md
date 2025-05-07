@@ -13,7 +13,7 @@ It contains the different types of reports created by the Local Data Spaces Scie
 * Women hospitalization risk
 * Mobility Reports
 
-**The html reports are available for download at ESRC-CDRC/LocalDataSpaces**
+**The html reports are available for download at https://data.geods.ac.uk/dataset/local-data-spaces**
 
 
 # Research Team
